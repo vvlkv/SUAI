@@ -1,16 +1,43 @@
 PODS:
-  - SUAISchedule (0.1.0)
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - HTMLKit (2.1.5)
+  - SUAISchedule (0.1.0):
+    - AFNetworking
+    - HTMLKit
 
 DEPENDENCIES:
+  - AFNetworking
+  - HTMLKit
   - SUAISchedule (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - HTMLKit
 
 EXTERNAL SOURCES:
   SUAISchedule:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SUAISchedule: cfd06e11a678395816bf87fe24d30d389e4777f8
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  HTMLKit: 91dbd983c94f264c6ddea27d317f5a66368dd20b
+  SUAISchedule: 7f5c50f037178b707bac3226719ca5937a555a34
 
-PODFILE CHECKSUM: 45981aae899a12cafe59a82ca857e2be653297b5
+PODFILE CHECKSUM: 8b2fa95402986468b1dcf06213bdc2f5d3279397
 
 COCOAPODS: 1.5.3

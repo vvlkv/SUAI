@@ -1,11 +1,13 @@
 use_frameworks!
+platform :ios, '9.0'
 
 target 'SUAISchedule_Example' do
   pod 'SUAISchedule', :path => '../'
-
+  pod 'AFNetworking'
+  pod 'HTMLKit', :inhibit_warnings => true
+  
   target 'SUAISchedule_Tests' do
     inherit! :search_paths
-
     
   end
 end

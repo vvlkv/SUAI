@@ -7,23 +7,30 @@
 //
 
 #import "SUAIViewController.h"
+#import "SUAISchedule.h"
+#import "SUAIManager.h"
 
-@interface SUAIViewController ()
+@interface SUAIViewController () <SUAIScheduleDelegate>
 
 @end
 
 @implementation SUAIViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [SUAIManager instance].delegate = self;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)didChangeStatus:(Status)status {
+    NSLog(@"status is %u", status);
+    [[SUAIManager instance] loadScheduleFor:@"1441" ofEntityType:EntityGroup success:^(SUAISchedule *schedule) {
+        NSLog(@"%@", schedule);
+        NSLog(@"%@", schedule.name);
+        NSLog(@"%@", schedule.session);
+        NSLog(@"%@", schedule.semester);
+    } fail:^(NSString *fail) {
+        NSLog(fail);
+    }];
 }
 
 @end

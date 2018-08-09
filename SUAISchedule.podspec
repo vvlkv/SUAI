@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SUAISchedule'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Library for working with SUAI schedule'
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ SUAISchedule is a lightweight and simple library for loading and parsing schedul
   s.source           = { :git => 'https://github.com/vvlkv/SUAISchedule.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'SUAISchedule/Classes/**/*'
   
@@ -39,4 +39,6 @@ SUAISchedule is a lightweight and simple library for loading and parsing schedul
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'AFNetworking'
+  s.dependency 'HTMLKit'
 end

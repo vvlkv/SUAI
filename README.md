@@ -22,7 +22,7 @@ pod 'SUAISchedule'
 
 ## Author
 
-vvlkv, v.v.alexeevich.95@gmail.com
+Victor Volkov, vvlkv@icloud.com
 
 ## License
 
