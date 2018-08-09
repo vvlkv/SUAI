@@ -1,0 +1,16 @@
+PODS:
+  - SUAISchedule (0.1.0)
+
+DEPENDENCIES:
+  - SUAISchedule (from `../`)
+
+EXTERNAL SOURCES:
+  SUAISchedule:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SUAISchedule: cfd06e11a678395816bf87fe24d30d389e4777f8
+
+PODFILE CHECKSUM: 45981aae899a12cafe59a82ca857e2be653297b5
+
+COCOAPODS: 1.5.3

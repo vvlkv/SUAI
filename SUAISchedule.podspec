@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SUAISchedule'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of SUAISchedule.'
+  s.summary          = 'Library for working with SUAI schedule'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+SUAISchedule is a lightweight and simple library for loading and parsing schedule for students and teachers studying in Saint Petersburg State Unversity of Aerospace Instrumentation. It includes both session and semester schedule.
                        DESC
 
   s.homepage         = 'https://github.com/vvlkv/SUAISchedule'

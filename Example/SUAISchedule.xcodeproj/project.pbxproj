@@ -62,11 +62,11 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C7A1EAE12BAAA99394DB208 /* Pods_SUAISchedule_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SUAISchedule_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		906E1C72F13805265F211FA5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		906E1C72F13805265F211FA5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A571F5F34FC4C48DCB85EC55 /* Pods-SUAISchedule_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SUAISchedule_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SUAISchedule_Tests/Pods-SUAISchedule_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		BC3751FF574420793B0CA47C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		BC3751FF574420793B0CA47C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		DE651A51A85C2AF1ED5C125D /* Pods-SUAISchedule_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SUAISchedule_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SUAISchedule_Example/Pods-SUAISchedule_Example.release.xcconfig"; sourceTree = "<group>"; };
-		DFB514B89B98674B2D2D7935 /* SUAISchedule.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SUAISchedule.podspec; path = ../SUAISchedule.podspec; sourceTree = "<group>"; };
+		DFB514B89B98674B2D2D7935 /* SUAISchedule.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SUAISchedule.podspec; path = ../SUAISchedule.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

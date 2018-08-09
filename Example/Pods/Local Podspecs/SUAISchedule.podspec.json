@@ -1,0 +1,22 @@
+{
+  "name": "SUAISchedule",
+  "version": "0.1.0",
+  "summary": "A short description of SUAISchedule.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/vvlkv/SUAISchedule",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "vvlkv": "v.v.alexeevich.95@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/vvlkv/SUAISchedule.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SUAISchedule/Classes/**/*"
+}
