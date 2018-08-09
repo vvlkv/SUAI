@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SUAISchedule_Example' do
+  pod 'SUAISchedule', :path => '../'
+
+  target 'SUAISchedule_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
