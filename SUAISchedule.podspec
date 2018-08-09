@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SUAISchedule'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'Library for working with SUAI schedule'
 
 # This description is used to generate tags and improve search results.
@@ -24,7 +24,7 @@ SUAISchedule is a lightweight and simple library for loading and parsing schedul
   s.homepage         = 'https://github.com/vvlkv/SUAISchedule'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'vvlkv' => 'v.v.alexeevich.95@gmail.com' }
+  s.author           = { 'Victor Volkov' => 'vvlkv@icloud.com' }
   s.source           = { :git => 'https://github.com/vvlkv/SUAISchedule.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
