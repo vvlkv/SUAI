@@ -18,7 +18,8 @@ typedef enum DayColor {
 @interface SUAIPair : NSObject
 
 @property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSString *teacherName;
+//@property (strong, nonatomic) NSString *teacherName;
+@property (strong, nonatomic) NSArray<NSString *> *teachers;
 @property (strong, nonatomic) NSArray<NSString *> *groups;
 @property (assign, nonatomic) DayColor color;
 @property (strong, nonatomic) NSString *lessonType;

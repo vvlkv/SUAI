@@ -80,23 +80,20 @@
             NSArray *pairContents = [text componentsSeparatedByString:@" – "];
             pair.auditory = [[SUAIAuditory alloc] initWithString:pairContents.lastObject];
             pair.name = pairContents[1];
-            pair.lessonType = pairContents[0];
+            pair.lessonType = [[pairContents[0] componentsSeparatedByString:@" "] lastObject];
         }
         if ([el.tagName isEqualToString:@"div"]) {
             HTMLElement *prep = [el querySelector:@".preps"];
-            pair.teacherName = [self teacherFromElement:prep];
+            pair.teachers = [self contentsFromElement:prep];
             HTMLElement *groups = [el querySelector:@".groups"];
-            pair.groups = [self groupsFromElement:groups];
+            pair.groups = [self contentsFromElement:groups];
         }
     }
 }
 
-+ (NSString *)teacherFromElement:(HTMLElement *)element {
-    return [[element.textContent componentsSeparatedByString:@": "] lastObject];
-}
-
-+ (NSArray<NSString *> *)groupsFromElement:(HTMLElement *)element {
-    return [[[element.textContent componentsSeparatedByString:@": "] lastObject] componentsSeparatedByString:@", "];
++ (NSArray<NSString *> *)contentsFromElement:(HTMLElement *)element {
+    return [[[[element.textContent componentsSeparatedByString:@": "] lastObject] stringByReplacingOccurrencesOfString:@";"
+                                                                                                            withString:@""] componentsSeparatedByString:@", "];
 }
 
 @end

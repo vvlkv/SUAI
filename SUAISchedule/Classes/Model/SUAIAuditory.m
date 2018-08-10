@@ -22,7 +22,7 @@
         } else {
             _building = Undefined;
             _number = nil;
-            _fullDescription = nil;
+            _fullDescription = @"";
         }
     }
     return self;

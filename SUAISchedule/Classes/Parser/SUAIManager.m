@@ -61,10 +61,10 @@
     
     if (semesterId != nil) {
         [SUAILoader loadScheduleOfType:ScheduleSemester entity:entity entityId:semesterId success:^(NSData *data) {
-            weakSched.session = [SUAIParser scheduleFromData:data];
+            weakSched.semester = [SUAIParser scheduleFromData:data];
             if (sessionId != nil) {
                 [SUAILoader loadScheduleOfType:ScheduleSession entity:entity entityId:sessionId success:^(NSData *data) {
-                    weakSched.semester = [SUAIParser scheduleFromData:data];
+                    weakSched.session = [SUAIParser scheduleFromData:data];
                     schedule(sched);
                 } fail:^(NSString *fail) {
                     NSLog(@"%@", fail);
@@ -79,6 +79,16 @@
     } else {
         NSLog(@"FAIL");
     }
+}
+
+- (NSArray <NSString *> *)groups {
+    NSDictionary *groupsDict = semesterCodes[[NSString convertToString:EntityGroup]];
+    return [[groupsDict allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+}
+
+- (NSArray <NSString *> *)teachers {
+    NSDictionary *teachersDict = semesterCodes[[NSString convertToString:EntityTeacher]];
+    return [[teachersDict allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
 }
 
 - (void)setStatus:(Status)status {

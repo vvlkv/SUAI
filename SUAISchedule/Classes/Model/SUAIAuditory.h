@@ -19,9 +19,9 @@ typedef NS_ENUM(NSUInteger, Building) {
 
 @interface SUAIAuditory : NSObject
 
-@property (assign, nonatomic, readonly) NSString *number;
+@property (strong, nonatomic, readonly) NSString *number;
 @property (assign, nonatomic, readonly) Building building;
-@property (assign, nonatomic, readonly) NSString *fullDescription;
+@property (strong, nonatomic, readonly) NSString *fullDescription;
 
 - (instancetype)initWithString:(NSString *)str;
 

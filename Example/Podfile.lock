@@ -15,7 +15,7 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - HTMLKit (2.1.5)
-  - SUAISchedule (0.1.0):
+  - SUAISchedule (0.1.2):
     - AFNetworking
     - HTMLKit
 
@@ -36,7 +36,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   HTMLKit: 91dbd983c94f264c6ddea27d317f5a66368dd20b
-  SUAISchedule: 7f5c50f037178b707bac3226719ca5937a555a34
+  SUAISchedule: 653b6b0a0d17fad2c204f4a72a57c14d07d87ded
 
 PODFILE CHECKSUM: 8b2fa95402986468b1dcf06213bdc2f5d3279397
 

@@ -25,6 +25,9 @@ typedef enum Status {
 @interface SUAIManager : NSObject
 
 @property (assign, nonatomic, readonly) Status status;
+@property (strong, nonatomic, readonly) NSArray <NSString *> *groups;
+@property (strong, nonatomic, readonly) NSArray <NSString *> *teachers;
+
 @property (weak, nonatomic) id <SUAIScheduleDelegate> delegate;
 
 + (instancetype)instance;
@@ -33,4 +36,5 @@ typedef enum Status {
            ofEntityType:(Entity)entity
                 success:(void (^) (SUAISchedule *schedule))schedule
                    fail:(void (^) (NSString *fail))fail;
+
 @end

@@ -1,6 +1,6 @@
 {
   "name": "SUAISchedule",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "summary": "Library for working with SUAI schedule",
   "description": "SUAISchedule is a lightweight and simple library for loading and parsing schedule for students and teachers studying in Saint Petersburg State Unversity of Aerospace Instrumentation. It includes both session and semester schedule.",
   "homepage": "https://github.com/vvlkv/SUAISchedule",
@@ -9,14 +9,14 @@
     "file": "LICENSE"
   },
   "authors": {
-    "vvlkv": "v.v.alexeevich.95@gmail.com"
+    "Victor Volkov": "vvlkv@icloud.com"
   },
   "source": {
     "git": "https://github.com/vvlkv/SUAISchedule.git",
-    "tag": "0.1.0"
+    "tag": "0.1.2"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
   "source_files": "SUAISchedule/Classes/**/*",
   "dependencies": {
