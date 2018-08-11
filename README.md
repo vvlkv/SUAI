@@ -33,8 +33,8 @@ Where Status is a structure which means current status of SUAIManager:
 Full description of Status below:
 ```Objective-C
 typedef enum Status {
-Ready,
-Refused
+    Ready,
+    Refused
 }Status;
 ```
 ### Step by step
@@ -49,9 +49,9 @@ Refused
 3. Use method:
 ```Objective-C
 - (void)loadScheduleFor:(NSString *)identificator
-ofEntityType:(Entity)entity
-success:(void (^) (SUAISchedule *schedule))schedule
-fail:(void (^) (NSString *fail))fail;
+           ofEntityType:(Entity)entity
+                success:(void (^) (SUAISchedule *schedule))schedule
+                   fail:(void (^) (NSString *fail))fail;
 ```
 For getting schedule for teacher or group passed in first argument (for example, 1740M). Also you need to pass entity. In next releases may be entity will be deprecated.
 
