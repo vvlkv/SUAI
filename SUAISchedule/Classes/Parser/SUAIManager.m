@@ -34,7 +34,7 @@
 {
     self = [super init];
     if (self) {
-        _status = Refused;
+        _status = Error;
         [self prepare];
     }
     return self;
@@ -103,7 +103,7 @@
         semesterCodes = codes;
     }
     if (semesterCodes != nil && sessionCodes != nil) {
-        self.status = Ready;
+        self.status = Ok;
     }
 }
 

@@ -10,8 +10,8 @@
 #import "Enums.h"
 
 typedef enum Status {
-    Ready,
-    Refused
+    Ok,
+    Error
 }Status;
 
 @class SUAISchedule;
