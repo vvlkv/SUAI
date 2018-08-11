@@ -16,6 +16,7 @@ typedef enum Status {
 
 @class SUAISchedule;
 @class SUAIEntity;
+
 @protocol SUAIScheduleDelegate <NSObject>
 @required
 - (void)didChangeStatus:(Status)status;
