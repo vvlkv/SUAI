@@ -21,7 +21,7 @@ pod 'SUAISchedule'
 ```
 ## Usage
 
-Library contains SUAIManager class, which is a singleton, it means that during all program you will have only one instance of this class (it's necessary to load entity codes once and store it in instance).
+Library contains SUAIManager class, which is a singleton, it means that during all program execution you will have only one instance of this class (it's necessary to load entity codes once and store it in instance).
 
 SUAIManager have one delegate method:
 ```Objective-C
@@ -43,7 +43,7 @@ typedef enum Status {
 ```Objective-C
 #import "SUAIManager.h"
 ```
-2. Set delegate if you want to obtain status of SUAIManager and of couse implement method in class:
+2. Set delegate if you want to obtain status of SUAIManager and of course implement method in class:
 ```Objective-C
 [SUAIManager instance].delegate = self;
 ```

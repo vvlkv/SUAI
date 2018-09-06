@@ -21,7 +21,7 @@
             _fullDescription = str;
         } else {
             _building = Undefined;
-            _number = nil;
+            _number = @"";
             _fullDescription = @"";
         }
     }
