@@ -134,7 +134,7 @@ typedef NSString*(*clr_func)(id, SEL);
             weakSched.semester = [SUAIParser scheduleFromData:data];
             dispatch_group_leave(group);
         } fail:^(NSString *fail) {
-            NSLog(@"ERROR1");
+            //TODO
             dispatch_group_leave(group);
         }];
     });
@@ -145,7 +145,7 @@ typedef NSString*(*clr_func)(id, SEL);
             weakSched.session = [SUAIParser scheduleFromData:data];
             dispatch_group_leave(group);
         } fail:^(NSString *fail) {
-            NSLog(@"ERROR2");
+            //TODO
             dispatch_group_leave(group);
         }];
     });

@@ -407,7 +407,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0A37DF667D475F852FBECD086B454AFE /* SUAISchedule */ = {
+		0A37DF667D475F852FBECD086B454AFE /* SUAI */ = {
 			isa = PBXGroup;
 			children = (
 				964F2C42FD1FC48A0F8AD9401CEA9476 /* Headers */,
@@ -418,7 +418,7 @@
 				C0E4400D37D6A2DE3FEB68447D983D82 /* Support Files */,
 				34B45BF50C668DC6C582B567FC5E500C /* Categories */,
 			);
-			name = SUAISchedule;
+			name = SUAI;
 			path = ../..;
 			sourceTree = "<group>";
 		};
@@ -740,7 +740,7 @@
 		D60452976E0886C8F75EACB1CC0BD2E8 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0A37DF667D475F852FBECD086B454AFE /* SUAISchedule */,
+				0A37DF667D475F852FBECD086B454AFE /* SUAI */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";

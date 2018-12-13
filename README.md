@@ -1,11 +1,11 @@
-# SUAISchedule
+# SUAI
 
 [![CI Status](https://img.shields.io/travis/vvlkv/SUAISchedule.svg?style=flat)](https://travis-ci.org/vvlkv/SUAISchedule)
 [![Version](https://img.shields.io/cocoapods/v/SUAISchedule.svg?style=flat)](https://cocoapods.org/pods/SUAISchedule)
 [![License](https://img.shields.io/cocoapods/l/SUAISchedule.svg?style=flat)](https://cocoapods.org/pods/SUAISchedule)
 [![Platform](https://img.shields.io/cocoapods/p/SUAISchedule.svg?style=flat)](https://cocoapods.org/pods/SUAISchedule)
 ###
-SUAISchedule is a lightweight and very simple library for load schedule of groups or teachers studying in [Saint Petersburg State University of Aerospace Instrumentation](http://suai.ru).
+SUAI is a lightweight and very simple library for load schedule of groups or teachers studying in [Saint Petersburg State University of Aerospace Instrumentation](http://suai.ru).
 Current version is beta, it doesn't obtain status of internet connection and not return adequate error codes.
 
 ## Example

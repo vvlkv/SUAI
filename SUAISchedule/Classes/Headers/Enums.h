@@ -17,7 +17,7 @@ typedef enum Schedule {
 typedef NS_ENUM(NSUInteger, Entity) {
     Group,
     Teacher,
-    Auditory,
+    Auditory
 };
 
 #endif /* Enums_h */

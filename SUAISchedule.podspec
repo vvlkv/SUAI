@@ -7,9 +7,9 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'SUAISchedule'
+  s.name             = 'SUAI'
   s.version          = '0.1.5'
-  s.summary          = 'Library for working with SUAI schedule'
+  s.summary          = 'Library for working with SUAI content'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,22 +21,17 @@ Pod::Spec.new do |s|
 SUAISchedule is a lightweight and simple library for loading and parsing schedule for students and teachers studying in Saint Petersburg State Unversity of Aerospace Instrumentation. It includes both session and semester schedule.
                        DESC
 
-  s.homepage         = 'https://github.com/vvlkv/SUAISchedule'
+  s.homepage         = 'https://github.com/vvlkv/SUAI'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Victor Volkov' => 'vvlkv@icloud.com' }
-  s.source           = { :git => 'https://github.com/vvlkv/SUAISchedule.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/vvlkv/SUAI.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'SUAISchedule/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'SUAISchedule' => ['SUAISchedule/Assets/*.png']
-  # }
+  s.source_files = 'SUAI/Classes/**/*'
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
   s.dependency 'HTMLKit'
 end
