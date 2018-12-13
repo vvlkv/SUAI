@@ -26,15 +26,15 @@ typedef enum Status {
 @interface SUAIManager : NSObject
 
 @property (assign, nonatomic, readonly) Status status;
-@property (strong, nonatomic, readonly) NSArray <NSString *> *groups;
-@property (strong, nonatomic, readonly) NSArray <NSString *> *teachers;
+@property (strong, nonatomic, readonly) NSArray <SUAIEntity *> *groups;
+@property (strong, nonatomic, readonly) NSArray <SUAIEntity *> *teachers;
+@property (strong, nonatomic, readonly) NSArray <SUAIEntity *> *auditories;
 
 @property (weak, nonatomic) id <SUAIScheduleDelegate> delegate;
 
 + (instancetype)instance;
 
-- (void)loadScheduleFor:(NSString *)identificator
-           ofEntityType:(Entity)entity
+- (void)loadScheduleFor:(SUAIEntity *)entity
                 success:(void (^) (SUAISchedule *schedule))schedule
                    fail:(void (^) (NSString *fail))fail;
 

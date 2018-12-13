@@ -20,16 +20,19 @@
     NSMutableDictionary *contents = [[NSMutableDictionary alloc] init];
     
     NSString *dataString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSArray <NSNumber *> *descriptors = @[[NSNumber numberWithInteger:Group],
+                                        [NSNumber numberWithInteger:Teacher],
+                                        [NSNumber numberWithInteger:Auditory]];
     HTMLDocument *document = [HTMLDocument documentWithString:dataString];
     NSArray *rasp = [document querySelectorAll:@".rasp"];
-    NSArray<NSString *> *descriptors = @[[NSString convertToString:EntityGroup],
-                                         [NSString convertToString:EntityTeacher],
-                                         @"Auditories"];
+    
     for (HTMLElement *element in rasp) {
         NSArray *spans = [element querySelectorAll:@"span"];
+        
         for (HTMLElement *span in spans) {
             NSArray *options = [span querySelectorAll:@"option"];
             NSMutableDictionary *codes = [NSMutableDictionary dictionary];
+            
             for (HTMLElement *option in options) {
                 HTMLNode *firstChild = [option firstChild];
                 if (firstChild != nil && firstChild.textContent != nil)
@@ -45,6 +48,8 @@
 }
 
 + (NSArray *)scheduleFromData:(NSData *)data {
+    if (data == nil)
+        return [NSArray array];
     NSString *dataString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     HTMLDocument *document = [HTMLDocument documentWithString:dataString];
     
@@ -54,11 +59,15 @@
     SUAIPair *pair;
     for (HTMLElement *element in rasp) {
         for (HTMLElement *child in element.childNodes) {
+            if ([child isMemberOfClass:[HTMLText class]])
+                continue;
             if ([child.tagName isEqualToString:@"h3"]) {
                 if ([pairs count] > 0) {
                     if (child.textContent != nil)
-                        [days addObject:[[SUAIDay alloc] initWithDay:child.textContent andPairs:pairs]];
+                        [days addObject:[[SUAIDay alloc] initWithDay:child.textContent
+                                                            andPairs:pairs]];
                     [pairs removeAllObjects];
+                    days = pairs;//??
                 }
             }
             if ([child.tagName isEqualToString:@"h4"]) {

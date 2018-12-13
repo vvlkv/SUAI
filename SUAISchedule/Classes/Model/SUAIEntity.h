@@ -7,18 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Enums.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SUAIEntity : NSObject
 
-@property (strong, nonatomic, readonly) NSString *name;
-@property (strong, nonatomic, readonly) NSString *sessionCode;
-@property (strong, nonatomic, readonly) NSString *semesterCode;
+@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *sessionCode;
+@property (strong, nonatomic) NSString *semesterCode;
+@property (assign, nonatomic) Entity type;
 
 - (instancetype)initWithName:(NSString *)name
                  sessionCode:(NSString *)sessionCode
-             andSemesterCode:(NSString *)semesterCode;
+                semesterCode:(NSString *)semesterCode
+                        type:(Entity)type;
+
 
 @end
 

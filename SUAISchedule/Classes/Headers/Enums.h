@@ -10,13 +10,14 @@
 #define Enums_h
 
 typedef enum Schedule {
-    ScheduleSession,
-    ScheduleSemester
+    Session,
+    Semester
 }Schedule;
 
-typedef enum Entity {
-    EntityGroup,
-    EntityTeacher
-} Entity;
+typedef NS_ENUM(NSUInteger, Entity) {
+    Group,
+    Teacher,
+    Auditory,
+};
 
 #endif /* Enums_h */

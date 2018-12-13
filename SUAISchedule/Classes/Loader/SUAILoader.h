@@ -9,11 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "Enums.h"
 
+@class SUAIEntity;
 @interface SUAILoader : NSObject
 
-+ (void)loadGroupsWithType:(Schedule)scheduleType
-                success:(void (^) (NSData *data))success
-                   fail:(void (^) (NSString *fail))fail;
++ (void)loadCodesWithSuccess:(void (^) (NSArray<NSData *> *data))success
+                        fail:(void (^) (NSString *fail))fail;
+
 
 + (void)loadScheduleOfType:(Schedule)scheduleType
                     entity:(Entity)entityType
@@ -21,4 +22,10 @@
                    success:(void (^) (NSData *data))success
                       fail:(void (^) (NSString *fail))fail;
 
++ (void)loadScheduleOfType:(Schedule)scheduleType
+                       for:(SUAIEntity *)entity
+                   success:(void (^) (NSData *data))success
+                      fail:(void (^) (NSString *fail))fail;
+
 @end
+

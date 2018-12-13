@@ -26,7 +26,6 @@ SUAISchedule is a lightweight and simple library for loading and parsing schedul
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Victor Volkov' => 'vvlkv@icloud.com' }
   s.source           = { :git => 'https://github.com/vvlkv/SUAISchedule.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
 
@@ -39,6 +38,5 @@ SUAISchedule is a lightweight and simple library for loading and parsing schedul
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
-  s.dependency 'AFNetworking'
   s.dependency 'HTMLKit'
 end

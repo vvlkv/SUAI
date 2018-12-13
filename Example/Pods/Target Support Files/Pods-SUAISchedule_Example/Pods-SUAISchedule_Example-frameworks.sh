@@ -143,12 +143,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/HTMLKit/HTMLKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SUAISchedule/SUAISchedule.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/HTMLKit/HTMLKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SUAISchedule/SUAISchedule.framework"
 fi

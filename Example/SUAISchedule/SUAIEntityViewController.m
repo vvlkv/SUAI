@@ -67,7 +67,7 @@
 - (void)didChangeStatus:(Status)status {
     [_indicator stopAnimating];
     _entitiesTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-    [self changeVisibleEntities:EntityGroup];
+    [self changeVisibleEntities:Group];
 }
 
 - (void)didChangeEntityType:(UISegmentedControl *)sender {
@@ -75,7 +75,12 @@
 }
 
 - (void)changeVisibleEntities:(Entity)type {
-    _entityNames = type == EntityGroup ? [SUAIManager instance].groups : [SUAIManager instance].teachers;
+    SUAIEntity *entity = [SUAIManager instance].teachers[69];
+    [[SUAIManager instance] loadScheduleFor:entity success:^(SUAISchedule *schedule) {
+        NSLog(@"%@", schedule);
+    } fail:^(NSString *fail) {
+        NSLog(@"%@", fail);
+    }];
     [_entitiesTableView reloadData];
 }
 

@@ -12,10 +12,10 @@
 
 + (NSString *)convertToString:(Entity)entity {
     switch (entity) {
-        case EntityGroup:
+        case Group:
             return @"Group";
             break;
-        case EntityTeacher:
+        case Teacher:
             return @"Teacher";
         default:
             return nil;
@@ -25,10 +25,10 @@
 
 + (Entity)convertToEntity:(NSString *)entity {
     if ([entity isEqualToString:@"Group"]) {
-        return EntityGroup;
+        return Group;
     }
     if ([entity isEqualToString:@"Teacher"]) {
-        return EntityTeacher;
+        return Teacher;
     }
     return 0;
 }
