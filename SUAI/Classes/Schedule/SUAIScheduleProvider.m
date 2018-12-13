@@ -60,25 +60,25 @@ typedef NSString*(*clr_func)(id, SEL);
 
 - (void)saveCodes:(NSArray<NSData *> *)data {
     
-    let *sessionCodes = [SUAIParser codesFromData:data[0]];
-    let *semesterCodes = [SUAIParser codesFromData:data[1]];
+    NSDictionary *sessionCodes = [SUAIParser codesFromData:data[0]];
+    NSDictionary *semesterCodes = [SUAIParser codesFromData:data[1]];
     
-    let *descriptors = @[[NSNumber numberWithInteger:Group],
+    NSArray *descriptors = @[[NSNumber numberWithInteger:Group],
                          [NSNumber numberWithInteger:Teacher],
                          [NSNumber numberWithInteger:Auditory]];
     
-    let *entities = @[_groups, _teachers, _auditories];
+    NSArray *entities = @[_groups, _teachers, _auditories];
     
-    let *clearMethods = @[NSStringFromSelector(@selector(refactoredGroup)),
+    NSArray *clearMethods = @[NSStringFromSelector(@selector(refactoredGroup)),
                           NSStringFromSelector(@selector(refactoredTeacher)),
                           NSStringFromSelector(@selector(refactoredAuditory))];
     
     for (NSNumber *descriptor in descriptors) {
-        var *entityDictionary = [NSMutableDictionary dictionary];
+        NSMutableDictionary *entityDictionary = [NSMutableDictionary dictionary];
         NSDictionary *semesterDict = [semesterCodes objectForKey:descriptor];
         NSDictionary *sessionDict = [sessionCodes objectForKey:descriptor];
 
-        let index = [descriptors indexOfObject:descriptor];
+        NSUInteger index = [descriptors indexOfObject:descriptor];
 
         SEL clearMethod = NSSelectorFromString(clearMethods[index]);
         //REFACTOR IT
@@ -121,7 +121,7 @@ typedef NSString*(*clr_func)(id, SEL);
                 success:(void (^) (SUAISchedule *schedule))schedule
                    fail:(void (^) (NSString *fail))fail {
     
-    var *sched = [[SUAISchedule alloc] initWithName:[entity name]];
+    SUAISchedule *sched = [[SUAISchedule alloc] initWithName:[entity name]];
     __weak SUAISchedule *weakSched = sched;
 
     [SUAILoader loadSchedulesWithSemesterCode:[entity semesterCode] sessionCode:[entity sessionCode] entityType:[entity type] success:^(NSArray<NSData *> *data) {

@@ -22,7 +22,6 @@ SUAISchedule is a lightweight and simple library for loading and parsing schedul
                        DESC
 
   s.homepage         = 'https://github.com/vvlkv/SUAI'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Victor Volkov' => 'vvlkv@icloud.com' }
   s.source           = { :git => 'https://github.com/vvlkv/SUAI.git', :tag => s.version.to_s }

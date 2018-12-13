@@ -417,8 +417,7 @@
 				AC01213FF08DC3DCD207840F658B7FE7 /* SUAIParser.h */,
 				7B19047C42097AF3D1BB64988908B68A /* SUAIParser.m */,
 			);
-			name = Parser;
-			path = SUAI/Classes/Parser;
+			path = Parser;
 			sourceTree = "<group>";
 		};
 		128F2F9DE4FBCF673388045B9C48E3E9 /* Support Files */ = {
@@ -449,8 +448,7 @@
 				87F5527D981333DF6DC60BDE6B399B43 /* Enums.h */,
 				1DE2BE8905D33D72F9A4391268094192 /* Links.h */,
 			);
-			name = Headers;
-			path = SUAI/Classes/Headers;
+			path = Headers;
 			sourceTree = "<group>";
 		};
 		38287D59366B5BD1C6B3A0005A96ED17 /* Model */ = {
@@ -500,8 +498,7 @@
 				2681BF0C6BAA47F7FD91C1FFACADEC8B /* NSString+NameFormation.h */,
 				2A98DFD41D2419AEB84B1F548950DC19 /* NSString+NameFormation.m */,
 			);
-			name = Categories;
-			path = SUAI/Classes/Categories;
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		450D13C937B4D50B36748799E3199AB2 /* Frameworks */ = {
@@ -538,14 +535,29 @@
 			path = News;
 			sourceTree = "<group>";
 		};
+		550E809C21C3032B00A50DF9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				550E809421C2F0B600A50DF9 /* SUAI.h */,
+				550E809521C2F0B600A50DF9 /* SUAI.m */,
+				550E809321C2F07200A50DF9 /* News */,
+				550E809221C2F05100A50DF9 /* Schedule */,
+				3FB5E4848B8D4CA9EE67DAFD856F432D /* Categories */,
+				380857E5A7F92F9E63644FADF5585709 /* Headers */,
+				5CCD46B52C688C81B8FC3E65FF6ACB74 /* Loader */,
+				06B9F48A5E4DDF249A616CA781B95097 /* Parser */,
+			);
+			name = Classes;
+			path = SUAI/Classes;
+			sourceTree = "<group>";
+		};
 		5CCD46B52C688C81B8FC3E65FF6ACB74 /* Loader */ = {
 			isa = PBXGroup;
 			children = (
 				51E96EA2A72A4821E3254140A5A69823 /* SUAILoader.h */,
 				E65AF9C50B18B4B19D30589B7D593FAA /* SUAILoader.m */,
 			);
-			name = Loader;
-			path = SUAI/Classes/Loader;
+			path = Loader;
 			sourceTree = "<group>";
 		};
 		797559370B44C5D42F24F3F6B24915C8 /* Pod */ = {
@@ -740,14 +752,7 @@
 		DB86C0E7D503E5F0B2036B4595C092EA /* SUAI */ = {
 			isa = PBXGroup;
 			children = (
-				550E809421C2F0B600A50DF9 /* SUAI.h */,
-				550E809521C2F0B600A50DF9 /* SUAI.m */,
-				550E809321C2F07200A50DF9 /* News */,
-				550E809221C2F05100A50DF9 /* Schedule */,
-				3FB5E4848B8D4CA9EE67DAFD856F432D /* Categories */,
-				380857E5A7F92F9E63644FADF5585709 /* Headers */,
-				5CCD46B52C688C81B8FC3E65FF6ACB74 /* Loader */,
-				06B9F48A5E4DDF249A616CA781B95097 /* Parser */,
+				550E809C21C3032B00A50DF9 /* Classes */,
 				797559370B44C5D42F24F3F6B24915C8 /* Pod */,
 				3BD6FEBEF073A353BC1099457D5CA2F9 /* Support Files */,
 			);
@@ -1253,8 +1258,6 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
-					"var=\"__auto_type\"",
-					"let=\"__auto_type const\"",
 				);
 				INFOPLIST_FILE = "Target Support Files/SUAI/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1385,8 +1388,6 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
-					"var=\"__auto_type\"",
-					"let=\"__auto_type const\"",
 				);
 				INFOPLIST_FILE = "Target Support Files/SUAI/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";

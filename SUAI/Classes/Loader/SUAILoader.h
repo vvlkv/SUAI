@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "Enums.h"
 
-@class SUAIEntity;
 @interface SUAILoader : NSObject
 
 + (void)loadCodesWithSuccess:(void (^) (NSArray<NSData *> *data))success

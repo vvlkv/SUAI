@@ -8,7 +8,6 @@
 
 #import "SUAILoader.h"
 #import "Links.h"
-#import "SUAIEntity.h"
 
 @implementation SUAILoader
 
@@ -16,11 +15,11 @@
                         fail:(void (^) (NSString *fail))fail {
     
     NSMutableArray<NSData *> *codes = [NSMutableArray arrayWithObjects:[NSData data], [NSData data], nil];
-    let sessionUrl = [NSURL URLWithString:sessionLink];
-    let semesterUrl = [NSURL URLWithString:semesterLink];
+    NSURL *sessionUrl = [NSURL URLWithString:sessionLink];
+    NSURL *semesterUrl = [NSURL URLWithString:semesterLink];
     
-    let group = dispatch_group_create();
-    let queue = dispatch_queue_create("codes load", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_queue_t queue = dispatch_queue_create("codes load", DISPATCH_QUEUE_CONCURRENT);
     
     __weak typeof(codes) weakCodes = codes;
     
@@ -85,8 +84,8 @@
                            entityType:(Entity)type
                               success:(void (^) (NSArray<NSData *> *data))success
                                  fail:(void (^) (NSString *fail))fail {
-    var *semesterUrl = [NSMutableString stringWithString:semesterLink];
-    var *sessionUrl = [NSMutableString stringWithFormat:@"%@", sessionLink];
+    NSMutableString *semesterUrl = [NSMutableString stringWithString:semesterLink];
+    NSMutableString *sessionUrl = [NSMutableString stringWithFormat:@"%@", sessionLink];
     
     NSString *placeholder;
     
@@ -106,8 +105,8 @@
     [semesterUrl appendFormat:placeholder, semCode];
     [sessionUrl appendFormat:placeholder, sesCode];
     
-    let group = dispatch_group_create();
-    let queue = dispatch_queue_create("loading schedule", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_queue_t queue = dispatch_queue_create("loading schedule", DISPATCH_QUEUE_CONCURRENT);
     
     NSMutableArray<NSData *> *schedules = [NSMutableArray arrayWithObjects:[NSData data], [NSData data], nil];
     dispatch_group_async(group, queue, ^{
@@ -135,44 +134,6 @@
             success(schedules);
         });
     });
-}
-
-+ (void)loadScheduleOfType:(Schedule)scheduleType
-                       for:(SUAIEntity *)entity
-                   success:(void (^) (NSData *data))success
-                      fail:(void (^) (NSString *fail))fail {
-    
-    NSMutableString *url = [[NSMutableString alloc] init];
-    NSString *identificator = nil;
-    
-    if (scheduleType == Session) {
-        [url appendString:sessionLink];
-        identificator = [entity sessionCode];
-    } else {
-        [url appendString:semesterLink];
-        identificator = [entity semesterCode];
-    }
-    
-    if (identificator == nil) {
-        success(nil);
-        return;
-    }
-    
-    switch ([entity type]) {
-            case Group:
-            [url appendFormat:@"/?g=%@", identificator];
-            break;
-            case Teacher:
-            [url appendFormat:@"/?p=%@", identificator];
-            break;
-            case Auditory:
-            [url appendFormat:@"/?r=%@", identificator];
-        default:
-            break;
-    }
-    [SUAILoader performRequestWithUrl:[NSURL URLWithString:url]
-                              success:success
-                                 fail:fail];
 }
 
 + (void)performRequestWithUrl:(NSURL *)url
