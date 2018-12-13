@@ -17,8 +17,6 @@
 typedef NSString*(*clr_func)(id, SEL);
 
 @interface SUAIManager() {
-//    __block NSDictionary *semesterCodes;
-//    __block NSDictionary *sessionCodes;
     NSMutableArray <SUAIEntity *> *_groups;
     NSMutableArray <SUAIEntity *> *_teachers;
     NSMutableArray <SUAIEntity *> *_auditories;
@@ -124,36 +122,14 @@ typedef NSString*(*clr_func)(id, SEL);
     
     var *sched = [[SUAISchedule alloc] initWithName:[entity name]];
     __weak SUAISchedule *weakSched = sched;
-    
-    let group = dispatch_group_create();
-    let queue = dispatch_queue_create("load sched", DISPATCH_QUEUE_CONCURRENT);
-    
-    dispatch_group_async(group, queue, ^{
-        dispatch_group_enter(group);
-        [SUAILoader loadScheduleOfType:Semester for:entity success:^(NSData *data) {
-            weakSched.semester = [SUAIParser scheduleFromData:data];
-            dispatch_group_leave(group);
-        } fail:^(NSString *fail) {
-            //TODO
-            dispatch_group_leave(group);
-        }];
-    });
-    dispatch_group_async(group, queue, ^{
-        dispatch_group_enter(group);
-        [SUAILoader loadScheduleOfType:Session for:entity success:^(NSData *data) {
-            NSLog(@"%@", [SUAIParser scheduleFromData:data]);
-            weakSched.session = [SUAIParser scheduleFromData:data];
-            dispatch_group_leave(group);
-        } fail:^(NSString *fail) {
-            //TODO
-            dispatch_group_leave(group);
-        }];
-    });
-    dispatch_group_notify(group, queue, ^{
-        dispatch_async(dispatch_get_main_queue(), ^{
-            schedule(sched);
-        });
-    });
+
+    [SUAILoader loadSchedulesWithSemesterCode:[entity semesterCode] sessionCode:[entity sessionCode] entityType:[entity type] success:^(NSArray<NSData *> *data) {
+        weakSched.semester = [SUAIParser scheduleFromData:data[0]];
+        weakSched.session = [SUAIParser scheduleFromData:data[1]];
+        schedule(sched);
+    } fail:^(NSString *fail) {
+        //TODO
+    }];
 }
 
 - (NSArray <SUAIEntity *> *)groups {
@@ -170,9 +146,7 @@ typedef NSString*(*clr_func)(id, SEL);
 
 - (void)setStatus:(Status)status {
     _status = status;
-    [self.delegate didChangeStatus:self->_status];
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//    });
+    [self.delegate didChangeStatus:_status];
 }
 
 @end

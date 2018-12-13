@@ -15,7 +15,7 @@
 + (void)loadCodesWithSuccess:(void (^) (NSArray<NSData *> *data))success
                         fail:(void (^) (NSString *fail))fail {
     
-    NSMutableArray<NSData *> *codes = [NSMutableArray arrayWithCapacity:2];
+    NSMutableArray<NSData *> *codes = [NSMutableArray arrayWithObjects:[NSData data], [NSData data], nil];
     let sessionUrl = [NSURL URLWithString:sessionLink];
     let semesterUrl = [NSURL URLWithString:semesterLink];
     
@@ -43,7 +43,6 @@
         }];
     });
     dispatch_group_notify(group, queue, ^{
-        //Обработка запроса
         dispatch_async(dispatch_get_main_queue(), ^{
             success(codes);
         });
@@ -79,6 +78,63 @@
     [SUAILoader performRequestWithUrl:[NSURL URLWithString:url]
                               success:success
                                  fail:fail];
+}
+
++ (void)loadSchedulesWithSemesterCode:(NSString *)semCode
+                          sessionCode:(NSString *)sesCode
+                           entityType:(Entity)type
+                              success:(void (^) (NSArray<NSData *> *data))success
+                                 fail:(void (^) (NSString *fail))fail {
+    var *semesterUrl = [NSMutableString stringWithString:semesterLink];
+    var *sessionUrl = [NSMutableString stringWithFormat:@"%@", sessionLink];
+    
+    NSString *placeholder;
+    
+    switch (type) {
+        case Group:
+            placeholder = @"/?g=%@";
+            break;
+        case Teacher:
+            placeholder = @"/?p=%@";
+            break;
+        case Auditory:
+            placeholder = @"/?r=%@";
+            break;
+        default:
+            break;
+    }
+    [semesterUrl appendFormat:placeholder, semCode];
+    [sessionUrl appendFormat:placeholder, sesCode];
+    
+    let group = dispatch_group_create();
+    let queue = dispatch_queue_create("loading schedule", DISPATCH_QUEUE_CONCURRENT);
+    
+    NSMutableArray<NSData *> *schedules = [NSMutableArray arrayWithObjects:[NSData data], [NSData data], nil];
+    dispatch_group_async(group, queue, ^{
+        dispatch_group_enter(group);
+        [SUAILoader performRequestWithUrl:[NSURL URLWithString:semesterUrl] inQueue:queue success:^(NSData *data) {
+            schedules[0] = data;
+            dispatch_group_leave(group);
+        } fail:^(NSString *description) {
+            //TODO
+            dispatch_group_leave(group);
+        }];
+    });
+    dispatch_group_async(group, queue, ^{
+        dispatch_group_enter(group);
+        [SUAILoader performRequestWithUrl:[NSURL URLWithString:sessionUrl] inQueue:queue success:^(NSData *data) {
+            schedules[1] = data;
+            dispatch_group_leave(group);
+        } fail:^(NSString *description) {
+            //TODO
+            dispatch_group_leave(group);
+        }];
+    });
+    dispatch_group_notify(group, queue, ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            success(schedules);
+        });
+    });
 }
 
 + (void)loadScheduleOfType:(Schedule)scheduleType
