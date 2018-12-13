@@ -72,7 +72,7 @@
 		A571F5F34FC4C48DCB85EC55 /* Pods-SUAISchedule_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SUAISchedule_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SUAISchedule_Tests/Pods-SUAISchedule_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BC3751FF574420793B0CA47C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		DE651A51A85C2AF1ED5C125D /* Pods-SUAISchedule_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SUAISchedule_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SUAISchedule_Example/Pods-SUAISchedule_Example.release.xcconfig"; sourceTree = "<group>"; };
-		DFB514B89B98674B2D2D7935 /* SUAISchedule.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SUAISchedule.podspec; path = ../SUAISchedule.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		DFB514B89B98674B2D2D7935 /* SUAI.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SUAI.podspec; path = ../SUAI.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,7 +199,7 @@
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				DFB514B89B98674B2D2D7935 /* SUAISchedule.podspec */,
+				DFB514B89B98674B2D2D7935 /* SUAI.podspec */,
 				906E1C72F13805265F211FA5 /* README.md */,
 				BC3751FF574420793B0CA47C /* LICENSE */,
 			);
