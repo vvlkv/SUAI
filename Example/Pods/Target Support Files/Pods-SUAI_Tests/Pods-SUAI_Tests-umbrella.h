@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_SUAISchedule_ExampleVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_SUAISchedule_ExampleVersionString[];
+FOUNDATION_EXPORT double Pods_SUAI_TestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_SUAI_TestsVersionString[];
 

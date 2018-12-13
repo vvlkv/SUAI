@@ -1,11 +1,11 @@
 use_frameworks!
 platform :ios, '9.0'
 
-target 'SUAISchedule_Example' do
-  pod 'SUAISchedule', :path => '../'
+target 'SUAI_Example' do
+  pod 'SUAI', :path => '../'
   pod 'HTMLKit', :inhibit_warnings => true
   
-  target 'SUAISchedule_Tests' do
+  target 'SUAI_Tests' do
     inherit! :search_paths
     
   end

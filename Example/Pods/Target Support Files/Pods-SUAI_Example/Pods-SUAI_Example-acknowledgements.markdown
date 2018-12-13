@@ -26,7 +26,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-## SUAISchedule
+## SUAI
 
 Copyright (c) 2018 vvlkv <vvlkv@icloud.com>
 

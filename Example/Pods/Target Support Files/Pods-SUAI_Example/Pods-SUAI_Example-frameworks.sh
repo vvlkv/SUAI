@@ -144,11 +144,11 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/HTMLKit/HTMLKit.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/SUAISchedule/SUAISchedule.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SUAI/SUAI.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/HTMLKit/HTMLKit.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/SUAISchedule/SUAISchedule.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SUAI/SUAI.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

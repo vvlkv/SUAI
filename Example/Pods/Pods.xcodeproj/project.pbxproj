@@ -8,20 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		002AB6FC31178751DD4383A67B75D95E /* HTMLTreeWalker.m in Sources */ = {isa = PBXBuildFile; fileRef = A91C34D6411470CCDC31F53EF80E909C /* HTMLTreeWalker.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		02D49BCBB7BE24EEB1002B39C9830F00 /* Pods-SUAI_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D4BB261FF9413B02C41E4F058C3F9B35 /* Pods-SUAI_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03F9ED6006F1274DA84FD473C4E5F817 /* HTMLDocument+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = A560D5D6E9220C31B04438AC120804FC /* HTMLDocument+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		04400A0BD9F091AAB84AD41F03259101 /* NSString+Enums.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2C93CF1BA81641CDB3E2D8CA494D0F /* NSString+Enums.m */; };
+		04616E5816C008D0077333AFEC2BDC68 /* Pods-SUAI_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 666B888CB3F01F3DE265E40384FB5A47 /* Pods-SUAI_Example-dummy.m */; };
+		066BF6E748BE6C605F7A3E5E95B24DA2 /* SUAILoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 51E96EA2A72A4821E3254140A5A69823 /* SUAILoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		06DCED56DE057DAA6B4C0300991A6183 /* HTMLDocumentType.h in Headers */ = {isa = PBXBuildFile; fileRef = E67C9FB2C34789F8B353184B310E0072 /* HTMLDocumentType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0700243B30EEFDCFFEEBC79DA02D6528 /* HTMLRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFD3CF1C98AF08BDACB0FFF0A8DBC5E /* HTMLRange.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		07E5639C1B1FF1A5B9F0F708A3314D75 /* HTMLNodeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7E2A2D86E417119FEE8C72E970C576 /* HTMLNodeFilter.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		08811CEE21D0C3135D948F9F40FADF71 /* HTMLOrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = AE72E9405F4D76745AD33A35489CA636 /* HTMLOrderedDictionary.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		0923E334AC6A5140BF58E644D02A2DDD /* SUAIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CCAF9E1BA78078E9AB7E363359C936 /* SUAIManager.m */; };
 		0CECA05779F9E0373C2750E0AAF601D7 /* CSSPseudoClassSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0611228298BBF6978428F476D9AA3E /* CSSPseudoClassSelector.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		0F4B8767240F6B5EAA87654F2B552CE0 /* SUAILoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 96FF8485E244B4278CAD3CF51A0C2889 /* SUAILoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		11EE4E01BFDA327D29B171AFBC634E7F /* Enums.h in Headers */ = {isa = PBXBuildFile; fileRef = 664BDC9B1C8ED84C341337A1B799C6A7 /* Enums.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		12D248CC6DD5635DCCD92A565376B101 /* HTMLTokenizerStates.h in Headers */ = {isa = PBXBuildFile; fileRef = A654E07CF281B069F5A1E0BBC1DEB52B /* HTMLTokenizerStates.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		138A8CF6386AFB71214F4D2B278F48EB /* SUAISchedule.h in Headers */ = {isa = PBXBuildFile; fileRef = 976BB712FB8C87635C5698219AE3470D /* SUAISchedule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13B12ACCAA9A07CDE02637C10425DD9E /* CSSNthExpressionSelector.h in Headers */ = {isa = PBXBuildFile; fileRef = 625FF32DE21CF8C560CF3203950E3051 /* CSSNthExpressionSelector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1491187E44076B9847D57500233F9257 /* HTMLListOfActiveFormattingElements.h in Headers */ = {isa = PBXBuildFile; fileRef = 53A06FFAF0A6EB56B31C289EA18467FC /* HTMLListOfActiveFormattingElements.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		14F79DBDF0B6D296D8DE5481A0FC32B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED889963E13282F933B7131D9CD57F6 /* Foundation.framework */; };
 		1594A2F4C5062A92154124AB7B1509C7 /* NSString+HTMLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE65B09E8E66A10EF67BB6E2828DA7E /* NSString+HTMLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15F7E036F4B5CF6C067882D7AEE81D17 /* HTMLNodeIterator+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E3570FDCC6D89FB64DCA2408A39C325 /* HTMLNodeIterator+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		1BCC613A3BAD5C42DF6B617BC0A4A88E /* HTMLEOFToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 88C85A0C3CC4F78492DF823E1DE7DE35 /* HTMLEOFToken.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -29,42 +28,44 @@
 		210FB25A68E3501A484AA2B0DB8F678D /* CSSCompoundSelector.h in Headers */ = {isa = PBXBuildFile; fileRef = CB70A53FCD2E96E7F1D73796BDD37169 /* CSSCompoundSelector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21F07278665B71617EC5089F3BB053E5 /* HTMLTokenizerEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE1579D3630487D51C5AF0DCE7C4652 /* HTMLTokenizerEntities.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		23ECB8E58B5B767808BCEFFCF289B7A6 /* HTMLDOCTYPEToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 985E912EC9F300AA0EEEB4E4263E287C /* HTMLDOCTYPEToken.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		253065F1C2631D9C824206F0DE96E173 /* SUAIDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 6829DB75BE7B227383BE16CA84DBD345 /* SUAIDay.m */; };
-		269D4477051EF176C3E14CABA9A6495D /* Pods-SUAISchedule_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DE8C01A4BDB130E4A93684FAB8F5750 /* Pods-SUAISchedule_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		28F3893DC55FD846397FD88363611731 /* NSString+Enums.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AA43667A1E542BBF39D3A299C365386 /* NSString+Enums.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2AC8E1F5CC50431004010A65099FB092 /* HTMLDOMUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E064C2752826B10E74F0DEFDBBA8B942 /* HTMLDOMUtils.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2CC41783870B04BE7C39DCB1209AD9C8 /* SUAIEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F2DE214E2DB1BE41D8012FA7A5A157E7 /* SUAIEntity.m */; };
-		306239EA030D2EAF4A339979A487A997 /* SUAIAuditory.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DEDABCC33C5AD5207C4731750D669A4 /* SUAIAuditory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31C255A65B3F67463E0BAD910BEA46C1 /* SUAIPair.h in Headers */ = {isa = PBXBuildFile; fileRef = A84A1BC2D03C8F91CE9ABEB1CC29046B /* SUAIPair.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		320A1F72342D5138D4909F63FF94E8E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED889963E13282F933B7131D9CD57F6 /* Foundation.framework */; };
 		35FAA09F59F20A835F7040381CEDF065 /* HTMLCharacterData.h in Headers */ = {isa = PBXBuildFile; fileRef = B0A608092E390797ACF09399607B6C77 /* HTMLCharacterData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		363A4FF89784E10D778D456C4A5E2C67 /* CSSSelectors.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A405691929EB08D80ABDBCCF4C01C6D /* CSSSelectors.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		36DE544CCD9C7D6068729BD18D0C2AD0 /* SUAIPair.m in Sources */ = {isa = PBXBuildFile; fileRef = D1ACFCAA70001E09D357AD6B17297501 /* SUAIPair.m */; };
 		3A9B992EFCAD2975BDEAD099B8A84577 /* HTMLCharacterData.m in Sources */ = {isa = PBXBuildFile; fileRef = 942F22631C29BC95FD8800084FA6EB9E /* HTMLCharacterData.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3C43C8732A22A2694E52BED62DDD967C /* SUAIParser.h in Headers */ = {isa = PBXBuildFile; fileRef = AC01213FF08DC3DCD207840F658B7FE7 /* SUAIParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C865A0268FA65F2E0E420F9CC16C187 /* HTMLToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A285A2D6605A55AA7672A0165B50AF6 /* HTMLToken.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		3D6A4990F8A8F2BEA2C9CB6EF152E29A /* HTMLComment.h in Headers */ = {isa = PBXBuildFile; fileRef = 58E741FA72DFBFA6940D9D05B2341604 /* HTMLComment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3E1E7216EDA0598A5D9017C15CDEDCD0 /* SUAIDay.h in Headers */ = {isa = PBXBuildFile; fileRef = 9725364278896BBA2025CF785FD8CED5 /* SUAIDay.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F7FEA2190810C4807730CA6732E4461 /* HTMLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 3760BF34DB435C200A8BF7981EE344FA /* HTMLParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3FFB1DDE45829356D249255795ABF4F1 /* Links.h in Headers */ = {isa = PBXBuildFile; fileRef = E5261CC6C2B895982E62932029F44E9F /* Links.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		41CC9262303667F6B5981BE7A44538DB /* CSSNthExpressionParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C93132C2CDB36FE605B0F5B66FC785 /* CSSNthExpressionParser.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		42A74B979D80B5E9F30DDE158FBB70D9 /* SUAI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0D850958F9B8EF27A4021CE833BFF7 /* SUAI-dummy.m */; };
 		47CC62839C4E3A54E685E381B1A0A3F3 /* HTMLNode+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 70D0DB315A61BBF44AC520BB0102A1E9 /* HTMLNode+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		490E2DF52B94110CA8F47CA406DD5338 /* HTMLNodeTraversal.m in Sources */ = {isa = PBXBuildFile; fileRef = 334C18DC1C50799AC661BDB41347762E /* HTMLNodeTraversal.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4967F3DEBB90191E0C4B10DDA49C6CF7 /* SUAIAuditory.m in Sources */ = {isa = PBXBuildFile; fileRef = A247785EB8B5F4B3508AE1BAB86D571C /* SUAIAuditory.m */; };
 		4970BA41F3C8A20F8D3B154E0E96F184 /* NSString+HTMLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F4FD06CBE046F568625CCCB4D9376 /* NSString+HTMLKit.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		49E6A4F5345E0B4825CC8EEA4D22074B /* NSCharacterSet+HTMLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EFCD26EDF5403431DDAA07A18F2EF32 /* NSCharacterSet+HTMLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AAD2047886010B74718A16F529B0521 /* NSString+Enums.m in Sources */ = {isa = PBXBuildFile; fileRef = D0469E7C463BA67935AD3D5D42C270B8 /* NSString+Enums.m */; };
+		4B7C8E10EE938A52E40ECD1BA0EB1266 /* SUAIParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B19047C42097AF3D1BB64988908B68A /* SUAIParser.m */; };
+		4CB284A1579335FA1D84450B8A2A6529 /* SUAIManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 55739F44CE9265C3F4F17FC8E7D74643 /* SUAIManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D6187D09B351A97D51AF36939F5718F /* HTMLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49358C72E17E9F24042104D825067B08 /* HTMLKit.framework */; };
 		4E8BB3CC835482FCAAFA0DB8A247A3BC /* HTMLNodeIterator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE2FA982F47B993C037A182FCB83E36 /* HTMLNodeIterator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4F8F9F4724430CE4B1BDD2DC89AC7658 /* HTMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362AEBB6B0C1F9476454FF286A90BB /* HTMLDocument.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		526DDE59530068730AA61FD362D2EE85 /* HTMLKitDOMExceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 968EC0BFCD1CC447FB9D1560D9D5A621 /* HTMLKitDOMExceptions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		537486179B0F1D7AC9F649B1A7E0B297 /* CSSInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 7777C2992C92813F88D755B40DE1C620 /* CSSInputStream.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		539EF496CF555228D628F6037595F78F /* HTMLCharacterToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A2589222D4F44A4913AB2A949BC8836 /* HTMLCharacterToken.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		5432DBE2468B7914FB4CE5C867F1EF03 /* HTMLCommentToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FAEC855F53B80A0AD3BD5EA16A5C054 /* HTMLCommentToken.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		550E808321C2D84400A50DF9 /* SUAIParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5846B8D9DE43D327C2971C9967A664 /* SUAIParser.m */; };
-		5542E7AB646A11ACEB5A5637CB20D144 /* SUAISchedule-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6350CD58A8558A0ECE9F40120F648059 /* SUAISchedule-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		556D1AE521C1862600497DA3 /* NSString+NameFormation.m in Sources */ = {isa = PBXBuildFile; fileRef = 556D1AE221C1825700497DA3 /* NSString+NameFormation.m */; };
-		556D1AE621C1864E00497DA3 /* NSString+NameFormation.h in Headers */ = {isa = PBXBuildFile; fileRef = 556D1AE121C1825700497DA3 /* NSString+NameFormation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		563F42D69CB9DE03C98E6A787DB3D2ED /* SUAIPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 786C85366D4527ACF5FC12E560813492 /* SUAIPair.m */; };
+		550E809121C2EA0D00A50DF9 /* SUAILoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E65AF9C50B18B4B19D30589B7D593FAA /* SUAILoader.m */; };
+		55692B29CA3C94745E0884063073AF5B /* SUAIEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3749D93CE8E013F10DC50FBA0E2959B1 /* SUAIEntity.m */; };
 		570BA6BE3110B5DEF2D1B8D6D330EF9C /* HTMLDOMTokenList.m in Sources */ = {isa = PBXBuildFile; fileRef = 408466ADDAC3793A120AC4B51B811C07 /* HTMLDOMTokenList.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5877B7F496E7633CC2312C90A1185352 /* HTMLDOMTokenList.h in Headers */ = {isa = PBXBuildFile; fileRef = 645472D6F8497BF1D90CB6D616313551 /* HTMLDOMTokenList.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		59B88F301FCD68EC0B986544427C844F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED889963E13282F933B7131D9CD57F6 /* Foundation.framework */; };
+		5AAF6C3034D244485E0532A93939964D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED889963E13282F933B7131D9CD57F6 /* Foundation.framework */; };
 		5CC3CCA46EB15D359619375F08B3D437 /* HTMLNamespaces.h in Headers */ = {isa = PBXBuildFile; fileRef = 31E4626A861D46A224982E543AF10220 /* HTMLNamespaces.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		60AD3AD2AC6602454D700D971B2E8BC9 /* HTMLComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0233E1D3F83B382C4BCBA647876C8A /* HTMLComment.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		60C59F03BCF433908A3CE340DDC10DBA /* HTMLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 18A74D90D134972A2811599CA4D21D9C /* HTMLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61120758ADED7E2487D6C56CA3E09057 /* SUAIAuditory.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB30B9A1321DCA2776957BB870F5DC7 /* SUAIAuditory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62D617C36D43DFF198152B866611E94D /* CSSSelectors.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FC8593CA49CAD7436795701912E7A5C /* CSSSelectors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		66BB90BAB921026D817A3CD115CD4FEE /* HTMLListOfActiveFormattingElements.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EF0B069AD0898C869AB38307F6D77F /* HTMLListOfActiveFormattingElements.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		68C0E62DA30F91BED7FE89BAD45C4967 /* HTMLCharacterData+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B22CC94833C81BD05E54C48061BCC293 /* HTMLCharacterData+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -73,22 +74,22 @@
 		6A46C3D107178B91375F1474D9901067 /* CSSCombinatorSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D6A1DAD0F177FA791A0773D96B706 /* CSSCombinatorSelector.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6CF5FD42481C2457107C2F5DB553637E /* HTMLEOFToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AE2550EEA0D6F118DEC0A61C7FB5BB /* HTMLEOFToken.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6E0F2CB83D128036447959E7C1262591 /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 486A9B933C1933806A9A7B43862D4C8B /* HTMLNode.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7070665428926F8503987F3463961AFB /* NSString+NameFormation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2681BF0C6BAA47F7FD91C1FFACADEC8B /* NSString+NameFormation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7293E9F6A62BAAD70117B3EADA894C19 /* Pods-SUAI_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 71856805E0CBE4632D6F7AFA7F398725 /* Pods-SUAI_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		77C0BF5ADACD9F011FBF4006B7FFA842 /* HTMLTokenizerCharacters.h in Headers */ = {isa = PBXBuildFile; fileRef = AC9641DA36363C14313D724C281766D6 /* HTMLTokenizerCharacters.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		789A5880D9CB9A3BC1CE294A3F2D8929 /* CSSCompoundSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D7693831090EB68DE43BA5E5E9D3E3 /* CSSCompoundSelector.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7ABA7854F7EC83DA273F23100EB8C3F1 /* HTMLStackOfOpenElements.h in Headers */ = {isa = PBXBuildFile; fileRef = F15FDCC2A83AB6AFE123A283969A1BD1 /* HTMLStackOfOpenElements.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		7AFF4400FEAABF4469046B1B5C55FFFE /* HTMLTokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = FA55B58679602570A58FDF51B4DDA58F /* HTMLTokenizer.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		7C0DEA489F6B2164462867D3200FC3B9 /* HTMLTokenizerEntities.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D3451D300208944C508B9553E6E07F7 /* HTMLTokenizerEntities.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		7E68093E94046DDFAD8BB0271AE2AE94 /* SUAI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 55C9ED383DB4E2468E6CD7D8664F6DB6 /* SUAI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7E86305BE015175BD72FDE753C492E6D /* HTMLTagToken.h in Headers */ = {isa = PBXBuildFile; fileRef = BA3717A6B765A61249A32138D8825FA7 /* HTMLTagToken.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		7F4ECBCCE64E3B7856AC6292D5E78F1A /* SUAIPair.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E3E7C36CC97FE9403A6ED65D3AC2CFE /* SUAIPair.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8035B85256F562399A3B7BC2E00507E8 /* HTMLInputStreamReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8448A0609B439D1580F40A6CD006BA /* HTMLInputStreamReader.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		824E009BE972B5A383D604CB98757DD9 /* SUAISchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E3ACC08B03D3438E42C53287717C17 /* SUAISchedule.m */; };
-		830B4ECBA35BB5745708D9330BEEFDA1 /* SUAIParser.m in Headers */ = {isa = PBXBuildFile; fileRef = 9F5846B8D9DE43D327C2971C9967A664 /* SUAIParser.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		83F51437A474C566D806D726A5BDFEB8 /* HTMLDocumentFragment.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B99D4C049F51B5D039E561476F6FD0 /* HTMLDocumentFragment.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		85E8F7CE496B151EB812E5C8690BDA1E /* Pods-SUAI_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA16B7ED042E4CCA09CBD28FEA4BAE0 /* Pods-SUAI_Tests-dummy.m */; };
 		887FFB328591D8CCB59189733EDFBE82 /* HTMLOrderedDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = F3157AB770EE14B204507D54220883C3 /* HTMLOrderedDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8938962045148287C6B33BADB44F6ECC /* HTMLKitDOMExceptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ECE7766C41515344DF44EAAD49FA8BF /* HTMLKitDOMExceptions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8978BB7FD70F599595BC023E92D3C485 /* HTMLNodeFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = A708CBE69DCDC36EBA854485D884750D /* HTMLNodeFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		89D5AE38FD8E1796326594C3A7D5B9A8 /* CSSSelectorBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = F88EF62BE0F48E97BBB899C641EF31C0 /* CSSSelectorBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8AD783F7215261EA3DF6813F65A70545 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED889963E13282F933B7131D9CD57F6 /* Foundation.framework */; };
 		8BACB168E46C1A25CFFAB24299E9C2D4 /* HTMLParseErrorToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C7275E27CD581009C25FA4CB74C8267 /* HTMLParseErrorToken.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		8D24C29031DE2F5687396A83BCC94CF9 /* HTMLCommentToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 87584337659578F537AC8FBEDD385B32 /* HTMLCommentToken.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		8DF2D0F1974242A1EB5099DE37B4DF5B /* CSSInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 772ADB7083278596152A080B44801448 /* CSSInputStream.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -102,13 +103,16 @@
 		9F116C43F8B1D1A93DFF886A9B88B222 /* CSSStructuralPseudoSelectors.h in Headers */ = {isa = PBXBuildFile; fileRef = DE1ED99E72E60005DC0121304BE5C58A /* CSSStructuralPseudoSelectors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F24582964532541F345C6654E046CD7 /* HTMLElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 699A96E44872EDEE701F47CB70EEB9CD /* HTMLElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A14E3A05070D48C318CF8B5915A8E460 /* HTMLTokens.h in Headers */ = {isa = PBXBuildFile; fileRef = 4830CA3C9E74629A0B5CDB34E53E869A /* HTMLTokens.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		A41AFCEC8025D69B1210BB503BDBECAB /* Pods-SUAISchedule_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3BA9A9DFAACD202E1E8591140CD521 /* Pods-SUAISchedule_Example-dummy.m */; };
 		A42401EEEFDBCBCE271140EEAB93B1A4 /* CSSTypeSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = B15864820F8AC91CD2DB088C3B80FE05 /* CSSTypeSelector.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A6855D9D7029C3B3A1C6D4BD59D00A44 /* CSSSelectorParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 691C9377D6E5B7104E4B09D77FE27A84 /* CSSSelectorParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A75D2A6453CECEFFE3917DF23627DFB3 /* SUAISchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E13D6063FBA893C7649686A350EE132 /* SUAISchedule.m */; };
 		A80042E1C598A2BB9890B29224775B45 /* HTMLQuirksMode.h in Headers */ = {isa = PBXBuildFile; fileRef = D6DBD0427A53E785E9F6BD31F17E1057 /* HTMLQuirksMode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA4FD9DEC9AA8E02FD3DE09DE8B62FBC /* SUAIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3C42F8F5973C5FB0F2303081EED205 /* SUAIManager.m */; };
 		AB0E8624B6CF27117F579614ED2B102C /* CSSStructuralPseudoSelectors.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8285A6766798B6C9C362E06430779D /* CSSStructuralPseudoSelectors.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		AB1ADFEF768199ED44C568B107A42D59 /* HTMLInputStreamReader.h in Headers */ = {isa = PBXBuildFile; fileRef = C87AC0D81FF80CEE3ED8A3BC9001A677 /* HTMLInputStreamReader.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		AB5D0F50D4D6DABE28637AF6441D04AD /* Links.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE2BE8905D33D72F9A4391268094192 /* Links.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD591832F30795AF18F990AA96D5CB3D /* HTMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = E0CD0173378BE3B5C4506734E9DA792B /* HTMLElement.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		AE26F9E62495D67523C24895FFAA4414 /* SUAIDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 703EAA232D3145ED58DEECBFD1E2C913 /* SUAIDay.m */; };
 		B0AE94929E6EE28C10C4C543A000554F /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6D82E32462CA729CC0E583E0F3A56C /* HTMLParser.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B1BD187AC337DA5AC610CD512EA6FAA7 /* HTMLText.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E0EA9AAD28629F48C8399B2EF498A33 /* HTMLText.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B21C2DAE7E63F4B7C63844707603E407 /* HTMLNode.h in Headers */ = {isa = PBXBuildFile; fileRef = CD3888978773AA4BBE35B475621FCA39 /* HTMLNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -118,40 +122,36 @@
 		B4BF06D8ACEC7F628431DB8DDE4F6E64 /* CSSCombinatorSelector.h in Headers */ = {isa = PBXBuildFile; fileRef = 155ED9A1FFCD919C275A46AE775926C6 /* CSSCombinatorSelector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B658AD1632440B356219D56B5BF6B548 /* HTMLNodeTraversal.h in Headers */ = {isa = PBXBuildFile; fileRef = 61FE60EFB7A4DF4D4F7B2B06909CA843 /* HTMLNodeTraversal.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		B6BE246670ACF7A9A95028107661AC2A /* CSSCodePoints.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8040FE0049781582BAE7999C6B379F /* CSSCodePoints.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		B8082CD393736797DCF521D6C73C3A36 /* SUAIManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 11C6232D3E2564BB94D0FC9A46D1E308 /* SUAIManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BC6232FE673C59CE021EAC82F6DC4C9E /* HTMLCharacterToken.m in Sources */ = {isa = PBXBuildFile; fileRef = D0314E056648C45421ED7BAF05AE7E1B /* HTMLCharacterToken.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		BE92F84488AA1814B1574CCF0BBDDF0A /* SUAIEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = 81A00A71C71019ACA632EC90FB154534 /* SUAIEntity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF34597E6B0FA55BCC2558328B662411 /* SUAIEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = A3349BFBBB6B5F7E69809A4A0F65A8B3 /* SUAIEntity.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0045F233BE411FF02B6F5D79AFA1251 /* CSSAttributeSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB70CD0FBC17FE4B4AA0BA363413423 /* CSSAttributeSelector.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C103151B45FC3DF2032E6444168DDE99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED889963E13282F933B7131D9CD57F6 /* Foundation.framework */; };
 		C35EFCF86015D931C2266D7DF9D556B4 /* HTMLDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FF7CC00E0ABC2754278AE201A66225F /* HTMLDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3DC34DD4D2EC0ADB1DDE35584AF82FD /* HTMLTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0888B2187A4D5D2A6EBE59BA98C6A039 /* HTMLTokenizer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C5FEF695F41DBB13BE833E19C3787572 /* HTMLElementAdjustment.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A87AF2FF3267AD181AFB6A18E6022F5 /* HTMLElementAdjustment.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		C61ABC8BAD1508C4C99F94142CF24314 /* CSSSelectorParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5F5B1ED13870358E7867568FB201E9 /* CSSSelectorParser.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C6DD558984DBF077CDA7DBCC3C8519D0 /* HTMLTreeWalker.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C3A9AF6170AF995006E5BDDE2108CD3 /* HTMLTreeWalker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7D597E8FA5CB691283C815BBDDB5605 /* Enums.h in Headers */ = {isa = PBXBuildFile; fileRef = 87F5527D981333DF6DC60BDE6B399B43 /* Enums.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C86059529C85A9A8BCA698B1B5861FB5 /* NSString+Enums.h in Headers */ = {isa = PBXBuildFile; fileRef = D728DA7457EB57EBBDB8D2552789D2BC /* NSString+Enums.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB264BE6B2C3F2F7A20449B435C5A0B9 /* NSCharacterSet+HTMLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B74F305B546B3815853D00BE0913B5F /* NSCharacterSet+HTMLKit.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		CBCF07999909DFC7FDCC923063B5D514 /* HTMLParser+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 20B593D739E09921181FD02965037F4A /* HTMLParser+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		CC85AED975030AF662CA3FCF10B20802 /* HTMLRange+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 93BEC9625979D945501470124F49ECF1 /* HTMLRange+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		CC97005FF2B1333ACB515F52343A91DA /* Pods-SUAISchedule_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0202E05A5A9DA85A8800E9ABCC43EEB8 /* Pods-SUAISchedule_Tests-dummy.m */; };
 		D3D3D9470CC251A20DF75A5623AE3976 /* CSSPseudoClassSelector.h in Headers */ = {isa = PBXBuildFile; fileRef = DB7C4C0ED3BB4E5422C2BFC38B79C551 /* CSSPseudoClassSelector.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D3F228349602F2084E95E1BA0EFB89AD /* SUAIAuditory.m in Sources */ = {isa = PBXBuildFile; fileRef = 938863D011AD748568C12D6A3AA0B0D0 /* SUAIAuditory.m */; };
-		D6826D2A17F3A2AF75D37AF377F87830 /* SUAISchedule.h in Headers */ = {isa = PBXBuildFile; fileRef = 689013393458034EF207A75C50BAD978 /* SUAISchedule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D69A6A7FF5C56CD3912779E69366B5DC /* HTMLRange.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FEE3010F43A6F9459F3CEEFAED7B048 /* HTMLRange.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D92DBDF43A58915363D1A56293B4E211 /* NSString+NameFormation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A98DFD41D2419AEB84B1F548950DC19 /* NSString+NameFormation.m */; };
 		D9E6082F773D4655E30F2353C847709B /* HTMLDocumentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 58EA9ED00DB75A47211BEF75E79F0FC0 /* HTMLDocumentType.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		DB983D6B4F3EEF8CFF7852BFD09F0A90 /* HTMLDOMUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = D60283BE0096C8B9C209FF7F538F3B26 /* HTMLDOMUtils.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		DC1F2B8D99EB31E87052F3B568FFEB53 /* SUAILoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1D2DDDC8CD9AEB90BAE95FB3450554 /* SUAILoader.m */; };
-		DCA5A98A825FE860ECB6BC78FA668AF1 /* Pods-SUAISchedule_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A487BCEC121CC310204BE7E8CF552A3B /* Pods-SUAISchedule_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E0180B8877CF2E6C8B855538F3E335E4 /* SUAIDay.h in Headers */ = {isa = PBXBuildFile; fileRef = CA867D2B133A2C5E2FD49DAECF9ABB9D /* SUAIDay.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E024085EDCCF5F06FB394E07680B475C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED889963E13282F933B7131D9CD57F6 /* Foundation.framework */; };
 		E08438C1041A50BD7DF353A1B3AD699D /* HTMLElementTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = FB31228147073583FBCE396542091BFA /* HTMLElementTypes.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		E30D5FE32CF0ED3C633EE3DEA7084782 /* HTMLDocumentFragment.h in Headers */ = {isa = PBXBuildFile; fileRef = EA4F1926AD91441F76C9827E7A911A58 /* HTMLDocumentFragment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EAF6A2BD87CBEC03E30A2E7F09418C2A /* HTMLKitErrorDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = D9A92A8DF01CA45F738EBE4722C7FF17 /* HTMLKitErrorDomain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ED90797D62A4E44FC3AE0DBC6B35C645 /* HTMLParseErrorToken.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6BC62AB15B5DDD406C833C6065F23E /* HTMLParseErrorToken.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		EE47E37E2C0E988C9D99AB2432F21A0D /* HTMLToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AB8D2B8FB15AC52A9A8B32BDDEA27 /* HTMLToken.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F1A4FB8FFCA07220C16D6686DBFA4928 /* HTMLTagToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFFFF0523BFB1008B086B40D9FF3E11 /* HTMLTagToken.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		F1B2C6443C26933182913C990B70043A /* SUAISchedule-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B18BEC25860755E864FF3BDD0187E38D /* SUAISchedule-dummy.m */; };
 		F3288784B212187449E4258DB9356EDF /* HTMLStackOfOpenElements.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D72262DF42D928073E0AF001CF90E7 /* HTMLStackOfOpenElements.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F34C265960DF1E85DCA53F7BF8BF1197 /* HTMLDOM.h in Headers */ = {isa = PBXBuildFile; fileRef = 275D7F30F748B990FC817F09F25F1C3E /* HTMLDOM.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F54BDFC5F930B0D8E3F4745D6204115C /* CSSSelectorBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B45299D1D38DE9D6674EDBCA8FF669 /* CSSSelectorBlock.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F5AF7D7C65929CD8D8E3F3D3BC8850F8 /* CSSPseudoFunctionSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = A260AC31394A12D1AEC1CB9A03A8BFCE /* CSSPseudoFunctionSelector.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		F5C97029EBDB9464064D1746FCC0F7DB /* HTMLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49358C72E17E9F24042104D825067B08 /* HTMLKit.framework */; };
 		F7C75909CAA3A3B28EB0464F791B559E /* CSSAttributeSelector.h in Headers */ = {isa = PBXBuildFile; fileRef = 64601BC7C837ECC33CB5C8FDA57615A8 /* CSSAttributeSelector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FA5623B686387F57A60252AC93CEC678 /* CSSNthExpressionParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B5EAF2245F33CF0BD1B5B15A4235645 /* CSSNthExpressionParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FB28349062C0DB8B1E6B015DC9AF7309 /* HTMLText.m in Sources */ = {isa = PBXBuildFile; fileRef = AD782F97117EC5072E712B2D323DB30D /* HTMLText.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -159,232 +159,223 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2154F2F8038A3DB37435DD301FB83919 /* PBXContainerItemProxy */ = {
+		08CB6876B11FAB90A8255B639D2F6E78 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7DF885F31CE63E4CAA6D8BB2EF575028;
 			remoteInfo = HTMLKit;
 		};
-		6E58A4AA0310EF0C2428CA6666B51E22 /* PBXContainerItemProxy */ = {
+		0DFDB0EED3CBB55E1EC1B0532B6CDA52 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FCEA685146428B1F986AF244827708F9;
-			remoteInfo = SUAISchedule;
+			remoteGlobalIDString = 00E6C3C2D677830E4FA68C4B4EB9A4E8;
+			remoteInfo = "Pods-SUAI_Example";
 		};
-		B6A66C05792BBDA0CECEF1D3CC5FAB55 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5533A3A42C73C5C770567AB7E5093D2F;
-			remoteInfo = "Pods-SUAISchedule_Example";
-		};
-		FD800F288F6AABA0468421366AB28284 /* PBXContainerItemProxy */ = {
+		3823B07CE3EA72F1672D6756E1D1ABEE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7DF885F31CE63E4CAA6D8BB2EF575028;
 			remoteInfo = HTMLKit;
+		};
+		82A7C84224A5D93983CCF9783C86502D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2091F875797A0FFD3E6717A26618EFB5;
+			remoteInfo = SUAI;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01CCAF9E1BA78078E9AB7E363359C936 /* SUAIManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SUAIManager.m; path = ../../../SUAI/Classes/Parser/SUAIManager.m; sourceTree = "<group>"; };
-		0202E05A5A9DA85A8800E9ABCC43EEB8 /* Pods-SUAISchedule_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SUAISchedule_Tests-dummy.m"; sourceTree = "<group>"; };
+		0242B44BE4CFC37494ECDAE76D526799 /* Pods-SUAI_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SUAI_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		04E1CE1BD222A0EACB907E5E45A1290F /* Pods-SUAI_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SUAI_Example.release.xcconfig"; sourceTree = "<group>"; };
 		0888B2187A4D5D2A6EBE59BA98C6A039 /* HTMLTokenizer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLTokenizer.m; path = Sources/HTMLTokenizer.m; sourceTree = "<group>"; };
 		0A2589222D4F44A4913AB2A949BC8836 /* HTMLCharacterToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLCharacterToken.h; path = Sources/include/HTMLCharacterToken.h; sourceTree = "<group>"; };
 		0A285A2D6605A55AA7672A0165B50AF6 /* HTMLToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLToken.h; path = Sources/include/HTMLToken.h; sourceTree = "<group>"; };
-		0AA43667A1E542BBF39D3A299C365386 /* NSString+Enums.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+Enums.h"; path = "../../../SUAI/Classes/Categories/NSString+Enums.h"; sourceTree = "<group>"; };
-		11C6232D3E2564BB94D0FC9A46D1E308 /* SUAIManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUAIManager.h; path = ../../../SUAI/Classes/Parser/SUAIManager.h; sourceTree = "<group>"; };
+		0B5EA554E7217E1DD0A04BA450D94F87 /* SUAI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SUAI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B7E367B275938C1152970F1B4290194 /* Pods-SUAI_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SUAI_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		134DC42B32F09B9319BE7C6A32A2923D /* CSSTypeSelector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSSTypeSelector.h; path = Sources/include/CSSTypeSelector.h; sourceTree = "<group>"; };
+		141AE1B46C6EB5DC053098225A7DC2E9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15362AEBB6B0C1F9476454FF286A90BB /* HTMLDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLDocument.m; path = Sources/HTMLDocument.m; sourceTree = "<group>"; };
 		155ED9A1FFCD919C275A46AE775926C6 /* CSSCombinatorSelector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSSCombinatorSelector.h; path = Sources/include/CSSCombinatorSelector.h; sourceTree = "<group>"; };
+		15E7F60093E53E3E53062A468967029A /* Pods-SUAI_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SUAI_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		18A74D90D134972A2811599CA4D21D9C /* HTMLKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLKit.h; path = Sources/include/HTMLKit.h; sourceTree = "<group>"; };
+		1A0D850958F9B8EF27A4021CE833BFF7 /* SUAI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SUAI-dummy.m"; sourceTree = "<group>"; };
 		1B5EAF2245F33CF0BD1B5B15A4235645 /* CSSNthExpressionParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSSNthExpressionParser.h; path = Sources/include/CSSNthExpressionParser.h; sourceTree = "<group>"; };
 		1B74F305B546B3815853D00BE0913B5F /* NSCharacterSet+HTMLKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSCharacterSet+HTMLKit.m"; path = "Sources/NSCharacterSet+HTMLKit.m"; sourceTree = "<group>"; };
+		1B861592B5DA98BE42111D32B87F32B5 /* Pods-SUAI_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SUAI_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		1DE2BE8905D33D72F9A4391268094192 /* Links.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Links.h; sourceTree = "<group>"; };
 		1FB70CD0FBC17FE4B4AA0BA363413423 /* CSSAttributeSelector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSSAttributeSelector.m; path = Sources/CSSAttributeSelector.m; sourceTree = "<group>"; };
 		1FEE3010F43A6F9459F3CEEFAED7B048 /* HTMLRange.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLRange.h; path = Sources/include/HTMLRange.h; sourceTree = "<group>"; };
 		20B593D739E09921181FD02965037F4A /* HTMLParser+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "HTMLParser+Private.h"; path = "Sources/include/HTMLParser+Private.h"; sourceTree = "<group>"; };
-		2302EA3AF84EAE0BED77422616C1627A /* Pods_SUAISchedule_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SUAISchedule_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		24E7425194B1A84875C7AFC4FAD9A8BC /* Pods-SUAISchedule_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SUAISchedule_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		2681BF0C6BAA47F7FD91C1FFACADEC8B /* NSString+NameFormation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+NameFormation.h"; sourceTree = "<group>"; };
 		275D7F30F748B990FC817F09F25F1C3E /* HTMLDOM.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLDOM.h; path = Sources/include/HTMLDOM.h; sourceTree = "<group>"; };
 		2A0233E1D3F83B382C4BCBA647876C8A /* HTMLComment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLComment.m; path = Sources/HTMLComment.m; sourceTree = "<group>"; };
 		2A405691929EB08D80ABDBCCF4C01C6D /* CSSSelectors.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSSSelectors.m; path = Sources/CSSSelectors.m; sourceTree = "<group>"; };
+		2A98DFD41D2419AEB84B1F548950DC19 /* NSString+NameFormation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+NameFormation.m"; sourceTree = "<group>"; };
 		2C3A9AF6170AF995006E5BDDE2108CD3 /* HTMLTreeWalker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLTreeWalker.h; path = Sources/include/HTMLTreeWalker.h; sourceTree = "<group>"; };
 		2D8448A0609B439D1580F40A6CD006BA /* HTMLInputStreamReader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLInputStreamReader.m; path = Sources/HTMLInputStreamReader.m; sourceTree = "<group>"; };
-		2DEDABCC33C5AD5207C4731750D669A4 /* SUAIAuditory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUAIAuditory.h; path = ../../../SUAI/Classes/Model/SUAIAuditory.h; sourceTree = "<group>"; };
+		2E13D6063FBA893C7649686A350EE132 /* SUAISchedule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SUAISchedule.m; sourceTree = "<group>"; };
 		2EFCD26EDF5403431DDAA07A18F2EF32 /* NSCharacterSet+HTMLKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSCharacterSet+HTMLKit.h"; path = "Sources/include/NSCharacterSet+HTMLKit.h"; sourceTree = "<group>"; };
 		31E4626A861D46A224982E543AF10220 /* HTMLNamespaces.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLNamespaces.h; path = Sources/include/HTMLNamespaces.h; sourceTree = "<group>"; };
-		3259B695637B4E0F2F51CED2DD1E846A /* Pods-SUAISchedule_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SUAISchedule_Example.modulemap"; sourceTree = "<group>"; };
+		323AC4CB77B5EF4B6A0985783FA2F8E3 /* Pods-SUAI_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SUAI_Example-resources.sh"; sourceTree = "<group>"; };
 		334C18DC1C50799AC661BDB41347762E /* HTMLNodeTraversal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLNodeTraversal.m; path = Sources/HTMLNodeTraversal.m; sourceTree = "<group>"; };
 		34A2A97F2DD33A71B1DB0307A37D1166 /* HTMLDOCTYPEToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLDOCTYPEToken.h; path = Sources/include/HTMLDOCTYPEToken.h; sourceTree = "<group>"; };
+		362C2A9C3621C4527B51AC5D88660097 /* HTMLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTMLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		368CBE35C3355A9984D8B593DD0088AA /* HTMLParserInsertionModes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLParserInsertionModes.h; path = Sources/include/HTMLParserInsertionModes.h; sourceTree = "<group>"; };
+		3749D93CE8E013F10DC50FBA0E2959B1 /* SUAIEntity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SUAIEntity.m; sourceTree = "<group>"; };
 		3760BF34DB435C200A8BF7981EE344FA /* HTMLParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLParser.h; path = Sources/include/HTMLParser.h; sourceTree = "<group>"; };
+		3A3C42F8F5973C5FB0F2303081EED205 /* SUAIManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SUAIManager.m; sourceTree = "<group>"; };
 		3A4D6A1DAD0F177FA791A0773D96B706 /* CSSCombinatorSelector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSSCombinatorSelector.m; path = Sources/CSSCombinatorSelector.m; sourceTree = "<group>"; };
 		3AE1579D3630487D51C5AF0DCE7C4652 /* HTMLTokenizerEntities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLTokenizerEntities.m; path = Sources/HTMLTokenizerEntities.m; sourceTree = "<group>"; };
-		3D527395DC8C563C85E774A05D2C3B1C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E3570FDCC6D89FB64DCA2408A39C325 /* HTMLNodeIterator+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "HTMLNodeIterator+Private.h"; path = "Sources/include/HTMLNodeIterator+Private.h"; sourceTree = "<group>"; };
-		3E3E7C36CC97FE9403A6ED65D3AC2CFE /* SUAIPair.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUAIPair.h; path = ../../../SUAI/Classes/Model/SUAIPair.h; sourceTree = "<group>"; };
-		3FC5E99F83A59FCE861822ED4654BFCC /* SUAISchedule.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SUAISchedule.modulemap; sourceTree = "<group>"; };
+		3EA16B7ED042E4CCA09CBD28FEA4BAE0 /* Pods-SUAI_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SUAI_Tests-dummy.m"; sourceTree = "<group>"; };
+		3F1B1A6C7797BB047359C54B31BB5E67 /* SUAI.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = SUAI.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3FB30B9A1321DCA2776957BB870F5DC7 /* SUAIAuditory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SUAIAuditory.h; sourceTree = "<group>"; };
 		3FE2FA982F47B993C037A182FCB83E36 /* HTMLNodeIterator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLNodeIterator.h; path = Sources/include/HTMLNodeIterator.h; sourceTree = "<group>"; };
 		408466ADDAC3793A120AC4B51B811C07 /* HTMLDOMTokenList.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLDOMTokenList.m; path = Sources/HTMLDOMTokenList.m; sourceTree = "<group>"; };
 		43B99D4C049F51B5D039E561476F6FD0 /* HTMLDocumentFragment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLDocumentFragment.m; path = Sources/HTMLDocumentFragment.m; sourceTree = "<group>"; };
 		45AE2550EEA0D6F118DEC0A61C7FB5BB /* HTMLEOFToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLEOFToken.m; path = Sources/HTMLEOFToken.m; sourceTree = "<group>"; };
-		469B9D439ADC93AC9D07247136D724E3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		46EF0B069AD0898C869AB38307F6D77F /* HTMLListOfActiveFormattingElements.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLListOfActiveFormattingElements.m; path = Sources/HTMLListOfActiveFormattingElements.m; sourceTree = "<group>"; };
 		4830CA3C9E74629A0B5CDB34E53E869A /* HTMLTokens.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLTokens.h; path = Sources/include/HTMLTokens.h; sourceTree = "<group>"; };
 		486A9B933C1933806A9A7B43862D4C8B /* HTMLNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLNode.m; path = Sources/HTMLNode.m; sourceTree = "<group>"; };
 		49358C72E17E9F24042104D825067B08 /* HTMLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTMLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A90B05FDBD7BFF880A063A070AA3E8B /* SUAIParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUAIParser.h; path = ../../../SUAI/Classes/Parser/SUAIParser.h; sourceTree = "<group>"; };
 		4C5F5B1ED13870358E7867568FB201E9 /* CSSSelectorParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSSSelectorParser.m; path = Sources/CSSSelectorParser.m; sourceTree = "<group>"; };
 		4C8040FE0049781582BAE7999C6B379F /* CSSCodePoints.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSSCodePoints.h; path = Sources/include/CSSCodePoints.h; sourceTree = "<group>"; };
-		4DE8C01A4BDB130E4A93684FAB8F5750 /* Pods-SUAISchedule_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SUAISchedule_Example-umbrella.h"; sourceTree = "<group>"; };
 		4ECE7766C41515344DF44EAAD49FA8BF /* HTMLKitDOMExceptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLKitDOMExceptions.h; path = Sources/include/HTMLKitDOMExceptions.h; sourceTree = "<group>"; };
-		51233CE414CB312783AF5672B5716CE3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		52CBBCFDA775E3C6478A4E8A3B3EF63C /* HTMLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTMLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51E96EA2A72A4821E3254140A5A69823 /* SUAILoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SUAILoader.h; sourceTree = "<group>"; };
 		53A06FFAF0A6EB56B31C289EA18467FC /* HTMLListOfActiveFormattingElements.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLListOfActiveFormattingElements.h; path = Sources/include/HTMLListOfActiveFormattingElements.h; sourceTree = "<group>"; };
 		556072F2392C36895E97C7A5F1E75EFD /* CSSSelector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSSSelector.h; path = Sources/include/CSSSelector.h; sourceTree = "<group>"; };
-		556D1AE121C1825700497DA3 /* NSString+NameFormation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSString+NameFormation.h"; path = "../../../SUAI/Classes/Categories/NSString+NameFormation.h"; sourceTree = "<group>"; };
-		556D1AE221C1825700497DA3 /* NSString+NameFormation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSString+NameFormation.m"; path = "../../../SUAI/Classes/Categories/NSString+NameFormation.m"; sourceTree = "<group>"; };
-		5640F5E1735FA0AFBD6998A33247AE85 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		58B71DE3AA15A93EAEF896ABB17E3C63 /* Pods-SUAISchedule_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SUAISchedule_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		55739F44CE9265C3F4F17FC8E7D74643 /* SUAIManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SUAIManager.h; sourceTree = "<group>"; };
+		55C9ED383DB4E2468E6CD7D8664F6DB6 /* SUAI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SUAI-umbrella.h"; sourceTree = "<group>"; };
+		577579969E53C9EFEE2591CCA1C2F485 /* Pods-SUAI_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SUAI_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		58E741FA72DFBFA6940D9D05B2341604 /* HTMLComment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLComment.h; path = Sources/include/HTMLComment.h; sourceTree = "<group>"; };
 		58EA9ED00DB75A47211BEF75E79F0FC0 /* HTMLDocumentType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLDocumentType.m; path = Sources/HTMLDocumentType.m; sourceTree = "<group>"; };
-		595AB8B2A85D19D82C83CE3C0643650D /* Pods-SUAISchedule_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SUAISchedule_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5B6AB8D2B8FB15AC52A9A8B32BDDEA27 /* HTMLToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLToken.m; path = Sources/HTMLToken.m; sourceTree = "<group>"; };
-		5C3BA9A9DFAACD202E1E8591140CD521 /* Pods-SUAISchedule_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SUAISchedule_Example-dummy.m"; sourceTree = "<group>"; };
 		5FAEC855F53B80A0AD3BD5EA16A5C054 /* HTMLCommentToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLCommentToken.h; path = Sources/include/HTMLCommentToken.h; sourceTree = "<group>"; };
 		5FC8593CA49CAD7436795701912E7A5C /* CSSSelectors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSSSelectors.h; path = Sources/include/CSSSelectors.h; sourceTree = "<group>"; };
 		61C93132C2CDB36FE605B0F5B66FC785 /* CSSNthExpressionParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSSNthExpressionParser.m; path = Sources/CSSNthExpressionParser.m; sourceTree = "<group>"; };
 		61FE60EFB7A4DF4D4F7B2B06909CA843 /* HTMLNodeTraversal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLNodeTraversal.h; path = Sources/include/HTMLNodeTraversal.h; sourceTree = "<group>"; };
 		6218BF6A6DECCBA3B4C0D637056EC16A /* HTMLTemplate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLTemplate.h; path = Sources/include/HTMLTemplate.h; sourceTree = "<group>"; };
 		625FF32DE21CF8C560CF3203950E3051 /* CSSNthExpressionSelector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSSNthExpressionSelector.h; path = Sources/include/CSSNthExpressionSelector.h; sourceTree = "<group>"; };
-		6350CD58A8558A0ECE9F40120F648059 /* SUAISchedule-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SUAISchedule-umbrella.h"; sourceTree = "<group>"; };
 		645472D6F8497BF1D90CB6D616313551 /* HTMLDOMTokenList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLDOMTokenList.h; path = Sources/include/HTMLDOMTokenList.h; sourceTree = "<group>"; };
 		64601BC7C837ECC33CB5C8FDA57615A8 /* CSSAttributeSelector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSSAttributeSelector.h; path = Sources/include/CSSAttributeSelector.h; sourceTree = "<group>"; };
-		664BDC9B1C8ED84C341337A1B799C6A7 /* Enums.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Enums.h; path = ../../../SUAI/Classes/Headers/Enums.h; sourceTree = "<group>"; };
-		6829DB75BE7B227383BE16CA84DBD345 /* SUAIDay.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SUAIDay.m; path = ../../../SUAI/Classes/Model/SUAIDay.m; sourceTree = "<group>"; };
-		689013393458034EF207A75C50BAD978 /* SUAISchedule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUAISchedule.h; path = ../../../SUAI/Classes/Model/SUAISchedule.h; sourceTree = "<group>"; };
+		6542374F1D5BA1A9BC3559C93EE9E3FB /* SUAI.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SUAI.xcconfig; sourceTree = "<group>"; };
+		666B888CB3F01F3DE265E40384FB5A47 /* Pods-SUAI_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SUAI_Example-dummy.m"; sourceTree = "<group>"; };
 		691C9377D6E5B7104E4B09D77FE27A84 /* CSSSelectorParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSSSelectorParser.h; path = Sources/include/CSSSelectorParser.h; sourceTree = "<group>"; };
 		699A96E44872EDEE701F47CB70EEB9CD /* HTMLElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLElement.h; path = Sources/include/HTMLElement.h; sourceTree = "<group>"; };
 		6A87AF2FF3267AD181AFB6A18E6022F5 /* HTMLElementAdjustment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLElementAdjustment.h; path = Sources/include/HTMLElementAdjustment.h; sourceTree = "<group>"; };
 		6B3F4FD06CBE046F568625CCCB4D9376 /* NSString+HTMLKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+HTMLKit.m"; path = "Sources/NSString+HTMLKit.m"; sourceTree = "<group>"; };
+		6BB008D55B00D89005D4D5A7BBAA5B15 /* Pods-SUAI_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SUAI_Example-frameworks.sh"; sourceTree = "<group>"; };
 		6CFFFF0523BFB1008B086B40D9FF3E11 /* HTMLTagToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLTagToken.m; path = Sources/HTMLTagToken.m; sourceTree = "<group>"; };
 		6E0EA9AAD28629F48C8399B2EF498A33 /* HTMLText.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLText.h; path = Sources/include/HTMLText.h; sourceTree = "<group>"; };
 		6E5954383B79DEC60156992829F7D458 /* HTMLKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HTMLKit.modulemap; sourceTree = "<group>"; };
-		704ACF0F9E0B84D1F50175574994F007 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F097469228E091772EBC9A46BB60F36 /* Pods-SUAI_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SUAI_Tests-resources.sh"; sourceTree = "<group>"; };
+		703EAA232D3145ED58DEECBFD1E2C913 /* SUAIDay.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SUAIDay.m; sourceTree = "<group>"; };
 		70D0DB315A61BBF44AC520BB0102A1E9 /* HTMLNode+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "HTMLNode+Private.h"; path = "Sources/include/HTMLNode+Private.h"; sourceTree = "<group>"; };
-		7235C4D7F16A645D714B9F4A7B769823 /* Pods-SUAISchedule_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SUAISchedule_Example-frameworks.sh"; sourceTree = "<group>"; };
+		71856805E0CBE4632D6F7AFA7F398725 /* Pods-SUAI_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SUAI_Tests-umbrella.h"; sourceTree = "<group>"; };
 		73D72262DF42D928073E0AF001CF90E7 /* HTMLStackOfOpenElements.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLStackOfOpenElements.m; path = Sources/HTMLStackOfOpenElements.m; sourceTree = "<group>"; };
 		772ADB7083278596152A080B44801448 /* CSSInputStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSSInputStream.m; path = Sources/CSSInputStream.m; sourceTree = "<group>"; };
 		7777C2992C92813F88D755B40DE1C620 /* CSSInputStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSSInputStream.h; path = Sources/include/CSSInputStream.h; sourceTree = "<group>"; };
-		786C85366D4527ACF5FC12E560813492 /* SUAIPair.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SUAIPair.m; path = ../../../SUAI/Classes/Model/SUAIPair.m; sourceTree = "<group>"; };
-		7B06004F55F35094BAE5FB7D7EB4A0D0 /* Pods-SUAISchedule_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SUAISchedule_Example-resources.sh"; sourceTree = "<group>"; };
+		7B19047C42097AF3D1BB64988908B68A /* SUAIParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SUAIParser.m; sourceTree = "<group>"; };
+		7EFFB8C73A9CBF23818BAD4DD8AF4CED /* Pods_SUAI_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SUAI_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF7CC00E0ABC2754278AE201A66225F /* HTMLDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLDocument.h; path = Sources/include/HTMLDocument.h; sourceTree = "<group>"; };
 		813D84221AA966231B27B2600237DD5A /* HTMLKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HTMLKit-dummy.m"; sourceTree = "<group>"; };
-		81A00A71C71019ACA632EC90FB154534 /* SUAIEntity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUAIEntity.h; path = ../../../SUAI/Classes/Model/SUAIEntity.h; sourceTree = "<group>"; };
+		862FD37BEDD772649AFA9DFBCD3290D3 /* Pods-SUAI_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SUAI_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		87584337659578F537AC8FBEDD385B32 /* HTMLCommentToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLCommentToken.m; path = Sources/HTMLCommentToken.m; sourceTree = "<group>"; };
+		87F5527D981333DF6DC60BDE6B399B43 /* Enums.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Enums.h; sourceTree = "<group>"; };
 		88C85A0C3CC4F78492DF823E1DE7DE35 /* HTMLEOFToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLEOFToken.h; path = Sources/include/HTMLEOFToken.h; sourceTree = "<group>"; };
-		8A1D2DDDC8CD9AEB90BAE95FB3450554 /* SUAILoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SUAILoader.m; path = ../../../SUAI/Classes/Loader/SUAILoader.m; sourceTree = "<group>"; };
 		8BC931CEBE2518C484E1204BF90DDE04 /* CSSPseudoFunctionSelector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSSPseudoFunctionSelector.h; path = Sources/include/CSSPseudoFunctionSelector.h; sourceTree = "<group>"; };
 		8CE65B09E8E66A10EF67BB6E2828DA7E /* NSString+HTMLKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+HTMLKit.h"; path = "Sources/include/NSString+HTMLKit.h"; sourceTree = "<group>"; };
-		90DE167B27583B01A0434321AF18105E /* SUAISchedule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SUAISchedule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		916FDDC1600D2DB35625538C7B29D8A0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		938863D011AD748568C12D6A3AA0B0D0 /* SUAIAuditory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SUAIAuditory.m; path = ../../../SUAI/Classes/Model/SUAIAuditory.m; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		93BEC9625979D945501470124F49ECF1 /* HTMLRange+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "HTMLRange+Private.h"; path = "Sources/include/HTMLRange+Private.h"; sourceTree = "<group>"; };
 		93DC5FB77EC3A493010C0D6404264820 /* HTMLMarker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLMarker.m; path = Sources/HTMLMarker.m; sourceTree = "<group>"; };
 		942F22631C29BC95FD8800084FA6EB9E /* HTMLCharacterData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLCharacterData.m; path = Sources/HTMLCharacterData.m; sourceTree = "<group>"; };
-		94E3ACC08B03D3438E42C53287717C17 /* SUAISchedule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SUAISchedule.m; path = ../../../SUAI/Classes/Model/SUAISchedule.m; sourceTree = "<group>"; };
 		968EC0BFCD1CC447FB9D1560D9D5A621 /* HTMLKitDOMExceptions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLKitDOMExceptions.m; path = Sources/HTMLKitDOMExceptions.m; sourceTree = "<group>"; };
-		96FF8485E244B4278CAD3CF51A0C2889 /* SUAILoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUAILoader.h; path = ../../../SUAI/Classes/Loader/SUAILoader.h; sourceTree = "<group>"; };
+		9725364278896BBA2025CF785FD8CED5 /* SUAIDay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SUAIDay.h; sourceTree = "<group>"; };
+		976BB712FB8C87635C5698219AE3470D /* SUAISchedule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SUAISchedule.h; sourceTree = "<group>"; };
 		985E912EC9F300AA0EEEB4E4263E287C /* HTMLDOCTYPEToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLDOCTYPEToken.m; path = Sources/HTMLDOCTYPEToken.m; sourceTree = "<group>"; };
+		996BFFB37E5C4797519AD7843330FE9E /* SUAI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SUAI.modulemap; sourceTree = "<group>"; };
 		99F99901578BF341BEF48892DA7C746F /* HTMLMarker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLMarker.h; path = Sources/include/HTMLMarker.h; sourceTree = "<group>"; };
 		9BE519008C5B0472206C637625AFAB51 /* HTMLNodeIterator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLNodeIterator.m; path = Sources/HTMLNodeIterator.m; sourceTree = "<group>"; };
 		9C7275E27CD581009C25FA4CB74C8267 /* HTMLParseErrorToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLParseErrorToken.h; path = Sources/include/HTMLParseErrorToken.h; sourceTree = "<group>"; };
 		9D3451D300208944C508B9553E6E07F7 /* HTMLTokenizerEntities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLTokenizerEntities.h; path = Sources/include/HTMLTokenizerEntities.h; sourceTree = "<group>"; };
 		9EFD3CF1C98AF08BDACB0FFF0A8DBC5E /* HTMLRange.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLRange.m; path = Sources/HTMLRange.m; sourceTree = "<group>"; };
-		9F5846B8D9DE43D327C2971C9967A664 /* SUAIParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SUAIParser.m; path = ../../../SUAI/Classes/Parser/SUAIParser.m; sourceTree = "<group>"; };
+		A247785EB8B5F4B3508AE1BAB86D571C /* SUAIAuditory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SUAIAuditory.m; sourceTree = "<group>"; };
 		A260AC31394A12D1AEC1CB9A03A8BFCE /* CSSPseudoFunctionSelector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSSPseudoFunctionSelector.m; path = Sources/CSSPseudoFunctionSelector.m; sourceTree = "<group>"; };
-		A487BCEC121CC310204BE7E8CF552A3B /* Pods-SUAISchedule_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SUAISchedule_Tests-umbrella.h"; sourceTree = "<group>"; };
+		A3349BFBBB6B5F7E69809A4A0F65A8B3 /* SUAIEntity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SUAIEntity.h; sourceTree = "<group>"; };
 		A560D5D6E9220C31B04438AC120804FC /* HTMLDocument+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "HTMLDocument+Private.h"; path = "Sources/include/HTMLDocument+Private.h"; sourceTree = "<group>"; };
 		A654E07CF281B069F5A1E0BBC1DEB52B /* HTMLTokenizerStates.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLTokenizerStates.h; path = Sources/include/HTMLTokenizerStates.h; sourceTree = "<group>"; };
 		A708CBE69DCDC36EBA854485D884750D /* HTMLNodeFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLNodeFilter.h; path = Sources/include/HTMLNodeFilter.h; sourceTree = "<group>"; };
+		A84A1BC2D03C8F91CE9ABEB1CC29046B /* SUAIPair.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SUAIPair.h; sourceTree = "<group>"; };
 		A91C34D6411470CCDC31F53EF80E909C /* HTMLTreeWalker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLTreeWalker.m; path = Sources/HTMLTreeWalker.m; sourceTree = "<group>"; };
 		AB8285A6766798B6C9C362E06430779D /* CSSStructuralPseudoSelectors.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSSStructuralPseudoSelectors.m; path = Sources/CSSStructuralPseudoSelectors.m; sourceTree = "<group>"; };
+		AC01213FF08DC3DCD207840F658B7FE7 /* SUAIParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SUAIParser.h; sourceTree = "<group>"; };
 		AC9641DA36363C14313D724C281766D6 /* HTMLTokenizerCharacters.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLTokenizerCharacters.h; path = Sources/include/HTMLTokenizerCharacters.h; sourceTree = "<group>"; };
 		AD782F97117EC5072E712B2D323DB30D /* HTMLText.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLText.m; path = Sources/HTMLText.m; sourceTree = "<group>"; };
 		AE72E9405F4D76745AD33A35489CA636 /* HTMLOrderedDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLOrderedDictionary.m; path = Sources/HTMLOrderedDictionary.m; sourceTree = "<group>"; };
 		AE7E2A2D86E417119FEE8C72E970C576 /* HTMLNodeFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLNodeFilter.m; path = Sources/HTMLNodeFilter.m; sourceTree = "<group>"; };
 		AEC40B4092AE684E6CC7F8427E7C1475 /* CSSSelector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSSSelector.m; path = Sources/CSSSelector.m; sourceTree = "<group>"; };
 		AED889963E13282F933B7131D9CD57F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		AFD4799AFA6D56665F02B1EDBC63854E /* Pods-SUAISchedule_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SUAISchedule_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AFB78A31590680CA96DA0A63E3E9C9B7 /* Pods-SUAI_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SUAI_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B03E43DB24C963A5A8FA35B54DC2DFBC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B0A608092E390797ACF09399607B6C77 /* HTMLCharacterData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLCharacterData.h; path = Sources/include/HTMLCharacterData.h; sourceTree = "<group>"; };
 		B15864820F8AC91CD2DB088C3B80FE05 /* CSSTypeSelector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSSTypeSelector.m; path = Sources/CSSTypeSelector.m; sourceTree = "<group>"; };
-		B18BEC25860755E864FF3BDD0187E38D /* SUAISchedule-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SUAISchedule-dummy.m"; sourceTree = "<group>"; };
 		B22CC94833C81BD05E54C48061BCC293 /* HTMLCharacterData+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "HTMLCharacterData+Private.h"; path = "Sources/include/HTMLCharacterData+Private.h"; sourceTree = "<group>"; };
 		BA3717A6B765A61249A32138D8825FA7 /* HTMLTagToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLTagToken.h; path = Sources/include/HTMLTagToken.h; sourceTree = "<group>"; };
 		BE6BC62AB15B5DDD406C833C6065F23E /* HTMLParseErrorToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLParseErrorToken.m; path = Sources/HTMLParseErrorToken.m; sourceTree = "<group>"; };
+		C025ABC3C04B1AFD8C2CED06C238028C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C0655609EEC58C2F4B3DAD7AF3302574 /* HTMLTemplate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLTemplate.m; path = Sources/HTMLTemplate.m; sourceTree = "<group>"; };
-		C322F91844D669FE950948C84B800B5C /* Pods-SUAISchedule_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SUAISchedule_Tests-resources.sh"; sourceTree = "<group>"; };
-		C4B12CF74AE8778352A7913263364F6E /* Pods-SUAISchedule_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SUAISchedule_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C66A99596389ADC0F7FB4271580661DF /* HTMLKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HTMLKit-umbrella.h"; sourceTree = "<group>"; };
 		C87AC0D81FF80CEE3ED8A3BC9001A677 /* HTMLInputStreamReader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLInputStreamReader.h; path = Sources/include/HTMLInputStreamReader.h; sourceTree = "<group>"; };
-		CA867D2B133A2C5E2FD49DAECF9ABB9D /* SUAIDay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUAIDay.h; path = ../../../SUAI/Classes/Model/SUAIDay.h; sourceTree = "<group>"; };
 		CB70A53FCD2E96E7F1D73796BDD37169 /* CSSCompoundSelector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSSCompoundSelector.h; path = Sources/include/CSSCompoundSelector.h; sourceTree = "<group>"; };
 		CD3888978773AA4BBE35B475621FCA39 /* HTMLNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLNode.h; path = Sources/include/HTMLNode.h; sourceTree = "<group>"; };
 		D0314E056648C45421ED7BAF05AE7E1B /* HTMLCharacterToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLCharacterToken.m; path = Sources/HTMLCharacterToken.m; sourceTree = "<group>"; };
-		D0A8A697654FCC7AB1E895D046C90C45 /* Pods-SUAISchedule_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SUAISchedule_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		D0469E7C463BA67935AD3D5D42C270B8 /* NSString+Enums.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+Enums.m"; sourceTree = "<group>"; };
 		D0D7693831090EB68DE43BA5E5E9D3E3 /* CSSCompoundSelector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSSCompoundSelector.m; path = Sources/CSSCompoundSelector.m; sourceTree = "<group>"; };
 		D0D9C703EC2830747E1265CF14E64743 /* HTMLKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HTMLKit.xcconfig; sourceTree = "<group>"; };
-		D45C1406C9C21163C4D8C3D241624216 /* Pods_SUAISchedule_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SUAISchedule_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1ACFCAA70001E09D357AD6B17297501 /* SUAIPair.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SUAIPair.m; sourceTree = "<group>"; };
+		D4BB261FF9413B02C41E4F058C3F9B35 /* Pods-SUAI_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SUAI_Example-umbrella.h"; sourceTree = "<group>"; };
 		D60283BE0096C8B9C209FF7F538F3B26 /* HTMLDOMUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLDOMUtils.h; path = Sources/include/HTMLDOMUtils.h; sourceTree = "<group>"; };
 		D6DBD0427A53E785E9F6BD31F17E1057 /* HTMLQuirksMode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLQuirksMode.h; path = Sources/include/HTMLQuirksMode.h; sourceTree = "<group>"; };
+		D728DA7457EB57EBBDB8D2552789D2BC /* NSString+Enums.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+Enums.h"; sourceTree = "<group>"; };
+		D9747EEE235B9B95CCE2E331F8BD04E5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9A92A8DF01CA45F738EBE4722C7FF17 /* HTMLKitErrorDomain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLKitErrorDomain.h; path = Sources/include/HTMLKitErrorDomain.h; sourceTree = "<group>"; };
+		DA11364DA01165AE2A48E8B67B50889A /* SUAI-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SUAI-prefix.pch"; sourceTree = "<group>"; };
 		DB7C4C0ED3BB4E5422C2BFC38B79C551 /* CSSPseudoClassSelector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSSPseudoClassSelector.h; path = Sources/include/CSSPseudoClassSelector.h; sourceTree = "<group>"; };
-		DC0A760163717415D4DE64EC25B40D43 /* SUAISchedule-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SUAISchedule-prefix.pch"; sourceTree = "<group>"; };
-		DD0B2E590B1C9B3B78BC3AF0AFA39D82 /* Pods-SUAISchedule_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SUAISchedule_Tests.modulemap"; sourceTree = "<group>"; };
+		DC96A8803892DA9937722287A63D7237 /* Pods-SUAI_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SUAI_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		DE1ED99E72E60005DC0121304BE5C58A /* CSSStructuralPseudoSelectors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSSStructuralPseudoSelectors.h; path = Sources/include/CSSStructuralPseudoSelectors.h; sourceTree = "<group>"; };
+		DE6774B20F6A8EC04ED49926B018D72C /* Pods-SUAI_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SUAI_Example.modulemap"; sourceTree = "<group>"; };
+		DF1B71B0E1592D83669017C86C7834D7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E064C2752826B10E74F0DEFDBBA8B942 /* HTMLDOMUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLDOMUtils.m; path = Sources/HTMLDOMUtils.m; sourceTree = "<group>"; };
 		E0B45299D1D38DE9D6674EDBCA8FF669 /* CSSSelectorBlock.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSSSelectorBlock.m; path = Sources/CSSSelectorBlock.m; sourceTree = "<group>"; };
 		E0CD0173378BE3B5C4506734E9DA792B /* HTMLElement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLElement.m; path = Sources/HTMLElement.m; sourceTree = "<group>"; };
-		E3C6E747CBBF674D73DAA3189269A860 /* SUAISchedule.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = SUAISchedule.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E1AD685D95DB91EAEC8E546D49205C51 /* Pods-SUAI_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SUAI_Tests.modulemap"; sourceTree = "<group>"; };
 		E3D7029FB2CCC7520D36F878393833A8 /* CSSNthExpressionSelector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSSNthExpressionSelector.m; path = Sources/CSSNthExpressionSelector.m; sourceTree = "<group>"; };
-		E5261CC6C2B895982E62932029F44E9F /* Links.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Links.h; path = ../../../SUAI/Classes/Headers/Links.h; sourceTree = "<group>"; };
+		E65AF9C50B18B4B19D30589B7D593FAA /* SUAILoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SUAILoader.m; sourceTree = "<group>"; };
 		E67C9FB2C34789F8B353184B310E0072 /* HTMLDocumentType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLDocumentType.h; path = Sources/include/HTMLDocumentType.h; sourceTree = "<group>"; };
 		EA4F1926AD91441F76C9827E7A911A58 /* HTMLDocumentFragment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLDocumentFragment.h; path = Sources/include/HTMLDocumentFragment.h; sourceTree = "<group>"; };
-		ECB373AF79142BA46117A0DEA3F951B3 /* Pods-SUAISchedule_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SUAISchedule_Example.release.xcconfig"; sourceTree = "<group>"; };
 		EE6D82E32462CA729CC0E583E0F3A56C /* HTMLParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLParser.m; path = Sources/HTMLParser.m; sourceTree = "<group>"; };
 		F15FDCC2A83AB6AFE123A283969A1BD1 /* HTMLStackOfOpenElements.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLStackOfOpenElements.h; path = Sources/include/HTMLStackOfOpenElements.h; sourceTree = "<group>"; };
-		F2DE214E2DB1BE41D8012FA7A5A157E7 /* SUAIEntity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SUAIEntity.m; path = ../../../SUAI/Classes/Model/SUAIEntity.m; sourceTree = "<group>"; };
 		F3157AB770EE14B204507D54220883C3 /* HTMLOrderedDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLOrderedDictionary.h; path = Sources/include/HTMLOrderedDictionary.h; sourceTree = "<group>"; };
 		F88EF62BE0F48E97BBB899C641EF31C0 /* CSSSelectorBlock.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSSSelectorBlock.h; path = Sources/include/CSSSelectorBlock.h; sourceTree = "<group>"; };
 		FA55B58679602570A58FDF51B4DDA58F /* HTMLTokenizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLTokenizer.h; path = Sources/include/HTMLTokenizer.h; sourceTree = "<group>"; };
 		FB31228147073583FBCE396542091BFA /* HTMLElementTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLElementTypes.h; path = Sources/include/HTMLElementTypes.h; sourceTree = "<group>"; };
-		FCB51C01A94D3CA5007E5B1689BC4DDA /* Pods-SUAISchedule_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SUAISchedule_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		FD2C93CF1BA81641CDB3E2D8CA494D0F /* NSString+Enums.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+Enums.m"; path = "../../../SUAI/Classes/Categories/NSString+Enums.m"; sourceTree = "<group>"; };
-		FD6891BC98CE6B31E093442D80CC0823 /* Pods-SUAISchedule_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SUAISchedule_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		FD836BE9B4E41A3D7C8E108C557B6135 /* Pods_SUAI_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SUAI_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD96196AC3EDFEEE53C9B4089C06A8BC /* HTMLKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HTMLKit-prefix.pch"; sourceTree = "<group>"; };
-		FEF5DB30D2A759C7BB45EA5B3577CD4E /* SUAISchedule.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SUAISchedule.xcconfig; sourceTree = "<group>"; };
 		FF0611228298BBF6978428F476D9AA3E /* CSSPseudoClassSelector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSSPseudoClassSelector.m; path = Sources/CSSPseudoClassSelector.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1F419960A3E587F31FE8E3434664C22A /* Frameworks */ = {
+		1F9AEAE90013CEF902AE5929EA0B823A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59B88F301FCD68EC0B986544427C844F /* Foundation.framework in Frameworks */,
-				F5C97029EBDB9464064D1746FCC0F7DB /* HTMLKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		263034DC2E1738969C24B8748C24B0F5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8AD783F7215261EA3DF6813F65A70545 /* Foundation.framework in Frameworks */,
+				5AAF6C3034D244485E0532A93939964D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,30 +387,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DBA1433BFF0BB8C0832C8F6D6E707D0F /* Frameworks */ = {
+		B29F665D4064AF2E4F3D9222701E7EF3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14F79DBDF0B6D296D8DE5481A0FC32B3 /* Foundation.framework in Frameworks */,
+				C103151B45FC3DF2032E6444168DDE99 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6D231B287F0374AE85BDDA85431E76F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E024085EDCCF5F06FB394E07680B475C /* Foundation.framework in Frameworks */,
+				4D6187D09B351A97D51AF36939F5718F /* HTMLKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0A37DF667D475F852FBECD086B454AFE /* SUAI */ = {
+		06B9F48A5E4DDF249A616CA781B95097 /* Parser */ = {
 			isa = PBXGroup;
 			children = (
-				964F2C42FD1FC48A0F8AD9401CEA9476 /* Headers */,
-				B5EBD58A2DEB6D37ED0E8053B5544177 /* Parser */,
-				2C5D455F999956D484AF7505AF94F4B4 /* Loader */,
-				3A94314A551D32A3BED645BC5D102206 /* Model */,
-				46E0438537D5DFC826DB27F276CABD58 /* Pod */,
-				C0E4400D37D6A2DE3FEB68447D983D82 /* Support Files */,
-				34B45BF50C668DC6C582B567FC5E500C /* Categories */,
+				55739F44CE9265C3F4F17FC8E7D74643 /* SUAIManager.h */,
+				3A3C42F8F5973C5FB0F2303081EED205 /* SUAIManager.m */,
+				AC01213FF08DC3DCD207840F658B7FE7 /* SUAIParser.h */,
+				7B19047C42097AF3D1BB64988908B68A /* SUAIParser.m */,
 			);
-			name = SUAI;
-			path = ../..;
+			name = Parser;
+			path = SUAI/Classes/Parser;
 			sourceTree = "<group>";
 		};
 		128F2F9DE4FBCF673388045B9C48E3E9 /* Support Files */ = {
@@ -436,44 +433,40 @@
 			path = "../Target Support Files/HTMLKit";
 			sourceTree = "<group>";
 		};
-		1E805053D3A9B4D88FC19132A28C2F08 /* Pods-SUAISchedule_Example */ = {
+		2E6AFFBA850173C540578CD5A36D9B48 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				704ACF0F9E0B84D1F50175574994F007 /* Info.plist */,
-				3259B695637B4E0F2F51CED2DD1E846A /* Pods-SUAISchedule_Example.modulemap */,
-				AFD4799AFA6D56665F02B1EDBC63854E /* Pods-SUAISchedule_Example-acknowledgements.markdown */,
-				58B71DE3AA15A93EAEF896ABB17E3C63 /* Pods-SUAISchedule_Example-acknowledgements.plist */,
-				5C3BA9A9DFAACD202E1E8591140CD521 /* Pods-SUAISchedule_Example-dummy.m */,
-				7235C4D7F16A645D714B9F4A7B769823 /* Pods-SUAISchedule_Example-frameworks.sh */,
-				7B06004F55F35094BAE5FB7D7EB4A0D0 /* Pods-SUAISchedule_Example-resources.sh */,
-				4DE8C01A4BDB130E4A93684FAB8F5750 /* Pods-SUAISchedule_Example-umbrella.h */,
-				FCB51C01A94D3CA5007E5B1689BC4DDA /* Pods-SUAISchedule_Example.debug.xcconfig */,
-				ECB373AF79142BA46117A0DEA3F951B3 /* Pods-SUAISchedule_Example.release.xcconfig */,
+				DB86C0E7D503E5F0B2036B4595C092EA /* SUAI */,
 			);
-			name = "Pods-SUAISchedule_Example";
-			path = "Target Support Files/Pods-SUAISchedule_Example";
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		2C5D455F999956D484AF7505AF94F4B4 /* Loader */ = {
+		380857E5A7F92F9E63644FADF5585709 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				96FF8485E244B4278CAD3CF51A0C2889 /* SUAILoader.h */,
-				8A1D2DDDC8CD9AEB90BAE95FB3450554 /* SUAILoader.m */,
+				87F5527D981333DF6DC60BDE6B399B43 /* Enums.h */,
+				1DE2BE8905D33D72F9A4391268094192 /* Links.h */,
 			);
-			name = Loader;
-			path = SUAISchedule/Classes/Loader;
+			name = Headers;
+			path = SUAI/Classes/Headers;
 			sourceTree = "<group>";
 		};
-		34B45BF50C668DC6C582B567FC5E500C /* Categories */ = {
+		38287D59366B5BD1C6B3A0005A96ED17 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				556D1AE121C1825700497DA3 /* NSString+NameFormation.h */,
-				556D1AE221C1825700497DA3 /* NSString+NameFormation.m */,
-				0AA43667A1E542BBF39D3A299C365386 /* NSString+Enums.h */,
-				FD2C93CF1BA81641CDB3E2D8CA494D0F /* NSString+Enums.m */,
+				3FB30B9A1321DCA2776957BB870F5DC7 /* SUAIAuditory.h */,
+				A247785EB8B5F4B3508AE1BAB86D571C /* SUAIAuditory.m */,
+				9725364278896BBA2025CF785FD8CED5 /* SUAIDay.h */,
+				703EAA232D3145ED58DEECBFD1E2C913 /* SUAIDay.m */,
+				A3349BFBBB6B5F7E69809A4A0F65A8B3 /* SUAIEntity.h */,
+				3749D93CE8E013F10DC50FBA0E2959B1 /* SUAIEntity.m */,
+				A84A1BC2D03C8F91CE9ABEB1CC29046B /* SUAIPair.h */,
+				D1ACFCAA70001E09D357AD6B17297501 /* SUAIPair.m */,
+				976BB712FB8C87635C5698219AE3470D /* SUAISchedule.h */,
+				2E13D6063FBA893C7649686A350EE132 /* SUAISchedule.m */,
 			);
-			name = Categories;
-			path = SUAISchedule/Classes/Categories;
+			name = Model;
+			path = SUAI/Classes/Model;
 			sourceTree = "<group>";
 		};
 		3A3A766098B21FE5568AFED55AE480E2 /* iOS */ = {
@@ -484,31 +477,30 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		3A94314A551D32A3BED645BC5D102206 /* Model */ = {
+		3BD6FEBEF073A353BC1099457D5CA2F9 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				81A00A71C71019ACA632EC90FB154534 /* SUAIEntity.h */,
-				F2DE214E2DB1BE41D8012FA7A5A157E7 /* SUAIEntity.m */,
-				2DEDABCC33C5AD5207C4731750D669A4 /* SUAIAuditory.h */,
-				938863D011AD748568C12D6A3AA0B0D0 /* SUAIAuditory.m */,
-				CA867D2B133A2C5E2FD49DAECF9ABB9D /* SUAIDay.h */,
-				6829DB75BE7B227383BE16CA84DBD345 /* SUAIDay.m */,
-				3E3E7C36CC97FE9403A6ED65D3AC2CFE /* SUAIPair.h */,
-				786C85366D4527ACF5FC12E560813492 /* SUAIPair.m */,
-				689013393458034EF207A75C50BAD978 /* SUAISchedule.h */,
-				94E3ACC08B03D3438E42C53287717C17 /* SUAISchedule.m */,
+				141AE1B46C6EB5DC053098225A7DC2E9 /* Info.plist */,
+				996BFFB37E5C4797519AD7843330FE9E /* SUAI.modulemap */,
+				6542374F1D5BA1A9BC3559C93EE9E3FB /* SUAI.xcconfig */,
+				1A0D850958F9B8EF27A4021CE833BFF7 /* SUAI-dummy.m */,
+				DA11364DA01165AE2A48E8B67B50889A /* SUAI-prefix.pch */,
+				55C9ED383DB4E2468E6CD7D8664F6DB6 /* SUAI-umbrella.h */,
 			);
-			name = Model;
-			path = SUAISchedule/Classes/Model;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SUAI";
 			sourceTree = "<group>";
 		};
-		3BFCC18B470C02AF65F96548B89874F8 /* Targets Support Files */ = {
+		3FB5E4848B8D4CA9EE67DAFD856F432D /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				1E805053D3A9B4D88FC19132A28C2F08 /* Pods-SUAISchedule_Example */,
-				A660E33603E380465839C60DFD739782 /* Pods-SUAISchedule_Tests */,
+				D728DA7457EB57EBBDB8D2552789D2BC /* NSString+Enums.h */,
+				D0469E7C463BA67935AD3D5D42C270B8 /* NSString+Enums.m */,
+				2681BF0C6BAA47F7FD91C1FFACADEC8B /* NSString+NameFormation.h */,
+				2A98DFD41D2419AEB84B1F548950DC19 /* NSString+NameFormation.m */,
 			);
-			name = "Targets Support Files";
+			name = Categories;
+			path = SUAI/Classes/Categories;
 			sourceTree = "<group>";
 		};
 		450D13C937B4D50B36748799E3199AB2 /* Frameworks */ = {
@@ -520,16 +512,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		46E0438537D5DFC826DB27F276CABD58 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				469B9D439ADC93AC9D07247136D724E3 /* LICENSE */,
-				51233CE414CB312783AF5672B5716CE3 /* README.md */,
-				E3C6E747CBBF674D73DAA3189269A860 /* SUAISchedule.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		4CC507759E8C3CA2E16620A87780163A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -538,27 +520,63 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		53BB8BECF13A3062CA688F2B68897F9B /* Products */ = {
+		5CCD46B52C688C81B8FC3E65FF6ACB74 /* Loader */ = {
 			isa = PBXGroup;
 			children = (
-				52CBBCFDA775E3C6478A4E8A3B3EF63C /* HTMLKit.framework */,
-				2302EA3AF84EAE0BED77422616C1627A /* Pods_SUAISchedule_Example.framework */,
-				D45C1406C9C21163C4D8C3D241624216 /* Pods_SUAISchedule_Tests.framework */,
-				90DE167B27583B01A0434321AF18105E /* SUAISchedule.framework */,
+				51E96EA2A72A4821E3254140A5A69823 /* SUAILoader.h */,
+				E65AF9C50B18B4B19D30589B7D593FAA /* SUAILoader.m */,
 			);
-			name = Products;
+			name = Loader;
+			path = SUAI/Classes/Loader;
+			sourceTree = "<group>";
+		};
+		797559370B44C5D42F24F3F6B24915C8 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				C025ABC3C04B1AFD8C2CED06C238028C /* LICENSE */,
+				B03E43DB24C963A5A8FA35B54DC2DFBC /* README.md */,
+				3F1B1A6C7797BB047359C54B31BB5E67 /* SUAI.podspec */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				D60452976E0886C8F75EACB1CC0BD2E8 /* Development Pods */,
+				2E6AFFBA850173C540578CD5A36D9B48 /* Development Pods */,
 				450D13C937B4D50B36748799E3199AB2 /* Frameworks */,
 				4CC507759E8C3CA2E16620A87780163A /* Pods */,
-				53BB8BECF13A3062CA688F2B68897F9B /* Products */,
-				3BFCC18B470C02AF65F96548B89874F8 /* Targets Support Files */,
+				F2DC482F6FD9F6638DCA4E6119DBB405 /* Products */,
+				855D44B25EB7AB07594BA2E794FAFDA1 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		82A9D37075EC8C7D23AAC85D457629D7 /* Pods-SUAI_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DF1B71B0E1592D83669017C86C7834D7 /* Info.plist */,
+				E1AD685D95DB91EAEC8E546D49205C51 /* Pods-SUAI_Tests.modulemap */,
+				577579969E53C9EFEE2591CCA1C2F485 /* Pods-SUAI_Tests-acknowledgements.markdown */,
+				0B7E367B275938C1152970F1B4290194 /* Pods-SUAI_Tests-acknowledgements.plist */,
+				3EA16B7ED042E4CCA09CBD28FEA4BAE0 /* Pods-SUAI_Tests-dummy.m */,
+				DC96A8803892DA9937722287A63D7237 /* Pods-SUAI_Tests-frameworks.sh */,
+				6F097469228E091772EBC9A46BB60F36 /* Pods-SUAI_Tests-resources.sh */,
+				71856805E0CBE4632D6F7AFA7F398725 /* Pods-SUAI_Tests-umbrella.h */,
+				0242B44BE4CFC37494ECDAE76D526799 /* Pods-SUAI_Tests.debug.xcconfig */,
+				15E7F60093E53E3E53062A468967029A /* Pods-SUAI_Tests.release.xcconfig */,
+			);
+			name = "Pods-SUAI_Tests";
+			path = "Target Support Files/Pods-SUAI_Tests";
+			sourceTree = "<group>";
+		};
+		855D44B25EB7AB07594BA2E794FAFDA1 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE908AFE442BE9861B56FEC7001CE87E /* Pods-SUAI_Example */,
+				82A9D37075EC8C7D23AAC85D457629D7 /* Pods-SUAI_Tests */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		905202E67A04AA418D0986495512421B /* HTMLKit */ = {
@@ -683,96 +701,70 @@
 			path = HTMLKit;
 			sourceTree = "<group>";
 		};
-		964F2C42FD1FC48A0F8AD9401CEA9476 /* Headers */ = {
+		BE908AFE442BE9861B56FEC7001CE87E /* Pods-SUAI_Example */ = {
 			isa = PBXGroup;
 			children = (
-				664BDC9B1C8ED84C341337A1B799C6A7 /* Enums.h */,
-				E5261CC6C2B895982E62932029F44E9F /* Links.h */,
+				D9747EEE235B9B95CCE2E331F8BD04E5 /* Info.plist */,
+				DE6774B20F6A8EC04ED49926B018D72C /* Pods-SUAI_Example.modulemap */,
+				AFB78A31590680CA96DA0A63E3E9C9B7 /* Pods-SUAI_Example-acknowledgements.markdown */,
+				1B861592B5DA98BE42111D32B87F32B5 /* Pods-SUAI_Example-acknowledgements.plist */,
+				666B888CB3F01F3DE265E40384FB5A47 /* Pods-SUAI_Example-dummy.m */,
+				6BB008D55B00D89005D4D5A7BBAA5B15 /* Pods-SUAI_Example-frameworks.sh */,
+				323AC4CB77B5EF4B6A0985783FA2F8E3 /* Pods-SUAI_Example-resources.sh */,
+				D4BB261FF9413B02C41E4F058C3F9B35 /* Pods-SUAI_Example-umbrella.h */,
+				862FD37BEDD772649AFA9DFBCD3290D3 /* Pods-SUAI_Example.debug.xcconfig */,
+				04E1CE1BD222A0EACB907E5E45A1290F /* Pods-SUAI_Example.release.xcconfig */,
 			);
-			name = Headers;
-			path = SUAISchedule/Classes/Headers;
+			name = "Pods-SUAI_Example";
+			path = "Target Support Files/Pods-SUAI_Example";
 			sourceTree = "<group>";
 		};
-		A660E33603E380465839C60DFD739782 /* Pods-SUAISchedule_Tests */ = {
+		DB86C0E7D503E5F0B2036B4595C092EA /* SUAI */ = {
 			isa = PBXGroup;
 			children = (
-				5640F5E1735FA0AFBD6998A33247AE85 /* Info.plist */,
-				DD0B2E590B1C9B3B78BC3AF0AFA39D82 /* Pods-SUAISchedule_Tests.modulemap */,
-				C4B12CF74AE8778352A7913263364F6E /* Pods-SUAISchedule_Tests-acknowledgements.markdown */,
-				24E7425194B1A84875C7AFC4FAD9A8BC /* Pods-SUAISchedule_Tests-acknowledgements.plist */,
-				0202E05A5A9DA85A8800E9ABCC43EEB8 /* Pods-SUAISchedule_Tests-dummy.m */,
-				FD6891BC98CE6B31E093442D80CC0823 /* Pods-SUAISchedule_Tests-frameworks.sh */,
-				C322F91844D669FE950948C84B800B5C /* Pods-SUAISchedule_Tests-resources.sh */,
-				A487BCEC121CC310204BE7E8CF552A3B /* Pods-SUAISchedule_Tests-umbrella.h */,
-				595AB8B2A85D19D82C83CE3C0643650D /* Pods-SUAISchedule_Tests.debug.xcconfig */,
-				D0A8A697654FCC7AB1E895D046C90C45 /* Pods-SUAISchedule_Tests.release.xcconfig */,
+				3FB5E4848B8D4CA9EE67DAFD856F432D /* Categories */,
+				380857E5A7F92F9E63644FADF5585709 /* Headers */,
+				5CCD46B52C688C81B8FC3E65FF6ACB74 /* Loader */,
+				38287D59366B5BD1C6B3A0005A96ED17 /* Model */,
+				06B9F48A5E4DDF249A616CA781B95097 /* Parser */,
+				797559370B44C5D42F24F3F6B24915C8 /* Pod */,
+				3BD6FEBEF073A353BC1099457D5CA2F9 /* Support Files */,
 			);
-			name = "Pods-SUAISchedule_Tests";
-			path = "Target Support Files/Pods-SUAISchedule_Tests";
+			name = SUAI;
+			path = ../..;
 			sourceTree = "<group>";
 		};
-		B5EBD58A2DEB6D37ED0E8053B5544177 /* Parser */ = {
+		F2DC482F6FD9F6638DCA4E6119DBB405 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				11C6232D3E2564BB94D0FC9A46D1E308 /* SUAIManager.h */,
-				01CCAF9E1BA78078E9AB7E363359C936 /* SUAIManager.m */,
-				4A90B05FDBD7BFF880A063A070AA3E8B /* SUAIParser.h */,
-				9F5846B8D9DE43D327C2971C9967A664 /* SUAIParser.m */,
+				362C2A9C3621C4527B51AC5D88660097 /* HTMLKit.framework */,
+				FD836BE9B4E41A3D7C8E108C557B6135 /* Pods_SUAI_Example.framework */,
+				7EFFB8C73A9CBF23818BAD4DD8AF4CED /* Pods_SUAI_Tests.framework */,
+				0B5EA554E7217E1DD0A04BA450D94F87 /* SUAI.framework */,
 			);
-			name = Parser;
-			path = SUAISchedule/Classes/Parser;
-			sourceTree = "<group>";
-		};
-		C0E4400D37D6A2DE3FEB68447D983D82 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				3D527395DC8C563C85E774A05D2C3B1C /* Info.plist */,
-				3FC5E99F83A59FCE861822ED4654BFCC /* SUAISchedule.modulemap */,
-				FEF5DB30D2A759C7BB45EA5B3577CD4E /* SUAISchedule.xcconfig */,
-				B18BEC25860755E864FF3BDD0187E38D /* SUAISchedule-dummy.m */,
-				DC0A760163717415D4DE64EC25B40D43 /* SUAISchedule-prefix.pch */,
-				6350CD58A8558A0ECE9F40120F648059 /* SUAISchedule-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/SUAISchedule";
-			sourceTree = "<group>";
-		};
-		D60452976E0886C8F75EACB1CC0BD2E8 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0A37DF667D475F852FBECD086B454AFE /* SUAI */,
-			);
-			name = "Development Pods";
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		127500B0CECD895465B450E6852C121B /* Headers */ = {
+		2C8D99255195103604B69313AF3533B4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11EE4E01BFDA327D29B171AFBC634E7F /* Enums.h in Headers */,
-				3FFB1DDE45829356D249255795ABF4F1 /* Links.h in Headers */,
-				28F3893DC55FD846397FD88363611731 /* NSString+Enums.h in Headers */,
-				306239EA030D2EAF4A339979A487A997 /* SUAIAuditory.h in Headers */,
-				E0180B8877CF2E6C8B855538F3E335E4 /* SUAIDay.h in Headers */,
-				BE92F84488AA1814B1574CCF0BBDDF0A /* SUAIEntity.h in Headers */,
-				0F4B8767240F6B5EAA87654F2B552CE0 /* SUAILoader.h in Headers */,
-				556D1AE621C1864E00497DA3 /* NSString+NameFormation.h in Headers */,
-				B8082CD393736797DCF521D6C73C3A36 /* SUAIManager.h in Headers */,
-				7F4ECBCCE64E3B7856AC6292D5E78F1A /* SUAIPair.h in Headers */,
-				830B4ECBA35BB5745708D9330BEEFDA1 /* SUAIParser.m in Headers */,
-				5542E7AB646A11ACEB5A5637CB20D144 /* SUAISchedule-umbrella.h in Headers */,
-				D6826D2A17F3A2AF75D37AF377F87830 /* SUAISchedule.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1E50AE001EFE8F99F560A0B60255C6BA /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DCA5A98A825FE860ECB6BC78FA668AF1 /* Pods-SUAISchedule_Tests-umbrella.h in Headers */,
+				C7D597E8FA5CB691283C815BBDDB5605 /* Enums.h in Headers */,
+				AB5D0F50D4D6DABE28637AF6441D04AD /* Links.h in Headers */,
+				C86059529C85A9A8BCA698B1B5861FB5 /* NSString+Enums.h in Headers */,
+				7070665428926F8503987F3463961AFB /* NSString+NameFormation.h in Headers */,
+				7E68093E94046DDFAD8BB0271AE2AE94 /* SUAI-umbrella.h in Headers */,
+				61120758ADED7E2487D6C56CA3E09057 /* SUAIAuditory.h in Headers */,
+				3E1E7216EDA0598A5D9017C15CDEDCD0 /* SUAIDay.h in Headers */,
+				BF34597E6B0FA55BCC2558328B662411 /* SUAIEntity.h in Headers */,
+				066BF6E748BE6C605F7A3E5E95B24DA2 /* SUAILoader.h in Headers */,
+				4CB284A1579335FA1D84450B8A2A6529 /* SUAIManager.h in Headers */,
+				31C255A65B3F67463E0BAD910BEA46C1 /* SUAIPair.h in Headers */,
+				3C43C8732A22A2694E52BED62DDD967C /* SUAIParser.h in Headers */,
+				138A8CF6386AFB71214F4D2B278F48EB /* SUAISchedule.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -850,52 +842,60 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		74DBF859B79A01C50D771B7553133967 /* Headers */ = {
+		82FA1BC3AB1C925D059BD35536257521 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				269D4477051EF176C3E14CABA9A6495D /* Pods-SUAISchedule_Example-umbrella.h in Headers */,
+				02D49BCBB7BE24EEB1002B39C9830F00 /* Pods-SUAI_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEA1D0B61E19D7C2069E44C362086212 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7293E9F6A62BAAD70117B3EADA894C19 /* Pods-SUAI_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		5533A3A42C73C5C770567AB7E5093D2F /* Pods-SUAISchedule_Example */ = {
+		00E6C3C2D677830E4FA68C4B4EB9A4E8 /* Pods-SUAI_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66E36091ACA9DBBEFFAD8FD7F84EFE82 /* Build configuration list for PBXNativeTarget "Pods-SUAISchedule_Example" */;
+			buildConfigurationList = 9F28BF0447EB75F73712025AAB2D783E /* Build configuration list for PBXNativeTarget "Pods-SUAI_Example" */;
 			buildPhases = (
-				4D1F82044F1743CB503D683CE1782D08 /* Sources */,
-				DBA1433BFF0BB8C0832C8F6D6E707D0F /* Frameworks */,
-				74DBF859B79A01C50D771B7553133967 /* Headers */,
+				B17EDFA1B50B053692309CC57C62832E /* Sources */,
+				1F9AEAE90013CEF902AE5929EA0B823A /* Frameworks */,
+				82FA1BC3AB1C925D059BD35536257521 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				39DF6B15C491E25E293B4BB65FBAEDFA /* PBXTargetDependency */,
-				CAE14BB21ED620D6BD8F8790FDEEBC70 /* PBXTargetDependency */,
+				9F4A721D7A6ED58D6FF25C4336EA6665 /* PBXTargetDependency */,
+				CCCD52FA573B2281A2A58D6049C19D7D /* PBXTargetDependency */,
 			);
-			name = "Pods-SUAISchedule_Example";
-			productName = "Pods-SUAISchedule_Example";
-			productReference = 2302EA3AF84EAE0BED77422616C1627A /* Pods_SUAISchedule_Example.framework */;
+			name = "Pods-SUAI_Example";
+			productName = "Pods-SUAI_Example";
+			productReference = FD836BE9B4E41A3D7C8E108C557B6135 /* Pods_SUAI_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		6D946512F001AF46A262CEB2026FAF17 /* Pods-SUAISchedule_Tests */ = {
+		2091F875797A0FFD3E6717A26618EFB5 /* SUAI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8D173929D8C6E7625E68206D5AE4A1A9 /* Build configuration list for PBXNativeTarget "Pods-SUAISchedule_Tests" */;
+			buildConfigurationList = D24F0A8F3E4EF0283F927C1EEAB3227F /* Build configuration list for PBXNativeTarget "SUAI" */;
 			buildPhases = (
-				2FEA2B79A4745D55B77DF425881ABFDB /* Sources */,
-				263034DC2E1738969C24B8748C24B0F5 /* Frameworks */,
-				1E50AE001EFE8F99F560A0B60255C6BA /* Headers */,
+				8506EE45C2D6F3719F925B3EA81D37B9 /* Sources */,
+				B6D231B287F0374AE85BDDA85431E76F /* Frameworks */,
+				2C8D99255195103604B69313AF3533B4 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				82354E39CEB6D8021D0EE481CCF57756 /* PBXTargetDependency */,
+				86BE2CE965A5BA85EE75AE7DEB0D4B26 /* PBXTargetDependency */,
 			);
-			name = "Pods-SUAISchedule_Tests";
-			productName = "Pods-SUAISchedule_Tests";
-			productReference = D45C1406C9C21163C4D8C3D241624216 /* Pods_SUAISchedule_Tests.framework */;
+			name = SUAI;
+			productName = SUAI;
+			productReference = 0B5EA554E7217E1DD0A04BA450D94F87 /* SUAI.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		7DF885F31CE63E4CAA6D8BB2EF575028 /* HTMLKit */ = {
@@ -912,25 +912,25 @@
 			);
 			name = HTMLKit;
 			productName = HTMLKit;
-			productReference = 52CBBCFDA775E3C6478A4E8A3B3EF63C /* HTMLKit.framework */;
+			productReference = 362C2A9C3621C4527B51AC5D88660097 /* HTMLKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		FCEA685146428B1F986AF244827708F9 /* SUAI */ = {
+		B0DFA13F97261C5B95420117855FF77A /* Pods-SUAI_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 656E83539FD61EFD3095CB1B8BAEA76D /* Build configuration list for PBXNativeTarget "SUAI" */;
+			buildConfigurationList = C3F1F78277A86A28D6D41BA451F451E3 /* Build configuration list for PBXNativeTarget "Pods-SUAI_Tests" */;
 			buildPhases = (
-				4EF362AC80CF04784C64418391F45FE5 /* Sources */,
-				1F419960A3E587F31FE8E3434664C22A /* Frameworks */,
-				127500B0CECD895465B450E6852C121B /* Headers */,
+				A22184C8A25D4739A979BEC9DE6AB508 /* Sources */,
+				B29F665D4064AF2E4F3D9222701E7EF3 /* Frameworks */,
+				BEA1D0B61E19D7C2069E44C362086212 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5FDCB3C5A16ED3BF00790A17D44BF084 /* PBXTargetDependency */,
+				CB48B052DBEDF8250900B74C6C7C166B /* PBXTargetDependency */,
 			);
-			name = SUAI;
-			productName = SUAISchedule;
-			productReference = 90DE167B27583B01A0434321AF18105E /* SUAISchedule.framework */;
+			name = "Pods-SUAI_Tests";
+			productName = "Pods-SUAI_Tests";
+			productReference = 7EFFB8C73A9CBF23818BAD4DD8AF4CED /* Pods_SUAI_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -950,50 +950,42 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 53BB8BECF13A3062CA688F2B68897F9B /* Products */;
+			productRefGroup = F2DC482F6FD9F6638DCA4E6119DBB405 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				7DF885F31CE63E4CAA6D8BB2EF575028 /* HTMLKit */,
-				5533A3A42C73C5C770567AB7E5093D2F /* Pods-SUAISchedule_Example */,
-				6D946512F001AF46A262CEB2026FAF17 /* Pods-SUAISchedule_Tests */,
-				FCEA685146428B1F986AF244827708F9 /* SUAI */,
+				00E6C3C2D677830E4FA68C4B4EB9A4E8 /* Pods-SUAI_Example */,
+				B0DFA13F97261C5B95420117855FF77A /* Pods-SUAI_Tests */,
+				2091F875797A0FFD3E6717A26618EFB5 /* SUAI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2FEA2B79A4745D55B77DF425881ABFDB /* Sources */ = {
+		8506EE45C2D6F3719F925B3EA81D37B9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC97005FF2B1333ACB515F52343A91DA /* Pods-SUAISchedule_Tests-dummy.m in Sources */,
+				4AAD2047886010B74718A16F529B0521 /* NSString+Enums.m in Sources */,
+				D92DBDF43A58915363D1A56293B4E211 /* NSString+NameFormation.m in Sources */,
+				42A74B979D80B5E9F30DDE158FBB70D9 /* SUAI-dummy.m in Sources */,
+				4967F3DEBB90191E0C4B10DDA49C6CF7 /* SUAIAuditory.m in Sources */,
+				AE26F9E62495D67523C24895FFAA4414 /* SUAIDay.m in Sources */,
+				55692B29CA3C94745E0884063073AF5B /* SUAIEntity.m in Sources */,
+				AA4FD9DEC9AA8E02FD3DE09DE8B62FBC /* SUAIManager.m in Sources */,
+				36DE544CCD9C7D6068729BD18D0C2AD0 /* SUAIPair.m in Sources */,
+				4B7C8E10EE938A52E40ECD1BA0EB1266 /* SUAIParser.m in Sources */,
+				A75D2A6453CECEFFE3917DF23627DFB3 /* SUAISchedule.m in Sources */,
+				550E809121C2EA0D00A50DF9 /* SUAILoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4D1F82044F1743CB503D683CE1782D08 /* Sources */ = {
+		A22184C8A25D4739A979BEC9DE6AB508 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A41AFCEC8025D69B1210BB503BDBECAB /* Pods-SUAISchedule_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4EF362AC80CF04784C64418391F45FE5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				550E808321C2D84400A50DF9 /* SUAIParser.m in Sources */,
-				04400A0BD9F091AAB84AD41F03259101 /* NSString+Enums.m in Sources */,
-				D3F228349602F2084E95E1BA0EFB89AD /* SUAIAuditory.m in Sources */,
-				253065F1C2631D9C824206F0DE96E173 /* SUAIDay.m in Sources */,
-				2CC41783870B04BE7C39DCB1209AD9C8 /* SUAIEntity.m in Sources */,
-				DC1F2B8D99EB31E87052F3B568FFEB53 /* SUAILoader.m in Sources */,
-				0923E334AC6A5140BF58E644D02A2DDD /* SUAIManager.m in Sources */,
-				563F42D69CB9DE03C98E6A787DB3D2ED /* SUAIPair.m in Sources */,
-				F1B2C6443C26933182913C990B70043A /* SUAISchedule-dummy.m in Sources */,
-				556D1AE521C1862600497DA3 /* NSString+NameFormation.m in Sources */,
-				824E009BE972B5A383D604CB98757DD9 /* SUAISchedule.m in Sources */,
+				85E8F7CE496B151EB812E5C8690BDA1E /* Pods-SUAI_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1053,36 +1045,111 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B17EDFA1B50B053692309CC57C62832E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04616E5816C008D0077333AFEC2BDC68 /* Pods-SUAI_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		39DF6B15C491E25E293B4BB65FBAEDFA /* PBXTargetDependency */ = {
+		86BE2CE965A5BA85EE75AE7DEB0D4B26 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = HTMLKit;
 			target = 7DF885F31CE63E4CAA6D8BB2EF575028 /* HTMLKit */;
-			targetProxy = FD800F288F6AABA0468421366AB28284 /* PBXContainerItemProxy */;
+			targetProxy = 3823B07CE3EA72F1672D6756E1D1ABEE /* PBXContainerItemProxy */;
 		};
-		5FDCB3C5A16ED3BF00790A17D44BF084 /* PBXTargetDependency */ = {
+		9F4A721D7A6ED58D6FF25C4336EA6665 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = HTMLKit;
 			target = 7DF885F31CE63E4CAA6D8BB2EF575028 /* HTMLKit */;
-			targetProxy = 2154F2F8038A3DB37435DD301FB83919 /* PBXContainerItemProxy */;
+			targetProxy = 08CB6876B11FAB90A8255B639D2F6E78 /* PBXContainerItemProxy */;
 		};
-		82354E39CEB6D8021D0EE481CCF57756 /* PBXTargetDependency */ = {
+		CB48B052DBEDF8250900B74C6C7C166B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Pods-SUAISchedule_Example";
-			target = 5533A3A42C73C5C770567AB7E5093D2F /* Pods-SUAISchedule_Example */;
-			targetProxy = B6A66C05792BBDA0CECEF1D3CC5FAB55 /* PBXContainerItemProxy */;
+			name = "Pods-SUAI_Example";
+			target = 00E6C3C2D677830E4FA68C4B4EB9A4E8 /* Pods-SUAI_Example */;
+			targetProxy = 0DFDB0EED3CBB55E1EC1B0532B6CDA52 /* PBXContainerItemProxy */;
 		};
-		CAE14BB21ED620D6BD8F8790FDEEBC70 /* PBXTargetDependency */ = {
+		CCCD52FA573B2281A2A58D6049C19D7D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = SUAISchedule;
-			target = FCEA685146428B1F986AF244827708F9 /* SUAI */;
-			targetProxy = 6E58A4AA0310EF0C2428CA6666B51E22 /* PBXContainerItemProxy */;
+			name = SUAI;
+			target = 2091F875797A0FFD3E6717A26618EFB5 /* SUAI */;
+			targetProxy = 82A7C84224A5D93983CCF9783C86502D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0FAD31F293AE84F39F065847B665AB65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0242B44BE4CFC37494ECDAE76D526799 /* Pods-SUAI_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SUAI_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SUAI_Tests/Pods-SUAI_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1650D5A46E3520FCFF6065DA89D33C87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04E1CE1BD222A0EACB907E5E45A1290F /* Pods-SUAI_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SUAI_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SUAI_Example/Pods-SUAI_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		199D972A13F2B4C56847F7A89CCA83BC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1146,9 +1213,9 @@
 			};
 			name = Debug;
 		};
-		1F3A7367D4876F2C1F2A0190C96CB5A0 /* Release */ = {
+		34F6C792C9A95BDC23B58969698E5DD5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FEF5DB30D2A759C7BB45EA5B3577CD4E /* SUAISchedule.xcconfig */;
+			baseConfigurationReference = 6542374F1D5BA1A9BC3559C93EE9E3FB /* SUAI.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1159,20 +1226,20 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SUAISchedule/SUAISchedule-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/SUAI/SUAI-prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
-					"var=__auto_type",
-					"\"let=__auto_type const\"",
+					"var=\"__auto_type\"",
+					"let=\"__auto_type const\"",
 				);
-				INFOPLIST_FILE = "Target Support Files/SUAISchedule/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/SUAI/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SUAISchedule/SUAISchedule.modulemap";
-				PRODUCT_MODULE_NAME = SUAISchedule;
-				PRODUCT_NAME = SUAISchedule;
+				MODULEMAP_FILE = "Target Support Files/SUAI/SUAI.modulemap";
+				PRODUCT_MODULE_NAME = SUAI;
+				PRODUCT_NAME = SUAI;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -1183,9 +1250,9 @@
 			};
 			name = Release;
 		};
-		55DB186B4FCD710304BE915485C6B748 /* Release */ = {
+		3E2BD584F1302C8FAFC54D56E1967321 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0A8A697654FCC7AB1E895D046C90C45 /* Pods-SUAISchedule_Tests.release.xcconfig */;
+			baseConfigurationReference = 15E7F60093E53E3E53062A468967029A /* Pods-SUAI_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -1197,12 +1264,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SUAISchedule_Tests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-SUAI_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SUAISchedule_Tests/Pods-SUAISchedule_Tests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-SUAI_Tests/Pods-SUAI_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -1248,142 +1315,6 @@
 			};
 			name = Release;
 		};
-		7B0B6ED2593FDAE10AD5A5137772022D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 595AB8B2A85D19D82C83CE3C0643650D /* Pods-SUAISchedule_Tests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SUAISchedule_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SUAISchedule_Tests/Pods-SUAISchedule_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		8073CA0D39BAE35D9FBC5E44B3C1CB14 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FCB51C01A94D3CA5007E5B1689BC4DDA /* Pods-SUAISchedule_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SUAISchedule_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SUAISchedule_Example/Pods-SUAISchedule_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		99F00D11E0DC9E783D05690A903ED992 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ECB373AF79142BA46117A0DEA3F951B3 /* Pods-SUAISchedule_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SUAISchedule_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SUAISchedule_Example/Pods-SUAISchedule_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		A5156CF44359D61327A0394CD449E75A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FEF5DB30D2A759C7BB45EA5B3577CD4E /* SUAISchedule.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SUAISchedule/SUAISchedule-prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"COCOAPODS=1",
-					"var=__auto_type",
-					"\"let=__auto_type const\"",
-				);
-				INFOPLIST_FILE = "Target Support Files/SUAISchedule/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SUAISchedule/SUAISchedule.modulemap";
-				PRODUCT_MODULE_NAME = SUAISchedule;
-				PRODUCT_NAME = SUAISchedule;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		C4F5E1FCA9F582BCC25C57BC1C78F08F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D0D9C703EC2830747E1265CF14E64743 /* HTMLKit.xcconfig */;
@@ -1408,6 +1339,75 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CF7A6B8954ED830CC99F08FA8CAB14B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6542374F1D5BA1A9BC3559C93EE9E3FB /* SUAI.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SUAI/SUAI-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"var=\"__auto_type\"",
+					"let=\"__auto_type const\"",
+				);
+				INFOPLIST_FILE = "Target Support Files/SUAI/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SUAI/SUAI.modulemap";
+				PRODUCT_MODULE_NAME = SUAI;
+				PRODUCT_NAME = SUAI;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CFDCB92AAD367FFC64FD6A2ACB1DAE2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 862FD37BEDD772649AFA9DFBCD3290D3 /* Pods-SUAI_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SUAI_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SUAI_Example/Pods-SUAI_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1493,29 +1493,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		656E83539FD61EFD3095CB1B8BAEA76D /* Build configuration list for PBXNativeTarget "SUAI" */ = {
+		9F28BF0447EB75F73712025AAB2D783E /* Build configuration list for PBXNativeTarget "Pods-SUAI_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A5156CF44359D61327A0394CD449E75A /* Debug */,
-				1F3A7367D4876F2C1F2A0190C96CB5A0 /* Release */,
+				CFDCB92AAD367FFC64FD6A2ACB1DAE2A /* Debug */,
+				1650D5A46E3520FCFF6065DA89D33C87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66E36091ACA9DBBEFFAD8FD7F84EFE82 /* Build configuration list for PBXNativeTarget "Pods-SUAISchedule_Example" */ = {
+		C3F1F78277A86A28D6D41BA451F451E3 /* Build configuration list for PBXNativeTarget "Pods-SUAI_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8073CA0D39BAE35D9FBC5E44B3C1CB14 /* Debug */,
-				99F00D11E0DC9E783D05690A903ED992 /* Release */,
+				0FAD31F293AE84F39F065847B665AB65 /* Debug */,
+				3E2BD584F1302C8FAFC54D56E1967321 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8D173929D8C6E7625E68206D5AE4A1A9 /* Build configuration list for PBXNativeTarget "Pods-SUAISchedule_Tests" */ = {
+		D24F0A8F3E4EF0283F927C1EEAB3227F /* Build configuration list for PBXNativeTarget "SUAI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7B0B6ED2593FDAE10AD5A5137772022D /* Debug */,
-				55DB186B4FCD710304BE915485C6B748 /* Release */,
+				CF7A6B8954ED830CC99F08FA8CAB14B0 /* Debug */,
+				34F6C792C9A95BDC23B58969698E5DD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

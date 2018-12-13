@@ -10,6 +10,8 @@
 #endif
 #endif
 
+#import "NSString+Enums.h"
+#import "NSString+NameFormation.h"
 #import "Enums.h"
 #import "Links.h"
 #import "SUAILoader.h"
@@ -20,8 +22,7 @@
 #import "SUAISchedule.h"
 #import "SUAIManager.h"
 #import "SUAIParser.h"
-#import "NSString+Enums.h"
 
-FOUNDATION_EXPORT double SUAIScheduleVersionNumber;
-FOUNDATION_EXPORT const unsigned char SUAIScheduleVersionString[];
+FOUNDATION_EXPORT double SUAIVersionNumber;
+FOUNDATION_EXPORT const unsigned char SUAIVersionString[];
 

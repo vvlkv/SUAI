@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		146F28DC2E3CFFBB1EC8F0CC /* Pods_SUAI_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B9DCD1F2188C78FF25A545 /* Pods_SUAI_Tests.framework */; };
 		5522AF58211CDEEA00A8A5AF /* SUAIScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5522AF57211CDEEA00A8A5AF /* SUAIScheduleViewController.m */; };
 		5522AF5C211CE0BF00A8A5AF /* SUAIScheduleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5522AF5A211CE0BF00A8A5AF /* SUAIScheduleTableViewCell.m */; };
 		5522AF5D211CE0BF00A8A5AF /* SUAIScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5522AF5B211CE0BF00A8A5AF /* SUAIScheduleTableViewCell.xib */; };
@@ -18,14 +19,12 @@
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* SUAIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* SUAIAppDelegate.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
-		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		677E817079DD70ABD624BF1C /* Pods_SUAISchedule_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C7A1EAE12BAAA99394DB208 /* Pods_SUAISchedule_Tests.framework */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
-		A42273CC50CF5614D8127CF4 /* Pods_SUAISchedule_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E6B8C19BAD9BB4D37CFE8D4 /* Pods_SUAISchedule_Example.framework */; };
+		E5246707F711283052023154 /* Pods_SUAI_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D40471FE487CD09BE709882 /* Pods_SUAI_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,40 +38,43 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2E6B8C19BAD9BB4D37CFE8D4 /* Pods_SUAISchedule_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SUAISchedule_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F817B83E1AD41E028A09E3E /* Pods-SUAISchedule_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SUAISchedule_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SUAISchedule_Tests/Pods-SUAISchedule_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		5522AF56211CDEEA00A8A5AF /* SUAIScheduleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SUAIScheduleViewController.h; sourceTree = "<group>"; };
-		5522AF57211CDEEA00A8A5AF /* SUAIScheduleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUAIScheduleViewController.m; sourceTree = "<group>"; };
-		5522AF59211CE0BF00A8A5AF /* SUAIScheduleTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SUAIScheduleTableViewCell.h; sourceTree = "<group>"; };
-		5522AF5A211CE0BF00A8A5AF /* SUAIScheduleTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUAIScheduleTableViewCell.m; sourceTree = "<group>"; };
-		5522AF5B211CE0BF00A8A5AF /* SUAIScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SUAIScheduleTableViewCell.xib; sourceTree = "<group>"; };
-		554A240E211CC75700B79FCC /* SUAIEntityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SUAIEntityViewController.h; sourceTree = "<group>"; };
-		554A240F211CC75700B79FCC /* SUAIEntityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUAIEntityViewController.m; sourceTree = "<group>"; };
-		6003F58A195388D20070C39A /* SUAISchedule_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SUAISchedule_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18CA1618640FBC7D8E492624 /* Pods-SUAI_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SUAI_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SUAI_Tests/Pods-SUAI_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		3D40471FE487CD09BE709882 /* Pods_SUAI_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SUAI_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		550E808721C2E51900A50DF9 /* SUAISchedule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SUAISchedule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		550E808921C2E54F00A50DF9 /* SUAISchedule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SUAISchedule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		550E808B21C2E60E00A50DF9 /* SUAISchedule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SUAISchedule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		550E808D21C2E64E00A50DF9 /* SUAISchedule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SUAISchedule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5522AF56211CDEEA00A8A5AF /* SUAIScheduleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SUAIScheduleViewController.h; path = SUAI/SUAIScheduleViewController.h; sourceTree = "<group>"; };
+		5522AF57211CDEEA00A8A5AF /* SUAIScheduleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SUAIScheduleViewController.m; path = SUAI/SUAIScheduleViewController.m; sourceTree = "<group>"; };
+		5522AF59211CE0BF00A8A5AF /* SUAIScheduleTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SUAIScheduleTableViewCell.h; path = SUAI/SUAIScheduleTableViewCell.h; sourceTree = "<group>"; };
+		5522AF5A211CE0BF00A8A5AF /* SUAIScheduleTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SUAIScheduleTableViewCell.m; path = SUAI/SUAIScheduleTableViewCell.m; sourceTree = "<group>"; };
+		5522AF5B211CE0BF00A8A5AF /* SUAIScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SUAIScheduleTableViewCell.xib; path = SUAI/SUAIScheduleTableViewCell.xib; sourceTree = "<group>"; };
+		554A240E211CC75700B79FCC /* SUAIEntityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SUAIEntityViewController.h; path = SUAI/SUAIEntityViewController.h; sourceTree = "<group>"; };
+		554A240F211CC75700B79FCC /* SUAIEntityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SUAIEntityViewController.m; path = SUAI/SUAIEntityViewController.m; sourceTree = "<group>"; };
+		6003F58A195388D20070C39A /* SUAI_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SUAI_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		6003F595195388D20070C39A /* SUAISchedule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SUAISchedule-Info.plist"; sourceTree = "<group>"; };
+		6003F595195388D20070C39A /* SUAI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SUAI-Info.plist"; path = "SUAI/SUAI-Info.plist"; sourceTree = "<group>"; };
 		6003F597195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6003F599195388D20070C39A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6003F59B195388D20070C39A /* SUAISchedule-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SUAISchedule-Prefix.pch"; sourceTree = "<group>"; };
-		6003F59C195388D20070C39A /* SUAIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SUAIAppDelegate.h; sourceTree = "<group>"; };
-		6003F59D195388D20070C39A /* SUAIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUAIAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6003F5AE195388D20070C39A /* SUAISchedule_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SUAISchedule_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6003F599195388D20070C39A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SUAI/main.m; sourceTree = "<group>"; };
+		6003F59B195388D20070C39A /* SUAI-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SUAI-Prefix.pch"; path = "SUAI/SUAI-Prefix.pch"; sourceTree = "<group>"; };
+		6003F59C195388D20070C39A /* SUAIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SUAIAppDelegate.h; path = SUAI/SUAIAppDelegate.h; sourceTree = "<group>"; };
+		6003F59D195388D20070C39A /* SUAIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SUAIAppDelegate.m; path = SUAI/SUAIAppDelegate.m; sourceTree = "<group>"; };
+		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SUAI/Images.xcassets; sourceTree = "<group>"; };
+		6003F5AE195388D20070C39A /* SUAI_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SUAI_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		6952EE3B196D3889B668C133 /* Pods-SUAISchedule_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SUAISchedule_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SUAISchedule_Example/Pods-SUAISchedule_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		6F50A8AD3828B9EB9923EE24 /* Pods-SUAI_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SUAI_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SUAI_Example/Pods-SUAI_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8C7A1EAE12BAAA99394DB208 /* Pods_SUAISchedule_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SUAISchedule_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		906E1C72F13805265F211FA5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		A571F5F34FC4C48DCB85EC55 /* Pods-SUAISchedule_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SUAISchedule_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SUAISchedule_Tests/Pods-SUAISchedule_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		A5B9DCD1F2188C78FF25A545 /* Pods_SUAI_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SUAI_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABE33C501E2E7D666F329DBA /* Pods-SUAI_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SUAI_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SUAI_Example/Pods-SUAI_Example.release.xcconfig"; sourceTree = "<group>"; };
 		BC3751FF574420793B0CA47C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		DE651A51A85C2AF1ED5C125D /* Pods-SUAISchedule_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SUAISchedule_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SUAISchedule_Example/Pods-SUAISchedule_Example.release.xcconfig"; sourceTree = "<group>"; };
 		DFB514B89B98674B2D2D7935 /* SUAI.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SUAI.podspec; path = ../SUAI.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		EC971081F9F1872F73CA278B /* Pods-SUAI_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SUAI_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SUAI_Tests/Pods-SUAI_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +85,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				A42273CC50CF5614D8127CF4 /* Pods_SUAISchedule_Example.framework in Frameworks */,
+				E5246707F711283052023154 /* Pods_SUAI_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,10 +93,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				677E817079DD70ABD624BF1C /* Pods_SUAISchedule_Tests.framework in Frameworks */,
+				146F28DC2E3CFFBB1EC8F0CC /* Pods_SUAI_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,10 +105,10 @@
 		02F6B2542227768F201D820D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6952EE3B196D3889B668C133 /* Pods-SUAISchedule_Example.debug.xcconfig */,
-				DE651A51A85C2AF1ED5C125D /* Pods-SUAISchedule_Example.release.xcconfig */,
-				A571F5F34FC4C48DCB85EC55 /* Pods-SUAISchedule_Tests.debug.xcconfig */,
-				4F817B83E1AD41E028A09E3E /* Pods-SUAISchedule_Tests.release.xcconfig */,
+				6F50A8AD3828B9EB9923EE24 /* Pods-SUAI_Example.debug.xcconfig */,
+				ABE33C501E2E7D666F329DBA /* Pods-SUAI_Example.release.xcconfig */,
+				18CA1618640FBC7D8E492624 /* Pods-SUAI_Tests.debug.xcconfig */,
+				EC971081F9F1872F73CA278B /* Pods-SUAI_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -116,7 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
-				6003F593195388D20070C39A /* Example for SUAISchedule */,
+				6003F593195388D20070C39A /* Example for SUAI */,
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
@@ -127,8 +128,8 @@
 		6003F58B195388D20070C39A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6003F58A195388D20070C39A /* SUAISchedule_Example.app */,
-				6003F5AE195388D20070C39A /* SUAISchedule_Tests.xctest */,
+				6003F58A195388D20070C39A /* SUAI_Example.app */,
+				6003F5AE195388D20070C39A /* SUAI_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -136,17 +137,20 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				550E808D21C2E64E00A50DF9 /* SUAISchedule.framework */,
+				550E808B21C2E60E00A50DF9 /* SUAISchedule.framework */,
+				550E808921C2E54F00A50DF9 /* SUAISchedule.framework */,
+				550E808721C2E51900A50DF9 /* SUAISchedule.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
-				6003F5AF195388D20070C39A /* XCTest.framework */,
-				2E6B8C19BAD9BB4D37CFE8D4 /* Pods_SUAISchedule_Example.framework */,
-				8C7A1EAE12BAAA99394DB208 /* Pods_SUAISchedule_Tests.framework */,
+				3D40471FE487CD09BE709882 /* Pods_SUAI_Example.framework */,
+				A5B9DCD1F2188C78FF25A545 /* Pods_SUAI_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6003F593195388D20070C39A /* Example for SUAISchedule */ = {
+		6003F593195388D20070C39A /* Example for SUAI */ = {
 			isa = PBXGroup;
 			children = (
 				6003F59C195388D20070C39A /* SUAIAppDelegate.h */,
@@ -162,17 +166,16 @@
 				5522AF5A211CE0BF00A8A5AF /* SUAIScheduleTableViewCell.m */,
 				5522AF5B211CE0BF00A8A5AF /* SUAIScheduleTableViewCell.xib */,
 			);
-			name = "Example for SUAISchedule";
-			path = SUAISchedule;
+			name = "Example for SUAI";
 			sourceTree = "<group>";
 		};
 		6003F594195388D20070C39A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6003F595195388D20070C39A /* SUAISchedule-Info.plist */,
+				6003F595195388D20070C39A /* SUAI-Info.plist */,
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,
-				6003F59B195388D20070C39A /* SUAISchedule-Prefix.pch */,
+				6003F59B195388D20070C39A /* SUAI-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -209,9 +212,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6003F589195388D20070C39A /* SUAISchedule_Example */ = {
+		6003F589195388D20070C39A /* SUAI_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "SUAISchedule_Example" */;
+			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "SUAI_Example" */;
 			buildPhases = (
 				0BBBBF580545FAE029519845 /* [CP] Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
@@ -223,14 +226,14 @@
 			);
 			dependencies = (
 			);
-			name = SUAISchedule_Example;
+			name = SUAI_Example;
 			productName = SUAISchedule;
-			productReference = 6003F58A195388D20070C39A /* SUAISchedule_Example.app */;
+			productReference = 6003F58A195388D20070C39A /* SUAI_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6003F5AD195388D20070C39A /* SUAISchedule_Tests */ = {
+		6003F5AD195388D20070C39A /* SUAI_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "SUAISchedule_Tests" */;
+			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "SUAI_Tests" */;
 			buildPhases = (
 				4DF1085FD7174155D64DAC33 /* [CP] Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
@@ -242,9 +245,9 @@
 			dependencies = (
 				6003F5B4195388D20070C39A /* PBXTargetDependency */,
 			);
-			name = SUAISchedule_Tests;
+			name = SUAI_Tests;
 			productName = SUAIScheduleTests;
-			productReference = 6003F5AE195388D20070C39A /* SUAISchedule_Tests.xctest */;
+			productReference = 6003F5AE195388D20070C39A /* SUAI_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -265,7 +268,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "SUAISchedule" */;
+			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "SUAI" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -278,8 +281,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6003F589195388D20070C39A /* SUAISchedule_Example */,
-				6003F5AD195388D20070C39A /* SUAISchedule_Tests */,
+				6003F589195388D20070C39A /* SUAI_Example */,
+				6003F5AD195388D20070C39A /* SUAI_Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -318,7 +321,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SUAISchedule_Example-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SUAI_Example-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -336,7 +339,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SUAISchedule_Tests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SUAI_Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -349,18 +352,18 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SUAISchedule_Example/Pods-SUAISchedule_Example-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-SUAI_Example/Pods-SUAI_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/HTMLKit/HTMLKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SUAISchedule/SUAISchedule.framework",
+				"${BUILT_PRODUCTS_DIR}/SUAI/SUAI.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HTMLKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SUAISchedule.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SUAI.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SUAISchedule_Example/Pods-SUAISchedule_Example-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SUAI_Example/Pods-SUAI_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -391,7 +394,7 @@
 /* Begin PBXTargetDependency section */
 		6003F5B4195388D20070C39A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6003F589195388D20070C39A /* SUAISchedule_Example */;
+			target = 6003F589195388D20070C39A /* SUAI_Example */;
 			targetProxy = 6003F5B3195388D20070C39A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -403,6 +406,7 @@
 				6003F597195388D20070C39A /* en */,
 			);
 			name = InfoPlist.strings;
+			path = SUAI;
 			sourceTree = "<group>";
 		};
 		6003F5B8195388D20070C39A /* InfoPlist.strings */ = {
@@ -419,6 +423,7 @@
 				71719F9E1E33DC2100824A3D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = SUAI;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -525,13 +530,13 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6952EE3B196D3889B668C133 /* Pods-SUAISchedule_Example.debug.xcconfig */;
+			baseConfigurationReference = 6F50A8AD3828B9EB9923EE24 /* Pods-SUAI_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = A7HQ3AATVX;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SUAISchedule/SUAISchedule-Prefix.pch";
-				INFOPLIST_FILE = "SUAISchedule/SUAISchedule-Info.plist";
+				GCC_PREFIX_HEADER = "SUAI/SUAI-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/SUAI/SUAI-Info.plist";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -541,13 +546,13 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE651A51A85C2AF1ED5C125D /* Pods-SUAISchedule_Example.release.xcconfig */;
+			baseConfigurationReference = ABE33C501E2E7D666F329DBA /* Pods-SUAI_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = A7HQ3AATVX;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SUAISchedule/SUAISchedule-Prefix.pch";
-				INFOPLIST_FILE = "SUAISchedule/SUAISchedule-Info.plist";
+				GCC_PREFIX_HEADER = "SUAI/SUAI-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/SUAI/SUAI-Info.plist";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -557,7 +562,7 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A571F5F34FC4C48DCB85EC55 /* Pods-SUAISchedule_Tests.debug.xcconfig */;
+			baseConfigurationReference = 18CA1618640FBC7D8E492624 /* Pods-SUAI_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -574,14 +579,14 @@
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SUAISchedule_Example.app/SUAISchedule_Example";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SUAI_Example.app/SUAI_Example";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F817B83E1AD41E028A09E3E /* Pods-SUAISchedule_Tests.release.xcconfig */;
+			baseConfigurationReference = EC971081F9F1872F73CA278B /* Pods-SUAI_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -594,7 +599,7 @@
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SUAISchedule_Example.app/SUAISchedule_Example";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SUAI_Example.app/SUAI_Example";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
@@ -602,7 +607,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6003F585195388D10070C39A /* Build configuration list for PBXProject "SUAISchedule" */ = {
+		6003F585195388D10070C39A /* Build configuration list for PBXProject "SUAI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6003F5BD195388D20070C39A /* Debug */,
@@ -611,7 +616,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "SUAISchedule_Example" */ = {
+		6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "SUAI_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6003F5C0195388D20070C39A /* Debug */,
@@ -620,7 +625,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "SUAISchedule_Tests" */ = {
+		6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "SUAI_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6003F5C3195388D20070C39A /* Debug */,

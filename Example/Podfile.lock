@@ -1,24 +1,24 @@
 PODS:
   - HTMLKit (2.1.5)
-  - SUAISchedule (0.1.5):
+  - SUAI (0.1.5):
     - HTMLKit
 
 DEPENDENCIES:
   - HTMLKit
-  - SUAISchedule (from `../`)
+  - SUAI (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - HTMLKit
 
 EXTERNAL SOURCES:
-  SUAISchedule:
+  SUAI:
     :path: "../"
 
 SPEC CHECKSUMS:
   HTMLKit: 91dbd983c94f264c6ddea27d317f5a66368dd20b
-  SUAISchedule: df15ae544c5d2fda019312faa6446c8144406c58
+  SUAI: 062428ca4680ea16e5339935774159fbeb8f8441
 
-PODFILE CHECKSUM: 835d29b6a7db58c8e49c4ee44acd912ec831ae77
+PODFILE CHECKSUM: 8e55101ec97a93b95f5b62d0a52b0fee780a1249
 
 COCOAPODS: 1.5.3
