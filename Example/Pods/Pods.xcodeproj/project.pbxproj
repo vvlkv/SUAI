@@ -49,7 +49,7 @@
 		49E6A4F5345E0B4825CC8EEA4D22074B /* NSCharacterSet+HTMLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EFCD26EDF5403431DDAA07A18F2EF32 /* NSCharacterSet+HTMLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4AAD2047886010B74718A16F529B0521 /* NSString+Enums.m in Sources */ = {isa = PBXBuildFile; fileRef = D0469E7C463BA67935AD3D5D42C270B8 /* NSString+Enums.m */; };
 		4B7C8E10EE938A52E40ECD1BA0EB1266 /* SUAIParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B19047C42097AF3D1BB64988908B68A /* SUAIParser.m */; };
-		4CB284A1579335FA1D84450B8A2A6529 /* SUAIManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 55739F44CE9265C3F4F17FC8E7D74643 /* SUAIManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CB284A1579335FA1D84450B8A2A6529 /* SUAIScheduleProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 55739F44CE9265C3F4F17FC8E7D74643 /* SUAIScheduleProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4D6187D09B351A97D51AF36939F5718F /* HTMLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49358C72E17E9F24042104D825067B08 /* HTMLKit.framework */; };
 		4E8BB3CC835482FCAAFA0DB8A247A3BC /* HTMLNodeIterator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE2FA982F47B993C037A182FCB83E36 /* HTMLNodeIterator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4F8F9F4724430CE4B1BDD2DC89AC7658 /* HTMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362AEBB6B0C1F9476454FF286A90BB /* HTMLDocument.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -58,6 +58,8 @@
 		539EF496CF555228D628F6037595F78F /* HTMLCharacterToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A2589222D4F44A4913AB2A949BC8836 /* HTMLCharacterToken.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		5432DBE2468B7914FB4CE5C867F1EF03 /* HTMLCommentToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FAEC855F53B80A0AD3BD5EA16A5C054 /* HTMLCommentToken.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		550E809121C2EA0D00A50DF9 /* SUAILoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E65AF9C50B18B4B19D30589B7D593FAA /* SUAILoader.m */; };
+		550E809621C2F0B600A50DF9 /* SUAI.h in Headers */ = {isa = PBXBuildFile; fileRef = 550E809421C2F0B600A50DF9 /* SUAI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		550E809721C2F0B600A50DF9 /* SUAI.m in Sources */ = {isa = PBXBuildFile; fileRef = 550E809521C2F0B600A50DF9 /* SUAI.m */; };
 		55692B29CA3C94745E0884063073AF5B /* SUAIEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3749D93CE8E013F10DC50FBA0E2959B1 /* SUAIEntity.m */; };
 		570BA6BE3110B5DEF2D1B8D6D330EF9C /* HTMLDOMTokenList.m in Sources */ = {isa = PBXBuildFile; fileRef = 408466ADDAC3793A120AC4B51B811C07 /* HTMLDOMTokenList.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5877B7F496E7633CC2312C90A1185352 /* HTMLDOMTokenList.h in Headers */ = {isa = PBXBuildFile; fileRef = 645472D6F8497BF1D90CB6D616313551 /* HTMLDOMTokenList.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -107,7 +109,7 @@
 		A6855D9D7029C3B3A1C6D4BD59D00A44 /* CSSSelectorParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 691C9377D6E5B7104E4B09D77FE27A84 /* CSSSelectorParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A75D2A6453CECEFFE3917DF23627DFB3 /* SUAISchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E13D6063FBA893C7649686A350EE132 /* SUAISchedule.m */; };
 		A80042E1C598A2BB9890B29224775B45 /* HTMLQuirksMode.h in Headers */ = {isa = PBXBuildFile; fileRef = D6DBD0427A53E785E9F6BD31F17E1057 /* HTMLQuirksMode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA4FD9DEC9AA8E02FD3DE09DE8B62FBC /* SUAIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3C42F8F5973C5FB0F2303081EED205 /* SUAIManager.m */; };
+		AA4FD9DEC9AA8E02FD3DE09DE8B62FBC /* SUAIScheduleProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3C42F8F5973C5FB0F2303081EED205 /* SUAIScheduleProvider.m */; };
 		AB0E8624B6CF27117F579614ED2B102C /* CSSStructuralPseudoSelectors.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8285A6766798B6C9C362E06430779D /* CSSStructuralPseudoSelectors.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		AB1ADFEF768199ED44C568B107A42D59 /* HTMLInputStreamReader.h in Headers */ = {isa = PBXBuildFile; fileRef = C87AC0D81FF80CEE3ED8A3BC9001A677 /* HTMLInputStreamReader.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		AB5D0F50D4D6DABE28637AF6441D04AD /* Links.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE2BE8905D33D72F9A4391268094192 /* Links.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -228,7 +230,7 @@
 		368CBE35C3355A9984D8B593DD0088AA /* HTMLParserInsertionModes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLParserInsertionModes.h; path = Sources/include/HTMLParserInsertionModes.h; sourceTree = "<group>"; };
 		3749D93CE8E013F10DC50FBA0E2959B1 /* SUAIEntity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SUAIEntity.m; sourceTree = "<group>"; };
 		3760BF34DB435C200A8BF7981EE344FA /* HTMLParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLParser.h; path = Sources/include/HTMLParser.h; sourceTree = "<group>"; };
-		3A3C42F8F5973C5FB0F2303081EED205 /* SUAIManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SUAIManager.m; sourceTree = "<group>"; };
+		3A3C42F8F5973C5FB0F2303081EED205 /* SUAIScheduleProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SUAIScheduleProvider.m; sourceTree = "<group>"; };
 		3A4D6A1DAD0F177FA791A0773D96B706 /* CSSCombinatorSelector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSSCombinatorSelector.m; path = Sources/CSSCombinatorSelector.m; sourceTree = "<group>"; };
 		3AE1579D3630487D51C5AF0DCE7C4652 /* HTMLTokenizerEntities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLTokenizerEntities.m; path = Sources/HTMLTokenizerEntities.m; sourceTree = "<group>"; };
 		3E3570FDCC6D89FB64DCA2408A39C325 /* HTMLNodeIterator+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "HTMLNodeIterator+Private.h"; path = "Sources/include/HTMLNodeIterator+Private.h"; sourceTree = "<group>"; };
@@ -248,8 +250,10 @@
 		4ECE7766C41515344DF44EAAD49FA8BF /* HTMLKitDOMExceptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLKitDOMExceptions.h; path = Sources/include/HTMLKitDOMExceptions.h; sourceTree = "<group>"; };
 		51E96EA2A72A4821E3254140A5A69823 /* SUAILoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SUAILoader.h; sourceTree = "<group>"; };
 		53A06FFAF0A6EB56B31C289EA18467FC /* HTMLListOfActiveFormattingElements.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLListOfActiveFormattingElements.h; path = Sources/include/HTMLListOfActiveFormattingElements.h; sourceTree = "<group>"; };
+		550E809421C2F0B600A50DF9 /* SUAI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SUAI.h; sourceTree = "<group>"; };
+		550E809521C2F0B600A50DF9 /* SUAI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUAI.m; sourceTree = "<group>"; };
 		556072F2392C36895E97C7A5F1E75EFD /* CSSSelector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSSSelector.h; path = Sources/include/CSSSelector.h; sourceTree = "<group>"; };
-		55739F44CE9265C3F4F17FC8E7D74643 /* SUAIManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SUAIManager.h; sourceTree = "<group>"; };
+		55739F44CE9265C3F4F17FC8E7D74643 /* SUAIScheduleProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SUAIScheduleProvider.h; sourceTree = "<group>"; };
 		55C9ED383DB4E2468E6CD7D8664F6DB6 /* SUAI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SUAI-umbrella.h"; sourceTree = "<group>"; };
 		577579969E53C9EFEE2591CCA1C2F485 /* Pods-SUAI_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SUAI_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		58E741FA72DFBFA6940D9D05B2341604 /* HTMLComment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLComment.h; path = Sources/include/HTMLComment.h; sourceTree = "<group>"; };
@@ -410,8 +414,6 @@
 		06B9F48A5E4DDF249A616CA781B95097 /* Parser */ = {
 			isa = PBXGroup;
 			children = (
-				55739F44CE9265C3F4F17FC8E7D74643 /* SUAIManager.h */,
-				3A3C42F8F5973C5FB0F2303081EED205 /* SUAIManager.m */,
 				AC01213FF08DC3DCD207840F658B7FE7 /* SUAIParser.h */,
 				7B19047C42097AF3D1BB64988908B68A /* SUAIParser.m */,
 			);
@@ -465,8 +467,7 @@
 				976BB712FB8C87635C5698219AE3470D /* SUAISchedule.h */,
 				2E13D6063FBA893C7649686A350EE132 /* SUAISchedule.m */,
 			);
-			name = Model;
-			path = SUAI/Classes/Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		3A3A766098B21FE5568AFED55AE480E2 /* iOS */ = {
@@ -518,6 +519,23 @@
 				905202E67A04AA418D0986495512421B /* HTMLKit */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		550E809221C2F05100A50DF9 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				55739F44CE9265C3F4F17FC8E7D74643 /* SUAIScheduleProvider.h */,
+				3A3C42F8F5973C5FB0F2303081EED205 /* SUAIScheduleProvider.m */,
+				38287D59366B5BD1C6B3A0005A96ED17 /* Model */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		550E809321C2F07200A50DF9 /* News */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = News;
 			sourceTree = "<group>";
 		};
 		5CCD46B52C688C81B8FC3E65FF6ACB74 /* Loader */ = {
@@ -722,10 +740,13 @@
 		DB86C0E7D503E5F0B2036B4595C092EA /* SUAI */ = {
 			isa = PBXGroup;
 			children = (
+				550E809421C2F0B600A50DF9 /* SUAI.h */,
+				550E809521C2F0B600A50DF9 /* SUAI.m */,
+				550E809321C2F07200A50DF9 /* News */,
+				550E809221C2F05100A50DF9 /* Schedule */,
 				3FB5E4848B8D4CA9EE67DAFD856F432D /* Categories */,
 				380857E5A7F92F9E63644FADF5585709 /* Headers */,
 				5CCD46B52C688C81B8FC3E65FF6ACB74 /* Loader */,
-				38287D59366B5BD1C6B3A0005A96ED17 /* Model */,
 				06B9F48A5E4DDF249A616CA781B95097 /* Parser */,
 				797559370B44C5D42F24F3F6B24915C8 /* Pod */,
 				3BD6FEBEF073A353BC1099457D5CA2F9 /* Support Files */,
@@ -754,6 +775,7 @@
 			files = (
 				C7D597E8FA5CB691283C815BBDDB5605 /* Enums.h in Headers */,
 				AB5D0F50D4D6DABE28637AF6441D04AD /* Links.h in Headers */,
+				550E809621C2F0B600A50DF9 /* SUAI.h in Headers */,
 				C86059529C85A9A8BCA698B1B5861FB5 /* NSString+Enums.h in Headers */,
 				7070665428926F8503987F3463961AFB /* NSString+NameFormation.h in Headers */,
 				7E68093E94046DDFAD8BB0271AE2AE94 /* SUAI-umbrella.h in Headers */,
@@ -761,7 +783,7 @@
 				3E1E7216EDA0598A5D9017C15CDEDCD0 /* SUAIDay.h in Headers */,
 				BF34597E6B0FA55BCC2558328B662411 /* SUAIEntity.h in Headers */,
 				066BF6E748BE6C605F7A3E5E95B24DA2 /* SUAILoader.h in Headers */,
-				4CB284A1579335FA1D84450B8A2A6529 /* SUAIManager.h in Headers */,
+				4CB284A1579335FA1D84450B8A2A6529 /* SUAIScheduleProvider.h in Headers */,
 				31C255A65B3F67463E0BAD910BEA46C1 /* SUAIPair.h in Headers */,
 				3C43C8732A22A2694E52BED62DDD967C /* SUAIParser.h in Headers */,
 				138A8CF6386AFB71214F4D2B278F48EB /* SUAISchedule.h in Headers */,
@@ -973,11 +995,12 @@
 				4967F3DEBB90191E0C4B10DDA49C6CF7 /* SUAIAuditory.m in Sources */,
 				AE26F9E62495D67523C24895FFAA4414 /* SUAIDay.m in Sources */,
 				55692B29CA3C94745E0884063073AF5B /* SUAIEntity.m in Sources */,
-				AA4FD9DEC9AA8E02FD3DE09DE8B62FBC /* SUAIManager.m in Sources */,
+				AA4FD9DEC9AA8E02FD3DE09DE8B62FBC /* SUAIScheduleProvider.m in Sources */,
 				36DE544CCD9C7D6068729BD18D0C2AD0 /* SUAIPair.m in Sources */,
 				4B7C8E10EE938A52E40ECD1BA0EB1266 /* SUAIParser.m in Sources */,
 				A75D2A6453CECEFFE3917DF23627DFB3 /* SUAISchedule.m in Sources */,
 				550E809121C2EA0D00A50DF9 /* SUAILoader.m in Sources */,
+				550E809721C2F0B600A50DF9 /* SUAI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,11 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "Enums.h"
 
-typedef enum Status {
-    Ok,
-    Error
-}Status;
-
 @class SUAISchedule;
 @class SUAIEntity;
 
@@ -23,7 +18,7 @@ typedef enum Status {
 
 @end
 
-@interface SUAIManager : NSObject
+@interface SUAIScheduleProvider : NSObject
 
 @property (assign, nonatomic, readonly) Status status;
 @property (strong, nonatomic, readonly) NSArray <SUAIEntity *> *groups;

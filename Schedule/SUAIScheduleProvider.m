@@ -6,7 +6,7 @@
 //  Copyright © 2018 Victor. All rights reserved.
 //
 
-#import "SUAIManager.h"
+#import "SUAIScheduleProvider.h"
 #import "SUAILoader.h"
 #import "SUAIParser.h"
 #import "SUAISchedule.h"
@@ -16,7 +16,7 @@
 
 typedef NSString*(*clr_func)(id, SEL);
 
-@interface SUAIManager() {
+@interface SUAIScheduleProvider() {
     NSMutableArray <SUAIEntity *> *_groups;
     NSMutableArray <SUAIEntity *> *_teachers;
     NSMutableArray <SUAIEntity *> *_auditories;
@@ -24,19 +24,20 @@ typedef NSString*(*clr_func)(id, SEL);
 
 @end
 
-@implementation SUAIManager
+@implementation SUAIScheduleProvider
 
 + (instancetype)instance {
-    static SUAIManager *sharedInstance = nil;
+    static SUAIScheduleProvider *sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedInstance = [[SUAIManager alloc] init];
+        sharedInstance = [[SUAIScheduleProvider alloc] init];
     });
     return sharedInstance;
 }
 
 - (instancetype)init
 {
+    
     self = [super init];
     if (self) {
         _status = Error;

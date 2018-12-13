@@ -7,12 +7,13 @@
 //
 
 #import "SUAIScheduleViewController.h"
-#import "SUAIManager.h"
+#import "SUAIScheduleProvider.h"
 #import "SUAISchedule.h"
 #import "SUAIScheduleTableViewCell.h"
 #import "SUAIPair.h"
 #import "SUAIDay.h"
 #import "SUAIAuditory.h"
+#import "SUAI.h"
 
 @interface SUAIScheduleViewController () <UITableViewDelegate, UITableViewDataSource> {
     UITableView *_scheduleTableView;

@@ -9,6 +9,11 @@
 #ifndef Enums_h
 #define Enums_h
 
+typedef enum Status {
+    Ok,
+    Error
+}Status;
+
 typedef enum Schedule {
     Session,
     Semester

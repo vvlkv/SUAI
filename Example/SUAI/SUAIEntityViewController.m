@@ -8,7 +8,8 @@
 
 #import "SUAIEntityViewController.h"
 #import "SUAIScheduleViewController.h"
-#import "SUAIManager.h"
+#import "SUAIScheduleProvider.h"
+#import "SUAI.h"
 
 @interface SUAIEntityViewController () <SUAIScheduleDelegate, UITableViewDelegate, UITableViewDataSource> {
     UITableView *_entitiesTableView;
@@ -36,7 +37,7 @@
     [self configureTableView];
     [self configureIndicator];
     [self configureSegmentedControl];
-    [SUAIManager instance].delegate = self;
+    [SUAIScheduleProvider instance].delegate = self;
 }
 
 - (void)configureIndicator {
@@ -75,8 +76,8 @@
 }
 
 - (void)changeVisibleEntities:(Entity)type {
-    SUAIEntity *entity = [SUAIManager instance].teachers[69];
-    [[SUAIManager instance] loadScheduleFor:entity success:^(SUAISchedule *schedule) {
+    SUAIEntity *entity = [SUAIScheduleProvider instance].teachers[69];
+    [[SUAI instance].schedule loadScheduleFor:entity success:^(SUAISchedule *schedule) {
         NSLog(@"%@", schedule);
     } fail:^(NSString *fail) {
         NSLog(@"%@", fail);
