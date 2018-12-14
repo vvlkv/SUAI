@@ -8,6 +8,7 @@
 
 #import "SUAIAppDelegate.h"
 #import "SUAIEntityViewController.h"
+#import "SUAINewsProvider.h"
 
 @implementation SUAIAppDelegate
 
@@ -18,6 +19,12 @@
     _window.rootViewController = [[UINavigationController alloc] initWithRootViewController:startViewController];
     _window.backgroundColor = [UIColor whiteColor];
     [_window makeKeyAndVisible];
+    SUAINewsProvider *news = [[SUAINewsProvider alloc] init];
+    [news loadAllNews:^(NSArray<SUAINews *> * _Nonnull news) {
+        
+    } fail:^(NSString * _Nonnull fail) {
+        
+    }];
     return YES;
 }
 

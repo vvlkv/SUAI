@@ -11,5 +11,6 @@
 
 static NSString *semesterLink = @"http://rasp.guap.ru";
 static NSString *sessionLink = @"http://raspsess.guap.ru";
+static NSString *newsLink = @"http://new.guap.ru/pubs";
 
 #endif /* Links_h */

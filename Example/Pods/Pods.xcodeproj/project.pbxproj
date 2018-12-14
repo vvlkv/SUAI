@@ -11,7 +11,7 @@
 		02D49BCBB7BE24EEB1002B39C9830F00 /* Pods-SUAI_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D4BB261FF9413B02C41E4F058C3F9B35 /* Pods-SUAI_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03F9ED6006F1274DA84FD473C4E5F817 /* HTMLDocument+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = A560D5D6E9220C31B04438AC120804FC /* HTMLDocument+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		04616E5816C008D0077333AFEC2BDC68 /* Pods-SUAI_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 666B888CB3F01F3DE265E40384FB5A47 /* Pods-SUAI_Example-dummy.m */; };
-		066BF6E748BE6C605F7A3E5E95B24DA2 /* SUAILoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 51E96EA2A72A4821E3254140A5A69823 /* SUAILoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		066BF6E748BE6C605F7A3E5E95B24DA2 /* SUAILoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 51E96EA2A72A4821E3254140A5A69823 /* SUAILoader.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		06DCED56DE057DAA6B4C0300991A6183 /* HTMLDocumentType.h in Headers */ = {isa = PBXBuildFile; fileRef = E67C9FB2C34789F8B353184B310E0072 /* HTMLDocumentType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0700243B30EEFDCFFEEBC79DA02D6528 /* HTMLRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFD3CF1C98AF08BDACB0FFF0A8DBC5E /* HTMLRange.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		07E5639C1B1FF1A5B9F0F708A3314D75 /* HTMLNodeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7E2A2D86E417119FEE8C72E970C576 /* HTMLNodeFilter.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -50,7 +50,6 @@
 		4AAD2047886010B74718A16F529B0521 /* NSString+Enums.m in Sources */ = {isa = PBXBuildFile; fileRef = D0469E7C463BA67935AD3D5D42C270B8 /* NSString+Enums.m */; };
 		4B7C8E10EE938A52E40ECD1BA0EB1266 /* SUAIParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B19047C42097AF3D1BB64988908B68A /* SUAIParser.m */; };
 		4CB284A1579335FA1D84450B8A2A6529 /* SUAIScheduleProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 55739F44CE9265C3F4F17FC8E7D74643 /* SUAIScheduleProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4D6187D09B351A97D51AF36939F5718F /* HTMLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49358C72E17E9F24042104D825067B08 /* HTMLKit.framework */; };
 		4E8BB3CC835482FCAAFA0DB8A247A3BC /* HTMLNodeIterator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE2FA982F47B993C037A182FCB83E36 /* HTMLNodeIterator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4F8F9F4724430CE4B1BDD2DC89AC7658 /* HTMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 15362AEBB6B0C1F9476454FF286A90BB /* HTMLDocument.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		526DDE59530068730AA61FD362D2EE85 /* HTMLKitDOMExceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 968EC0BFCD1CC447FB9D1560D9D5A621 /* HTMLKitDOMExceptions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -61,6 +60,16 @@
 		550E809621C2F0B600A50DF9 /* SUAI.h in Headers */ = {isa = PBXBuildFile; fileRef = 550E809421C2F0B600A50DF9 /* SUAI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		550E809721C2F0B600A50DF9 /* SUAI.m in Sources */ = {isa = PBXBuildFile; fileRef = 550E809521C2F0B600A50DF9 /* SUAI.m */; };
 		55692B29CA3C94745E0884063073AF5B /* SUAIEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3749D93CE8E013F10DC50FBA0E2959B1 /* SUAIEntity.m */; };
+		55CF152B21C373D500568F6F /* SUAILoader+News.h in Headers */ = {isa = PBXBuildFile; fileRef = 55CF152921C373D500568F6F /* SUAILoader+News.h */; };
+		55CF152C21C373D500568F6F /* SUAILoader+News.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CF152A21C373D500568F6F /* SUAILoader+News.m */; };
+		55CF152D21C3741700568F6F /* HTMLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 362C2A9C3621C4527B51AC5D88660097 /* HTMLKit.framework */; };
+		55CF152F21C3742100568F6F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CF152E21C3742100568F6F /* Foundation.framework */; };
+		55CF153321C375FF00568F6F /* SUAINews.h in Headers */ = {isa = PBXBuildFile; fileRef = 55CF153121C375FF00568F6F /* SUAINews.h */; };
+		55CF153421C375FF00568F6F /* SUAINews.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CF153221C375FF00568F6F /* SUAINews.m */; };
+		55CF153721C3782400568F6F /* SUAINewsProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 55CF153521C3782400568F6F /* SUAINewsProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55CF153821C3782400568F6F /* SUAINewsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CF153621C3782400568F6F /* SUAINewsProvider.m */; };
+		55CF153B21C3799400568F6F /* SUAIParser+News.h in Headers */ = {isa = PBXBuildFile; fileRef = 55CF153921C3799400568F6F /* SUAIParser+News.h */; };
+		55CF153C21C3799400568F6F /* SUAIParser+News.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CF153A21C3799400568F6F /* SUAIParser+News.m */; };
 		570BA6BE3110B5DEF2D1B8D6D330EF9C /* HTMLDOMTokenList.m in Sources */ = {isa = PBXBuildFile; fileRef = 408466ADDAC3793A120AC4B51B811C07 /* HTMLDOMTokenList.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5877B7F496E7633CC2312C90A1185352 /* HTMLDOMTokenList.h in Headers */ = {isa = PBXBuildFile; fileRef = 645472D6F8497BF1D90CB6D616313551 /* HTMLDOMTokenList.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AAF6C3034D244485E0532A93939964D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED889963E13282F933B7131D9CD57F6 /* Foundation.framework */; };
@@ -143,7 +152,6 @@
 		D92DBDF43A58915363D1A56293B4E211 /* NSString+NameFormation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A98DFD41D2419AEB84B1F548950DC19 /* NSString+NameFormation.m */; };
 		D9E6082F773D4655E30F2353C847709B /* HTMLDocumentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 58EA9ED00DB75A47211BEF75E79F0FC0 /* HTMLDocumentType.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		DB983D6B4F3EEF8CFF7852BFD09F0A90 /* HTMLDOMUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = D60283BE0096C8B9C209FF7F538F3B26 /* HTMLDOMUtils.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		E024085EDCCF5F06FB394E07680B475C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED889963E13282F933B7131D9CD57F6 /* Foundation.framework */; };
 		E08438C1041A50BD7DF353A1B3AD699D /* HTMLElementTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = FB31228147073583FBCE396542091BFA /* HTMLElementTypes.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		E30D5FE32CF0ED3C633EE3DEA7084782 /* HTMLDocumentFragment.h in Headers */ = {isa = PBXBuildFile; fileRef = EA4F1926AD91441F76C9827E7A911A58 /* HTMLDocumentFragment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EAF6A2BD87CBEC03E30A2E7F09418C2A /* HTMLKitErrorDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = D9A92A8DF01CA45F738EBE4722C7FF17 /* HTMLKitErrorDomain.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -255,6 +263,15 @@
 		556072F2392C36895E97C7A5F1E75EFD /* CSSSelector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSSSelector.h; path = Sources/include/CSSSelector.h; sourceTree = "<group>"; };
 		55739F44CE9265C3F4F17FC8E7D74643 /* SUAIScheduleProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SUAIScheduleProvider.h; sourceTree = "<group>"; };
 		55C9ED383DB4E2468E6CD7D8664F6DB6 /* SUAI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SUAI-umbrella.h"; sourceTree = "<group>"; };
+		55CF152921C373D500568F6F /* SUAILoader+News.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SUAILoader+News.h"; sourceTree = "<group>"; };
+		55CF152A21C373D500568F6F /* SUAILoader+News.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SUAILoader+News.m"; sourceTree = "<group>"; };
+		55CF152E21C3742100568F6F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		55CF153121C375FF00568F6F /* SUAINews.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SUAINews.h; sourceTree = "<group>"; };
+		55CF153221C375FF00568F6F /* SUAINews.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUAINews.m; sourceTree = "<group>"; };
+		55CF153521C3782400568F6F /* SUAINewsProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SUAINewsProvider.h; sourceTree = "<group>"; };
+		55CF153621C3782400568F6F /* SUAINewsProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUAINewsProvider.m; sourceTree = "<group>"; };
+		55CF153921C3799400568F6F /* SUAIParser+News.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SUAIParser+News.h"; sourceTree = "<group>"; };
+		55CF153A21C3799400568F6F /* SUAIParser+News.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SUAIParser+News.m"; sourceTree = "<group>"; };
 		577579969E53C9EFEE2591CCA1C2F485 /* Pods-SUAI_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SUAI_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		58E741FA72DFBFA6940D9D05B2341604 /* HTMLComment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLComment.h; path = Sources/include/HTMLComment.h; sourceTree = "<group>"; };
 		58EA9ED00DB75A47211BEF75E79F0FC0 /* HTMLDocumentType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLDocumentType.m; path = Sources/HTMLDocumentType.m; sourceTree = "<group>"; };
@@ -403,8 +420,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E024085EDCCF5F06FB394E07680B475C /* Foundation.framework in Frameworks */,
-				4D6187D09B351A97D51AF36939F5718F /* HTMLKit.framework in Frameworks */,
+				55CF152F21C3742100568F6F /* Foundation.framework in Frameworks */,
+				55CF152D21C3741700568F6F /* HTMLKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +433,8 @@
 			children = (
 				AC01213FF08DC3DCD207840F658B7FE7 /* SUAIParser.h */,
 				7B19047C42097AF3D1BB64988908B68A /* SUAIParser.m */,
+				55CF153921C3799400568F6F /* SUAIParser+News.h */,
+				55CF153A21C3799400568F6F /* SUAIParser+News.m */,
 			);
 			path = Parser;
 			sourceTree = "<group>";
@@ -504,6 +523,7 @@
 		450D13C937B4D50B36748799E3199AB2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				55CF152E21C3742100568F6F /* Foundation.framework */,
 				49358C72E17E9F24042104D825067B08 /* HTMLKit.framework */,
 				3A3A766098B21FE5568AFED55AE480E2 /* iOS */,
 			);
@@ -531,6 +551,9 @@
 		550E809321C2F07200A50DF9 /* News */ = {
 			isa = PBXGroup;
 			children = (
+				55CF153521C3782400568F6F /* SUAINewsProvider.h */,
+				55CF153621C3782400568F6F /* SUAINewsProvider.m */,
+				55CF153021C375E900568F6F /* Model */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -551,11 +574,22 @@
 			path = SUAI/Classes;
 			sourceTree = "<group>";
 		};
+		55CF153021C375E900568F6F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				55CF153121C375FF00568F6F /* SUAINews.h */,
+				55CF153221C375FF00568F6F /* SUAINews.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5CCD46B52C688C81B8FC3E65FF6ACB74 /* Loader */ = {
 			isa = PBXGroup;
 			children = (
 				51E96EA2A72A4821E3254140A5A69823 /* SUAILoader.h */,
 				E65AF9C50B18B4B19D30589B7D593FAA /* SUAILoader.m */,
+				55CF152921C373D500568F6F /* SUAILoader+News.h */,
+				55CF152A21C373D500568F6F /* SUAILoader+News.m */,
 			);
 			path = Loader;
 			sourceTree = "<group>";
@@ -779,8 +813,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7D597E8FA5CB691283C815BBDDB5605 /* Enums.h in Headers */,
+				55CF153721C3782400568F6F /* SUAINewsProvider.h in Headers */,
 				AB5D0F50D4D6DABE28637AF6441D04AD /* Links.h in Headers */,
 				550E809621C2F0B600A50DF9 /* SUAI.h in Headers */,
+				55CF153B21C3799400568F6F /* SUAIParser+News.h in Headers */,
+				55CF152B21C373D500568F6F /* SUAILoader+News.h in Headers */,
 				C86059529C85A9A8BCA698B1B5861FB5 /* NSString+Enums.h in Headers */,
 				7070665428926F8503987F3463961AFB /* NSString+NameFormation.h in Headers */,
 				7E68093E94046DDFAD8BB0271AE2AE94 /* SUAI-umbrella.h in Headers */,
@@ -792,6 +829,7 @@
 				31C255A65B3F67463E0BAD910BEA46C1 /* SUAIPair.h in Headers */,
 				3C43C8732A22A2694E52BED62DDD967C /* SUAIParser.h in Headers */,
 				138A8CF6386AFB71214F4D2B278F48EB /* SUAISchedule.h in Headers */,
+				55CF153321C375FF00568F6F /* SUAINews.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -994,8 +1032,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55CF152C21C373D500568F6F /* SUAILoader+News.m in Sources */,
 				4AAD2047886010B74718A16F529B0521 /* NSString+Enums.m in Sources */,
 				D92DBDF43A58915363D1A56293B4E211 /* NSString+NameFormation.m in Sources */,
+				55CF153C21C3799400568F6F /* SUAIParser+News.m in Sources */,
+				55CF153821C3782400568F6F /* SUAINewsProvider.m in Sources */,
 				42A74B979D80B5E9F30DDE158FBB70D9 /* SUAI-dummy.m in Sources */,
 				4967F3DEBB90191E0C4B10DDA49C6CF7 /* SUAIAuditory.m in Sources */,
 				AE26F9E62495D67523C24895FFAA4414 /* SUAIDay.m in Sources */,
@@ -1003,6 +1044,7 @@
 				AA4FD9DEC9AA8E02FD3DE09DE8B62FBC /* SUAIScheduleProvider.m in Sources */,
 				36DE544CCD9C7D6068729BD18D0C2AD0 /* SUAIPair.m in Sources */,
 				4B7C8E10EE938A52E40ECD1BA0EB1266 /* SUAIParser.m in Sources */,
+				55CF153421C375FF00568F6F /* SUAINews.m in Sources */,
 				A75D2A6453CECEFFE3917DF23627DFB3 /* SUAISchedule.m in Sources */,
 				550E809121C2EA0D00A50DF9 /* SUAILoader.m in Sources */,
 				550E809721C2F0B600A50DF9 /* SUAI.m in Sources */,

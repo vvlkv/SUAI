@@ -30,14 +30,12 @@ typedef NSString*(*clr_func)(id, SEL);
     static SUAIScheduleProvider *sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedInstance = [[SUAIScheduleProvider alloc] init];
+        sharedInstance = [[SUAIScheduleProvider alloc] initPrivate];
     });
     return sharedInstance;
 }
 
-- (instancetype)init
-{
-    
+- (instancetype)initPrivate {
     self = [super init];
     if (self) {
         _status = Error;
@@ -47,6 +45,11 @@ typedef NSString*(*clr_func)(id, SEL);
         [self prepare];
     }
     return self;
+}
+
+- (instancetype)init {
+    assert("Use instance instead!");
+    return nil;
 }
 
 - (void)prepare {

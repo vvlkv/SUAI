@@ -1,0 +1,22 @@
+//
+//  SUAILoader+News.h
+//  SUAI
+//
+//  Created by Виктор on 14/12/2018.
+//
+
+#import "SUAILoader.h"
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface SUAILoader (News)
+
++ (void)loadAllNewsWithSuccess:(void (^) (NSData *data))success
+                       fail:(void (^) (NSString *fail))fail;
+
++ (void)loadNewsWithID:(NSString *)newsId
+               success:(void (^) (NSData *data))success
+                  fail:(void (^) (NSString *fail))fail;
+@end
+
+NS_ASSUME_NONNULL_END

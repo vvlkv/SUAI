@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)refactoredGroup;
 - (NSString *)refactoredAuditory;
 
+- (NSString *)removeSlashes;
+
 @end
 
 NS_ASSUME_NONNULL_END

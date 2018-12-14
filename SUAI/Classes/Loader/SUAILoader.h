@@ -20,5 +20,9 @@
                               success:(void (^) (NSArray<NSData *> *data))success
                                  fail:(void (^) (NSString *fail))fail;
 
++ (void)performRequestWithUrl:(NSURL *)url
+                      success:(void (^) (NSData *data))success
+                         fail:(void (^) (NSString *description))fail;
+
 @end
 

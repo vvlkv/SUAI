@@ -31,4 +31,10 @@
     return [self refactored];
 }
 
+- (NSString *)removeSlashes {
+    NSCharacterSet *trim = [NSCharacterSet characterSetWithCharactersInString:@"\t\n\r"];
+    NSString *result = [[self componentsSeparatedByCharactersInSet:trim] componentsJoinedByString:@""];
+    return result;
+}
+
 @end

@@ -78,9 +78,7 @@
 - (void)changeVisibleEntities:(Entity)type {
     SUAIEntity *entity = [SUAIScheduleProvider instance].teachers[69];
     [[SUAI instance].schedule loadScheduleFor:entity success:^(SUAISchedule *schedule) {
-        NSLog(@"%@", schedule);
     } fail:^(NSString *fail) {
-        NSLog(@"%@", fail);
     }];
     [_entitiesTableView reloadData];
 }
