@@ -52,14 +52,6 @@
     _scheduleTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [_scheduleTableView registerNib:[UINib nibWithNibName:@"SUAIScheduleTableViewCell" bundle:nil]
              forCellReuseIdentifier:@"CellId"];
-//    [[SUAIManager instance] loadScheduleFor:_name ofEntityType:_type success:^(SUAISchedule *schedule) {
-//        self->_scheduleTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-//        [self->_indicator stopAnimating];
-//        self->_semesterSchedule = schedule.semester;
-//        [self->_scheduleTableView reloadData];
-//    } fail:^(NSString *fail) {
-//        NSLog(@"%@", fail);
-//    }];
     [self.view addSubview:_scheduleTableView];
 }
 
