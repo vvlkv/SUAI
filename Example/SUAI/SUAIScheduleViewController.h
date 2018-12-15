@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Enums.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class SUAIEntity;
 @interface SUAIScheduleViewController : UIViewController
 
-- (instancetype)initWithEntityName:(NSString *)name andType:(Entity)type;
+- (instancetype)initWithEntity:(SUAIEntity *)entity;
 
 @end
 

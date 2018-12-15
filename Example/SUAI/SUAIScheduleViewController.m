@@ -7,25 +7,37 @@
 //
 
 #import "SUAIScheduleViewController.h"
-#import "SUAIScheduleProvider.h"
 #import "SUAISchedule.h"
 #import "SUAIScheduleTableViewCell.h"
 #import "SUAIPair.h"
 #import "SUAIDay.h"
 #import "SUAIAuditory.h"
 #import "SUAI.h"
+#import "SUAIEntity.h"
+#import "SUAISchedule.h"
 
 @interface SUAIScheduleViewController () <UITableViewDelegate, UITableViewDataSource> {
-    UITableView *_scheduleTableView;
+    UITableView *_tableView;
     UIActivityIndicatorView *_indicator;
     NSArray <SUAIDay *> *_semesterSchedule;
     NSString *_name;
     Entity _type;
+    
+    SUAIEntity *_entity;
+    __block SUAISchedule *_schedule;
 }
 
 @end
 
 @implementation SUAIScheduleViewController
+
+- (instancetype)initWithEntity:(SUAIEntity *)entity {
+    self = [super init];
+    if (self) {
+        _entity = entity;
+    }
+    return self;
+}
 
 - (instancetype)initWithEntityName:(NSString *)name andType:(Entity)type
 {
@@ -40,19 +52,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = _name;
+    self.title = _entity.name;
+    [[[SUAI instance] schedule] loadScheduleFor:_entity success:^(SUAISchedule *schedule) {
+        self->_schedule = schedule;
+        [self->_tableView reloadData];
+    } fail:^(NSString *fail) {
+    }];
     [self configureTableView];
     [self configureIndicator];
 }
 
 - (void)configureTableView {
-    _scheduleTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    _scheduleTableView.delegate = self;
-    _scheduleTableView.dataSource = self;
-    _scheduleTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [_scheduleTableView registerNib:[UINib nibWithNibName:@"SUAIScheduleTableViewCell" bundle:nil]
+    _tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [_tableView registerNib:[UINib nibWithNibName:@"SUAIScheduleTableViewCell" bundle:nil]
              forCellReuseIdentifier:@"CellId"];
-    [self.view addSubview:_scheduleTableView];
+    [self.view addSubview:_tableView];
 }
 
 - (void)configureIndicator {
@@ -68,21 +85,20 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [_semesterSchedule count];
+    return [_schedule.semester count];
 }
 
 - (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return ((SUAIDay *)_semesterSchedule[section]).day;
+    return @"todo";//_schedule.semester[section].day;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    SUAIDay *day = (SUAIDay *)_semesterSchedule[section];
-    return [day.pairs count];
+    return _schedule.semester[section].pairs.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SUAIScheduleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellId"];
-    SUAIPair *pair = ((SUAIDay *)_semesterSchedule[indexPath.section]).pairs[indexPath.row];
+    SUAIPair *pair = _schedule.semester[indexPath.section].pairs[indexPath.row];
     cell.name = pair.name;
     cell.teachers = pair.teachers;
     cell.time = pair.time;

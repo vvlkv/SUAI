@@ -91,6 +91,8 @@
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    SUAIScheduleViewController *vc = [[SUAIScheduleViewController alloc] initWithEntity:_entities[indexPath.row]];
+    [self.navigationController pushViewController:vc animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
