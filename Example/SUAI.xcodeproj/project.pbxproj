@@ -12,6 +12,7 @@
 		5522AF5C211CE0BF00A8A5AF /* SUAIScheduleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5522AF5A211CE0BF00A8A5AF /* SUAIScheduleTableViewCell.m */; };
 		5522AF5D211CE0BF00A8A5AF /* SUAIScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5522AF5B211CE0BF00A8A5AF /* SUAIScheduleTableViewCell.xib */; };
 		554A2410211CC75700B79FCC /* SUAIEntityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 554A240F211CC75700B79FCC /* SUAIEntityViewController.m */; };
+		55CF154121C5701700568F6F /* SUAIAllNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CF154021C5701700568F6F /* SUAIAllNewsViewController.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -51,6 +52,8 @@
 		5522AF5B211CE0BF00A8A5AF /* SUAIScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SUAIScheduleTableViewCell.xib; path = SUAI/SUAIScheduleTableViewCell.xib; sourceTree = "<group>"; };
 		554A240E211CC75700B79FCC /* SUAIEntityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SUAIEntityViewController.h; path = SUAI/SUAIEntityViewController.h; sourceTree = "<group>"; };
 		554A240F211CC75700B79FCC /* SUAIEntityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SUAIEntityViewController.m; path = SUAI/SUAIEntityViewController.m; sourceTree = "<group>"; };
+		55CF153F21C5701700568F6F /* SUAIAllNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SUAIAllNewsViewController.h; sourceTree = "<group>"; };
+		55CF154021C5701700568F6F /* SUAIAllNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUAIAllNewsViewController.m; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* SUAI_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SUAI_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -130,6 +133,8 @@
 		55CF153E21C54FEA00568F6F /* News */ = {
 			isa = PBXGroup;
 			children = (
+				55CF153F21C5701700568F6F /* SUAIAllNewsViewController.h */,
+				55CF154021C5701700568F6F /* SUAIAllNewsViewController.m */,
 			);
 			name = News;
 			sourceTree = "<group>";
@@ -394,6 +399,7 @@
 				5522AF58211CDEEA00A8A5AF /* SUAIScheduleViewController.m in Sources */,
 				554A2410211CC75700B79FCC /* SUAIEntityViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				55CF154121C5701700568F6F /* SUAIAllNewsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

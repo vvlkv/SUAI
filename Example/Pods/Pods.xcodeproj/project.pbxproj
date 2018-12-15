@@ -64,7 +64,7 @@
 		55CF152C21C373D500568F6F /* SUAILoader+News.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CF152A21C373D500568F6F /* SUAILoader+News.m */; };
 		55CF152D21C3741700568F6F /* HTMLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 362C2A9C3621C4527B51AC5D88660097 /* HTMLKit.framework */; };
 		55CF152F21C3742100568F6F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CF152E21C3742100568F6F /* Foundation.framework */; };
-		55CF153321C375FF00568F6F /* SUAINews.h in Headers */ = {isa = PBXBuildFile; fileRef = 55CF153121C375FF00568F6F /* SUAINews.h */; };
+		55CF153321C375FF00568F6F /* SUAINews.h in Headers */ = {isa = PBXBuildFile; fileRef = 55CF153121C375FF00568F6F /* SUAINews.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55CF153421C375FF00568F6F /* SUAINews.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CF153221C375FF00568F6F /* SUAINews.m */; };
 		55CF153721C3782400568F6F /* SUAINewsProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 55CF153521C3782400568F6F /* SUAINewsProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55CF153821C3782400568F6F /* SUAINewsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CF153621C3782400568F6F /* SUAINewsProvider.m */; };

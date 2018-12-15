@@ -53,11 +53,12 @@ typedef NSString*(*clr_func)(id, SEL);
 }
 
 - (void)prepare {
+    __weak typeof(self) welf = self;
     [SUAILoader loadCodesWithSuccess:^(NSArray<NSData *> *data) {
-        [self saveCodes:data];
-        [self setStatus:Ok];
+        [welf saveCodes:data];
+        [welf setStatus:Ok];
     } fail:^(NSString *fail) {
-        //TODO
+        
     }];
 }
 
