@@ -45,20 +45,12 @@
 
 - (void)setTeachers:(NSArray <NSString *> *)teachers {
     _teachers = teachers;
-    self.teacherLabel.text = [NSString stringWithFormat:@"teachers: %@", [self fillElementsFrom:_teachers]];
+    self.teacherLabel.text = [NSString stringWithFormat:@"teachers: %@", [_teachers componentsJoinedByString:@" "]];
 }
 
 - (void)setGroups:(NSArray<NSString *> *)groups {
     _groups = groups;
-    self.groupsLabel.text = [NSString stringWithFormat:@"groups: %@", [self fillElementsFrom:_groups]];
-}
-
-- (NSString *)fillElementsFrom:(NSArray<NSString *> *)contents {
-    NSMutableString *elementsStr = [[NSMutableString alloc] init];
-    for (NSString *element in contents) {
-        [elementsStr appendString:[NSString stringWithFormat:@"%@ ", element]];
-    }
-    return elementsStr;
+    self.groupsLabel.text = [NSString stringWithFormat:@"groups: %@", [_groups componentsJoinedByString:@" "]];
 }
 
 @end

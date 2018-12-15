@@ -113,6 +113,27 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		55CF153D21C54FD700568F6F /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				554A240E211CC75700B79FCC /* SUAIEntityViewController.h */,
+				554A240F211CC75700B79FCC /* SUAIEntityViewController.m */,
+				5522AF56211CDEEA00A8A5AF /* SUAIScheduleViewController.h */,
+				5522AF57211CDEEA00A8A5AF /* SUAIScheduleViewController.m */,
+				5522AF59211CE0BF00A8A5AF /* SUAIScheduleTableViewCell.h */,
+				5522AF5A211CE0BF00A8A5AF /* SUAIScheduleTableViewCell.m */,
+				5522AF5B211CE0BF00A8A5AF /* SUAIScheduleTableViewCell.xib */,
+			);
+			name = Schedule;
+			sourceTree = "<group>";
+		};
+		55CF153E21C54FEA00568F6F /* News */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = News;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -153,18 +174,13 @@
 		6003F593195388D20070C39A /* Example for SUAI */ = {
 			isa = PBXGroup;
 			children = (
+				55CF153D21C54FD700568F6F /* Schedule */,
+				55CF153E21C54FEA00568F6F /* News */,
 				6003F59C195388D20070C39A /* SUAIAppDelegate.h */,
 				6003F59D195388D20070C39A /* SUAIAppDelegate.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
-				554A240E211CC75700B79FCC /* SUAIEntityViewController.h */,
-				554A240F211CC75700B79FCC /* SUAIEntityViewController.m */,
-				5522AF56211CDEEA00A8A5AF /* SUAIScheduleViewController.h */,
-				5522AF57211CDEEA00A8A5AF /* SUAIScheduleViewController.m */,
-				5522AF59211CE0BF00A8A5AF /* SUAIScheduleTableViewCell.h */,
-				5522AF5A211CE0BF00A8A5AF /* SUAIScheduleTableViewCell.m */,
-				5522AF5B211CE0BF00A8A5AF /* SUAIScheduleTableViewCell.xib */,
 			);
 			name = "Example for SUAI";
 			sourceTree = "<group>";
