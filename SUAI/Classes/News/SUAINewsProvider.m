@@ -27,10 +27,12 @@
             for (int i = 0; i < [news count]; i++) {
                 (news[i]).image = images[i];
             }
+            success(news);
         } fail:^(NSString * _Nonnull fail) {
-            NSLog(@"%@", fail);
+//            fail(fail);
         }];
     } fail:^(NSString * _Nonnull fail) {
+//        fail(fail);
         NSLog(@"ERROR");
     }];
 }

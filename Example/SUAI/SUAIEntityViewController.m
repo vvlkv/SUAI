@@ -8,7 +8,7 @@
 
 #import "SUAIEntityViewController.h"
 #import "SUAIScheduleViewController.h"
-#import "SUAIScheduleProvider.h"
+//#import "SUAIScheduleProvider.h"
 #import "SUAI.h"
 
 @interface SUAIEntityViewController () <SUAIScheduleDelegate, UITableViewDelegate, UITableViewDataSource> {
@@ -80,6 +80,15 @@
     [[SUAI instance].schedule loadScheduleFor:entity success:^(SUAISchedule *schedule) {
     } fail:^(NSString *fail) {
     }];
+    
+    [[SUAI instance].news loadAllNews:^(NSArray<SUAINews *> * _Nonnull news) {
+        for (SUAINews *new in news) {
+            NSLog(@"%@", new);
+        }
+    } fail:^(NSString * _Nonnull fail) {
+        NSLog(@"%@", fail);
+    }];
+    
     [_entitiesTableView reloadData];
 }
 

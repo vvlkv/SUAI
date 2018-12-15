@@ -36,7 +36,6 @@
         news.text = txt.textContent;
         [contents addObject:news];
     }
-    NSLog(@"%@", contents);
     return contents;
 }
 
