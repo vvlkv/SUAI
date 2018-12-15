@@ -6,10 +6,10 @@
 //
 
 #import "SUAI.h"
-#import "SUAIScheduleProvider.h"
 
 @interface SUAI() {
     SUAIScheduleProvider *_schedule;
+    SUAINewsProvider     *_news;
 }
 
 @end
@@ -29,6 +29,7 @@
     self = [super init];
     if (self) {
         _schedule = [SUAIScheduleProvider instance];
+        _news = [[SUAINewsProvider alloc] init];
     }
     return self;
 }
@@ -41,6 +42,10 @@
 
 - (SUAIScheduleProvider *)schedule {
     return _schedule;
+}
+
+- (SUAINewsProvider *)news {
+    return _news;
 }
 
 @end

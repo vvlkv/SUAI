@@ -8,22 +8,29 @@
 
 #import "SUAIAppDelegate.h"
 #import "SUAIEntityViewController.h"
-#import "SUAINewsProvider.h"
+#import "SUAI.h"
 
 @implementation SUAIAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     _window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-    SUAIEntityViewController *startViewController = [[SUAIEntityViewController alloc] init];
-    _window.rootViewController = [[UINavigationController alloc] initWithRootViewController:startViewController];
-    _window.backgroundColor = [UIColor whiteColor];
+    
+    UINavigationController *newsNavVC = [[UINavigationController alloc]
+                                           initWithRootViewController:[[SUAIEntityViewController alloc] init]];
+    UINavigationController *scheduNavVC = [[UINavigationController alloc]
+                                           initWithRootViewController:[[SUAIEntityViewController alloc] init]];
+    
+    UITabBarController *tabBar = [[UITabBarController alloc] init];
+    tabBar.viewControllers = @[newsNavVC, scheduNavVC];
+    
+    _window.rootViewController = tabBar;
     [_window makeKeyAndVisible];
     SUAINewsProvider *news = [[SUAINewsProvider alloc] init];
     [news loadAllNews:^(NSArray<SUAINews *> * _Nonnull news) {
-        
+        NSLog(@"%@", news);
     } fail:^(NSString * _Nonnull fail) {
-        
+        NSLog(@"%@", fail);
     }];
     return YES;
 }

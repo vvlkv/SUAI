@@ -14,9 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)loadAllNewsWithSuccess:(void (^) (NSData *data))success
                        fail:(void (^) (NSString *fail))fail;
 
-+ (void)loadNewsWithID:(NSString *)newsId
-               success:(void (^) (NSData *data))success
-                  fail:(void (^) (NSString *fail))fail;
++ (void)loadImages:(NSArray<NSString *> *)imagesUrl
+           success:(void (^) (NSArray<UIImage *> *images))success
+              fail:(void (^) (NSString *fail))fail;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+@class SUAIDay;
 @interface SUAIParser : NSObject
 
 + (NSDictionary *)codesFromData:(NSData *)data;

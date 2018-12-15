@@ -1,9 +1,9 @@
 # SUAI
 
-[![CI Status](https://img.shields.io/travis/vvlkv/SUAISchedule.svg?style=flat)](https://travis-ci.org/vvlkv/SUAISchedule)
-[![Version](https://img.shields.io/cocoapods/v/SUAISchedule.svg?style=flat)](https://cocoapods.org/pods/SUAISchedule)
-[![License](https://img.shields.io/cocoapods/l/SUAISchedule.svg?style=flat)](https://cocoapods.org/pods/SUAISchedule)
-[![Platform](https://img.shields.io/cocoapods/p/SUAISchedule.svg?style=flat)](https://cocoapods.org/pods/SUAISchedule)
+[![CI Status](https://img.shields.io/travis/vvlkv/SUAI.svg?style=flat)](https://travis-ci.org/vvlkv/SUAI)
+[![Version](https://img.shields.io/cocoapods/v/SUAI.svg?style=flat)](https://cocoapods.org/pods/SUAI)
+[![License](https://img.shields.io/cocoapods/l/SUAI.svg?style=flat)](https://cocoapods.org/pods/SUAI)
+[![Platform](https://img.shields.io/cocoapods/p/SUAI.svg?style=flat)](https://cocoapods.org/pods/SUAI)
 ###
 SUAI is a lightweight and very simple library for load schedule of groups or teachers studying in [Saint Petersburg State University of Aerospace Instrumentation](http://suai.ru).
 Current version is beta, it doesn't obtain status of internet connection and not return adequate error codes.
@@ -13,7 +13,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-SUAISchedule is available through [CocoaPods](https://cocoapods.org). To install
+SUAI is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
@@ -73,4 +73,4 @@ Victor Volkov, vvlkv@icloud.com
 
 ## License
 
-SUAISchedule is available under the MIT license. See the LICENSE file for more info.
+SUAI is available under the MIT license. See the LICENSE file for more info.
