@@ -18,14 +18,12 @@
 
 @interface SUAIScheduleViewController () <UITableViewDelegate, UITableViewDataSource> {
     UITableView *_tableView;
-    UIActivityIndicatorView *_indicator;
-    NSArray <SUAIDay *> *_semesterSchedule;
-    NSString *_name;
-    Entity _type;
     
     SUAIEntity *_entity;
-    __block SUAISchedule *_schedule;
+    NSArray<SUAIDay *> *_content;
 }
+
+@property (strong, nonatomic) SUAISchedule *schedule;
 
 @end
 
@@ -39,27 +37,17 @@
     return self;
 }
 
-- (instancetype)initWithEntityName:(NSString *)name andType:(Entity)type
-{
-    self = [super init];
-    if (self) {
-        _name = name;
-        _type = type;
-        _semesterSchedule = [[NSArray alloc] init];
-    }
-    return self;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = _entity.name;
+    __weak typeof(self) welf = self;
     [[[SUAI instance] schedule] loadScheduleFor:_entity success:^(SUAISchedule *schedule) {
-        self->_schedule = schedule;
-        [self->_tableView reloadData];
+        welf.schedule = schedule;
+        [welf showSchedule:0];
     } fail:^(NSString *fail) {
     }];
     [self configureTableView];
-    [self configureIndicator];
+    [self configureSegmentedControl];
 }
 
 - (void)configureTableView {
@@ -72,33 +60,58 @@
     [self.view addSubview:_tableView];
 }
 
-- (void)configureIndicator {
-    CGRect indicatorFrame = CGRectMake(self.view.bounds.size.width/2 - 10, self.view.bounds.size.height/2 - 10, 20, 20);
-    _indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    _indicator.frame = indicatorFrame;
-    [self.view addSubview:_indicator];
-    [_indicator startAnimating];
+- (void)configureSegmentedControl {
+    UISegmentedControl *control = [[UISegmentedControl alloc] initWithItems:@[@"Sem", @"Ses"]];
+    [control addTarget:self action:@selector(didChangeSegment:) forControlEvents:UIControlEventValueChanged];
+    control.selectedSegmentIndex = 0;
+    self.navigationItem.titleView = control;
 }
 
+- (void)didChangeSegment:(UISegmentedControl *)sender {
+    NSUInteger index = sender.selectedSegmentIndex;
+    [self showSchedule:index];
+}
+
+- (void)showSchedule:(NSUInteger)index {
+    switch (index) {
+        case 0:
+            _content = _schedule.semester;
+            break;
+        case 1:
+            _content = _schedule.session;
+            break;
+        default:
+            assert("wtf");
+            break;
+    }
+    [_tableView reloadData];
+}
+
+
 #pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [_schedule.semester count];
+    return [_content count];
 }
 
 - (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @"todo";//_schedule.semester[section].day;
+    return _content[section].day;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _schedule.semester[section].pairs.count;
+    return _content[section].pairs.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SUAIScheduleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellId"];
-    SUAIPair *pair = _schedule.semester[indexPath.section].pairs[indexPath.row];
+    SUAIPair *pair = _content[indexPath.section].pairs[indexPath.row];
     cell.name = pair.name;
     cell.teachers = pair.teachers;
     cell.time = pair.time;
@@ -107,4 +120,5 @@
     cell.groups = pair.groups;
     return cell;
 }
+
 @end
