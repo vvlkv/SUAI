@@ -13,7 +13,6 @@
 {
     self = [super init];
     if (self) {
-        _image = [[UIImage alloc] init];
     }
     return self;
 }
