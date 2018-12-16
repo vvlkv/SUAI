@@ -7,6 +7,7 @@
 //
 
 #import "SUAIAppDelegate.h"
+#import "SUAIAllNewsViewController.h"
 #import "SUAIEntityViewController.h"
 #import "SUAI.h"
 
@@ -17,7 +18,7 @@
     _window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     
     UINavigationController *newsNavVC = [[UINavigationController alloc]
-                                           initWithRootViewController:[[SUAIEntityViewController alloc] init]];
+                                           initWithRootViewController:[[SUAIAllNewsViewController alloc] init]];
     UINavigationController *scheduNavVC = [[UINavigationController alloc]
                                            initWithRootViewController:[[SUAIEntityViewController alloc] init]];
     

@@ -44,4 +44,11 @@
     });
 }
 
++ (void)loadNews:(NSString *)newsID
+         success:(void (^) (NSData *data))success
+            fail:(void (^) (NSString *fail))fail {
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@", @"http://new.guap.ru", newsID];
+    [SUAILoader performRequestWithUrl:[NSURL URLWithString:urlStr] success:success fail:fail];
+}
+
 @end

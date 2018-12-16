@@ -39,4 +39,22 @@
     return contents;
 }
 
++ (SUAINews *)newsFromData:(NSData *)data {
+    NSString *dataStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    HTMLDocument *document = [HTMLDocument documentWithString:dataStr];
+    HTMLElement *content = [document querySelector:@".header"];
+    HTMLElement *header = [content querySelector:@"h1"];
+    HTMLElement *date = [header querySelector:@"span"];
+    SUAINews *news = [[SUAINews alloc] init];
+    news.date = date.textContent;
+    news.header = [header.lastChild.textContent removeSlashes];
+    HTMLElement *mainPart = [document querySelector:@".col-xs-9"];
+    HTMLElement *gallery = [mainPart querySelector:@"a"];
+    news.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:gallery.attributes[@"href"]]]];
+    news.text = [mainPart.textContent removeSlashes];
+    HTMLElement *subHeader = [mainPart querySelector:@".lead"];
+    news.subHeader = [[subHeader textContent] removeSlashes];
+    return news;
+}
+
 @end
