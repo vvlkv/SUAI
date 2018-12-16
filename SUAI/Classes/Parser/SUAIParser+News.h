@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SUAIParser (News)
 
 + (NSArray<SUAINews *> *)allNewsFromData:(NSData *)data;
++ (SUAINews *)newsFromData:(NSData *)data;
 
 @end
 

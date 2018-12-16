@@ -15,7 +15,7 @@
 - (void)loadAllNews:(void (^) (NSArray<SUAINews *> *news))success
                fail:(void (^) (NSString *fail))fail {
     [SUAILoader loadAllNewsWithSuccess:^(NSData * _Nonnull data) {
-        NSArray<SUAINews *> const *news = [SUAIParser allNewsFromData:data];
+        NSArray<SUAINews *> *news = [SUAIParser allNewsFromData:data];
         NSMutableArray *imgUrls = [NSMutableArray arrayWithCapacity:[news count]];
         NSMutableArray *images = [NSMutableArray arrayWithCapacity:[news count]];
         for (SUAINews *newsModel in news) {
@@ -29,11 +29,19 @@
             }
             success(news);
         } fail:^(NSString * _Nonnull fail) {
-//            fail(fail);
         }];
     } fail:^(NSString * _Nonnull fail) {
-//        fail(fail);
         NSLog(@"ERROR");
+    }];
+}
+
+- (void)loadNews:(NSString *)newsID
+         success:(void (^) (SUAINews *news))success
+            fail:(void (^) (NSString *fail))fail {
+    [SUAILoader loadNews:newsID success:^(NSData * _Nonnull data) {
+        [SUAIParser newsFromData:data];
+    } fail:^(NSString * _Nonnull fail) {
+        
     }];
 }
 

@@ -15,6 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)loadAllNews:(void (^) (NSArray<SUAINews *>* news))success
                fail:(void (^) (NSString *fail))fail;
 
+- (void)loadNews:(NSString *)newsID
+         success:(void (^) (SUAINews *news))success
+            fail:(void (^) (NSString *fail))fail;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -26,7 +26,18 @@
         welf.content = news;
         [welf.tableView reloadData];
     } fail:^(NSString * _Nonnull fail) {
-        
+    }];
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    SUAINews *news = _content[indexPath.row];
+    [[[SUAI instance] news] loadNews:news.publicationId success:^(SUAINews * _Nonnull news) {
+        NSLog(@"OK");
+    } fail:^(NSString * _Nonnull fail) {
+        NSLog(@"FAIL");
     }];
 }
 
