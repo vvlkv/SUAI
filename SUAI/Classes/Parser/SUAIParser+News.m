@@ -51,8 +51,6 @@
     HTMLElement *mainPart = [document querySelector:@".col-xs-9"];
     HTMLElement *gallery = [mainPart querySelector:@"a"];
     news.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:gallery.attributes[@"href"]]]];
-    NSLog(@"%@", NSStringFromCGSize(news.image.size));
-    HTMLElement *reference = [mainPart querySelector:@".href"];
     news.text = [mainPart.textContent removeSlashes];
     HTMLElement *subHeader = [mainPart querySelector:@".lead"];
     news.subHeader = [[subHeader textContent] removeSlashes];

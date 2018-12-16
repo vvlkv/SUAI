@@ -39,7 +39,8 @@
          success:(void (^) (SUAINews *news))success
             fail:(void (^) (NSString *fail))fail {
     [SUAILoader loadNews:newsID success:^(NSData * _Nonnull data) {
-        [SUAIParser newsFromData:data];
+        SUAINews *loadedNews = [SUAIParser newsFromData:data];
+        success(loadedNews);
     } fail:^(NSString * _Nonnull fail) {
         
     }];
