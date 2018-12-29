@@ -33,7 +33,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     __weak typeof(self) welf = self;
-    NSLog(@"%@", NSStringFromCGRect(_headerLabe.frame));
     [[[SUAI instance] news] loadNews:newsId success:^(SUAINews * _Nonnull news) {
         welf.headerLabe.text = news.header;
         welf.dateLabel.text = news.date;
