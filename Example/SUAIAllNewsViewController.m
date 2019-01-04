@@ -37,11 +37,6 @@
     SUAINews *news = _content[indexPath.row];
     SUAIConcreteNewsViewController *vc = [[SUAIConcreteNewsViewController alloc] initWithNewsID:news.publicationId];
     [self.navigationController pushViewController:vc animated:YES];
-//    [[[SUAI instance] news] loadNews:news.publicationId success:^(SUAINews * _Nonnull news) {
-//        NSLog(@"OK");
-//    } fail:^(NSString * _Nonnull fail) {
-//        NSLog(@"FAIL");
-//    }];
 }
 
 #pragma mark - Table view data source

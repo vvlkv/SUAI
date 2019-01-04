@@ -137,6 +137,42 @@ typedef NSString*(*clr_func)(id, SEL);
     }];
 }
 
+- (void)loadScheduleFor:(NSString *)entityName
+                 ofType:(Entity)type
+                success:(void (^) (SUAISchedule *schedule))schedule
+                   fail:(void (^) (NSString *fail))fail {
+    NSArray *searchEntities;
+    switch (type) {
+        case Group:
+            searchEntities = _groups;
+            break;
+        case Teacher:
+            searchEntities = _teachers;
+            break;
+        case Auditory:
+            searchEntities = _auditories;
+            break;
+        default:
+            fail(@"FAIL");
+            break;
+    }
+    
+    SUAIEntity *entity = nil;
+    for (SUAIEntity *e in searchEntities) {
+        NSLog(@"%@", e.name);
+        if ([e.name isEqualToString:entityName]) {
+            entity = e;
+            break;
+        }
+    }
+    
+    if (entity == nil) {
+        fail(@"FAIL");
+    } else {
+        [self loadScheduleFor:entity success:schedule fail:fail];
+    }
+}
+
 - (NSArray <SUAIEntity *> *)groups {
     return _groups;
 }

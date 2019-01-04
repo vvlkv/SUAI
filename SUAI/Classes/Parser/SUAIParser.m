@@ -47,14 +47,6 @@
     return contents;
 }
 
-//+ (NSArray<SUAIDay *> *)semesterFromData:(NSData *)data {
-//    
-//}
-//
-//+ (NSArray<SUAIDay *> *)sessionFromData:(NSData *)data {
-//    
-//}
-
 + (NSArray *)scheduleFromData:(NSData *)data {
     if (data == nil)
         return [NSArray array];

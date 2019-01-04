@@ -15,7 +15,6 @@
     UITableView *_tableView;
     UISegmentedControl *_entityControl;
     UIActivityIndicatorView *_indicator;
-    
     NSArray<SUAIEntity *> *_entities;
 }
 
@@ -28,7 +27,6 @@
     [super viewDidLoad];
     self.title = @"Schedule";
     [self configureTableView];
-//    [self configureIndicator];
     [self configureSegmentedControl];
     [[SUAI instance] schedule].delegate = self;
 }
@@ -77,6 +75,11 @@
             assert("wtf");
             break;
     }
+    [[[SUAI instance] schedule] loadScheduleFor:@"1740М" ofType:Group success:^(SUAISchedule *schedule) {
+        NSLog(@"%@", schedule);
+    } fail:^(NSString *fail) {
+        NSLog(@"%@", fail);
+    }];
     [_tableView reloadData];
 }
 

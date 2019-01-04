@@ -32,7 +32,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    __weak typeof(self) welf = self;
+    __weak __typeof(self) welf = self;
     [[[SUAI instance] news] loadNews:newsId success:^(SUAINews * _Nonnull news) {
         welf.headerLabe.text = news.header;
         welf.dateLabel.text = news.date;

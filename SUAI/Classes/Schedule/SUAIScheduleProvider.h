@@ -33,4 +33,9 @@
                 success:(void (^) (SUAISchedule *schedule))schedule
                    fail:(void (^) (NSString *fail))fail;
 
+- (void)loadScheduleFor:(NSString *)entityName
+                 ofType:(Entity)type
+                success:(void (^) (SUAISchedule *schedule))schedule
+                   fail:(void (^) (NSString *fail))fail;
+
 @end

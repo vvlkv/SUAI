@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @class SUAIDay;
-@class SUAIPair;
 @interface SUAISchedule : NSObject
 
 @property (strong, nonatomic, readonly) NSString *name;
@@ -17,5 +16,8 @@
 @property (strong, nonatomic) NSArray<SUAIDay *> *semester;
 
 - (instancetype)initWithName:(NSString *)name;
+- (instancetype)initWithName:(NSString *)name
+                     session:(NSArray<SUAIDay *> *)session
+                 andSemester:(NSArray<SUAIDay *> *)semester;
 
 @end

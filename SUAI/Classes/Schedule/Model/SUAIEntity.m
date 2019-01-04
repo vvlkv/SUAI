@@ -8,12 +8,6 @@
 
 #import "SUAIEntity.h"
 
-@interface SUAIEntity() {
-    
-}
-
-@end
-
 @implementation SUAIEntity
 
 - (instancetype)initWithName:(NSString *)name

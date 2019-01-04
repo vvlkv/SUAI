@@ -25,4 +25,9 @@
     }
     return self;
 }
+
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"Name:\t%@\nTeachers:\t%@", _name, _teachers];
+}
 @end
