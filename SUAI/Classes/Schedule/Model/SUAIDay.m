@@ -10,11 +10,11 @@
 
 @implementation SUAIDay
 
-- (instancetype)initWithDay:(NSString *)day andPairs:(NSArray<SUAIPair *> *)pairs
+- (instancetype)initWithName:(NSString *)name andPairs:(NSArray<SUAIPair *> *)pairs
 {
     self = [super init];
     if (self) {
-        _day = day;
+        _name = name;
         _pairs = [pairs copy];
     }
     return self;
@@ -22,7 +22,7 @@
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"day:%@\rpairs:%@\r", self.day, self.pairs];
+    return [NSString stringWithFormat:@"day:%@\rpairs:%@\r", self.name, self.pairs];
 }
 
 @end

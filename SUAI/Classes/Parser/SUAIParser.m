@@ -64,7 +64,7 @@
             if ([child.tagName isEqualToString:@"h3"]) {
                 if ([pairs count] > 0) {
                     if (child.textContent != nil)
-                        [days addObject:[[SUAIDay alloc] initWithDay:child.textContent
+                        [days addObject:[[SUAIDay alloc] initWithName:child.textContent
                                                             andPairs:pairs]];
                     [pairs removeAllObjects];
 //                    days = pairs;

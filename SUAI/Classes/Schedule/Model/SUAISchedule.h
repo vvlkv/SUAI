@@ -14,10 +14,13 @@
 @property (strong, nonatomic, readonly) NSString *name;
 @property (strong, nonatomic) NSArray<SUAIDay *> *session;
 @property (strong, nonatomic) NSArray<SUAIDay *> *semester;
+@property (strong, nonatomic, readonly) NSArray<SUAIDay *> *redSemester;
+@property (strong, nonatomic, readonly) NSArray<SUAIDay *> *blueSemester;
 
 - (instancetype)initWithName:(NSString *)name;
 - (instancetype)initWithName:(NSString *)name
                      session:(NSArray<SUAIDay *> *)session
                  andSemester:(NSArray<SUAIDay *> *)semester;
+- (NSArray<SUAIDay *> *)expandedScheduleToFullWeek:(NSArray<SUAIDay *> *)schedule;
 
 @end

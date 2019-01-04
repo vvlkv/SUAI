@@ -11,10 +11,10 @@
 @class SUAIPair;
 @interface SUAIDay: NSObject
 
-@property (strong, nonatomic) NSString *day;
+@property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic, readonly) NSArray<SUAIPair *> *pairs;
 
-- (instancetype)initWithDay:(NSString *)day
+- (instancetype)initWithName:(NSString *)name
                    andPairs:(NSArray<SUAIPair *> *)pairs;
 
 @end

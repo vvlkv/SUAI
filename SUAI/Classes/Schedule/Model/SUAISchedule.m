@@ -7,6 +7,15 @@
 //
 
 #import "SUAISchedule.h"
+#import "SUAIDay.h"
+#import "SUAIPair.h"
+
+@interface SUAISchedule() {
+    NSArray <SUAIDay *> *_redSemester;
+    NSArray <SUAIDay *> *_blueSemester;
+}
+
+@end
 
 @implementation SUAISchedule
 
@@ -33,6 +42,59 @@
 
 - (NSString *)description {
     return [NSString stringWithFormat:@"Name:\t%@\nSemester:\n%@Session:\n%@", _name, _semester, _session];
+}
+
+- (NSArray<SUAIDay *> *)redSemester {
+    if (_redSemester == nil) {
+        _redSemester = [self sortSemesterUsing:DayColorRed];
+    }
+    return _redSemester;
+}
+
+- (NSArray<SUAIDay *> *)blueSemester {
+    if (_blueSemester == nil) {
+        _blueSemester = [self sortSemesterUsing:DayColorBlue];
+    }
+    return _blueSemester;
+}
+
+- (NSArray<SUAIDay *> *)sortSemesterUsing:(DayColor)color {
+    NSMutableArray<SUAIDay *> *result = [NSMutableArray array];
+    for (SUAIDay *day in _semester) {
+        NSMutableArray<SUAIPair *> *pairs = [NSMutableArray array];
+        for (SUAIPair *pair in day.pairs) {
+            if (pair.color == DayColorBoth || pair.color == color) {
+                [pairs addObject:pair];
+            }
+        }
+        if ([pairs count] > 0) {
+            [result addObject:[[SUAIDay alloc] initWithName:day.name
+                                                   andPairs:[pairs copy]]];
+        }
+    }
+    return [result copy];
+}
+
+- (NSArray<SUAIDay *> *)expandedScheduleToFullWeek:(NSArray<SUAIDay *> *)schedule {
+    NSArray *days = @[@"Понедельник", @"Вторник", @"Среда", @"Четверг", @"Пятница", @"Суббота", @"Вне"];
+    NSMutableArray<SUAIDay *> *expanded = [NSMutableArray array];
+    
+    for (int i = 0; i < [days count]; i++) {
+        
+        NSUInteger foundedIndex = [schedule indexOfObjectPassingTest:^BOOL(SUAIDay * _Nonnull day, NSUInteger idx, BOOL * _Nonnull stop) {
+            if ([[day name] containsString:days[i]]) {
+                *stop = YES;
+                return YES;
+            }
+            return NO;
+        }];
+        if (foundedIndex == NSNotFound) {
+            [expanded addObject:[[SUAIDay alloc] initWithName:days[i] andPairs:[NSArray array]]];
+        } else {
+            [expanded addObject:schedule[foundedIndex]];
+        }
+    }
+    return expanded;
 }
 
 @end

@@ -24,9 +24,8 @@
     return self;
 }
 
-- (NSString *)description
-{
-    return [NSString stringWithFormat:@"\n\nname:%@\nsesCode:%@\nsemCode:%@\ntype:%ld", _name, _sessionCode, _semesterCode, _type];
+- (NSString *)description {
+    return [NSString stringWithFormat:@"\n\nname:%@\nsesCode:%@\nsemCode:%@\ntype:%lu", _name, _sessionCode, _semesterCode, (unsigned long)_type];
 }
 
 @end

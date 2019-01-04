@@ -75,7 +75,7 @@
 - (void)showSchedule:(NSUInteger)index {
     switch (index) {
         case 0:
-            _content = _schedule.semester;
+            _content = [_schedule expandedScheduleToFullWeek:_schedule.semester];
             break;
         case 1:
             _content = _schedule.session;
@@ -102,11 +102,11 @@
 }
 
 - (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return _content[section].day;
+    return [_content[section] name];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _content[section].pairs.count;
+    return [[_content[section] pairs] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
