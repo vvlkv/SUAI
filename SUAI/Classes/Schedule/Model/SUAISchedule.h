@@ -21,6 +21,7 @@
 - (instancetype)initWithName:(NSString *)name
                      session:(NSArray<SUAIDay *> *)session
                  andSemester:(NSArray<SUAIDay *> *)semester;
+
 - (NSArray<SUAIDay *> *)expandedScheduleToFullWeek:(NSArray<SUAIDay *> *)schedule;
 
 @end

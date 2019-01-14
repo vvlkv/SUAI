@@ -41,7 +41,8 @@
     [super viewDidLoad];
     self.title = _entity.name;
     __weak typeof(self) welf = self;
-    [[[SUAI instance] schedule] loadScheduleFor:_entity success:^(SUAISchedule *schedule) {
+    [[[SUAI instance] schedule] loadScheduleFor:_entity
+                                        success:^(SUAISchedule *schedule) {
         welf.schedule = schedule;
         [welf showSchedule:0];
     } fail:^(NSString *fail) {

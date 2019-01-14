@@ -8,6 +8,12 @@
 
 #import "SUAIDay.h"
 
+@interface SUAIDay() {
+    NSMutableArray<SUAIPair *> *_pairs;
+}
+
+@end
+
 @implementation SUAIDay
 
 - (instancetype)initWithName:(NSString *)name andPairs:(NSArray<SUAIPair *> *)pairs
@@ -15,9 +21,21 @@
     self = [super init];
     if (self) {
         _name = name;
-        _pairs = [pairs copy];
+        _pairs = [NSMutableArray arrayWithArray:pairs];
     }
     return self;
+}
+
+- (instancetype)initWithName:(NSString *)name {
+    return [self initWithName:name andPairs:[NSArray array]];
+}
+
+- (void)addPair:(SUAIPair *)pair {
+    [_pairs addObject:pair];
+}
+
+- (NSArray<SUAIPair *> *)pairs {
+    return [_pairs copy];
 }
 
 - (NSString *)description

@@ -54,31 +54,32 @@
     HTMLDocument *document = [HTMLDocument documentWithString:dataString];
     
     NSArray *rasp = [document querySelectorAll:@".result"];
-    NSMutableArray *pairs = [NSMutableArray array];
     NSMutableArray *days = [NSMutableArray array];
     SUAIPair *pair;
+    SUAIDay *day;
+    
     for (HTMLElement *element in rasp) {
         for (HTMLElement *child in element.childNodes) {
-            if ([child isMemberOfClass:[HTMLText class]])
-                continue;
+            //Each day starts with h3 tag
             if ([child.tagName isEqualToString:@"h3"]) {
-                if ([pairs count] > 0) {
-                    if (child.textContent != nil)
-                        [days addObject:[[SUAIDay alloc] initWithName:child.textContent
-                                                            andPairs:pairs]];
-                    [pairs removeAllObjects];
-//                    days = pairs;
-                }
+                // Create day and add pairs array
+                day = [[SUAIDay alloc] initWithName:child.textContent];
+                [days addObject:day];
             }
+            //Each pair starts with h4 tag
             if ([child.tagName isEqualToString:@"h4"]) {
+                // Create pair object
                 pair = [[SUAIPair alloc] init];
                 if (child.textContent != nil)
                     pair.time = child.textContent;
+                else
+                    assert("text content is nil?");
+                [day addPair:pair];
             }
+            //Each pair content starts from div
             if ([child.tagName isEqualToString:@"div"]) {
                 if (pair != nil) {
                     [self fillPair:pair fromElement:[child querySelector:@".study"]];
-                    [pairs addObject:pair];
                 }
             }
         }

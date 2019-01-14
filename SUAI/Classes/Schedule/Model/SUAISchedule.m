@@ -76,7 +76,7 @@
 }
 
 - (NSArray<SUAIDay *> *)expandedScheduleToFullWeek:(NSArray<SUAIDay *> *)schedule {
-    NSArray *days = @[@"Понедельник", @"Вторник", @"Среда", @"Четверг", @"Пятница", @"Суббота", @"Вне"];
+    NSArray *days = @[@"Понедельник", @"Вторник", @"Среда", @"Четверг", @"Пятница", @"Суббота", @"Вне сетки расписания"];
     NSMutableArray<SUAIDay *> *expanded = [NSMutableArray array];
     
     for (int i = 0; i < [days count]; i++) {

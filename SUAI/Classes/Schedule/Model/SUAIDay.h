@@ -17,4 +17,8 @@
 - (instancetype)initWithName:(NSString *)name
                    andPairs:(NSArray<SUAIPair *> *)pairs;
 
+- (instancetype)initWithName:(NSString *)name;
+
+- (void)addPair:(SUAIPair *)pair;
+
 @end
