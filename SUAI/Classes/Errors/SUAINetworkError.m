@@ -11,7 +11,7 @@ NSString *const SUAINetworkErrorDomain = @"SUAINetworkErrorDomain";
 
 @implementation SUAINetworkError
 
-+ (instancetype)errorWithCode:(NSInteger)code userInfo:(NSDictionary<NSErrorUserInfoKey,id> *)dict {
++ (instancetype)errorWithCode:(SUAIErrorCode)code userInfo:(NSDictionary<NSErrorUserInfoKey,id> *)dict {
     return [SUAINetworkError errorWithDomain:SUAINetworkErrorDomain code:code userInfo:dict];
 }
 

@@ -13,7 +13,6 @@
 #import "SUAIAuditory.h"
 #import "Enums.h"
 #import "NSString+Enums.h"
-#import "SUAIParseError.h"
 
 @implementation SUAIParser
 
