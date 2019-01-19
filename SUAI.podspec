@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SUAI'
-  s.version          = '0.4.0'
+  s.version          = '0.4.1'
   s.summary          = 'Library for working with SUAI content'
 
 # This description is used to generate tags and improve search results.
