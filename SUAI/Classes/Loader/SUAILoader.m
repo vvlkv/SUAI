@@ -153,7 +153,7 @@
                                                             NSURLResponse * _Nullable response,
                                                             NSError * _Nullable hError) {
                                             dispatch_async(queue, ^{
-                                                if (hError == nil) {
+                                                if (hError != nil) {
                                                     SUAINetworkError *err = [SUAINetworkError errorWithCode:SUAIErrorNetworkFault userInfo:@{NSLocalizedDescriptionKey: hError.localizedDescription}];
                                                     error(err);
                                                 }
@@ -176,10 +176,14 @@
     NSURLSessionTask *task = [session dataTaskWithRequest:request
                                         completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable hError) {
         dispatch_async(dispatch_get_main_queue(), ^{
+            if (hError != nil) {
+                SUAINetworkError *err = [SUAINetworkError errorWithCode:SUAIErrorNetworkFault userInfo:@{NSLocalizedDescriptionKey: hError.localizedDescription}];
+                error(err);
+            }
             if (data != nil) {
                 success(data);
             } else {
-                SUAINetworkError *err = [SUAINetworkError errorWithCode:SUAIErrorNetworkFault userInfo:@{NSLocalizedDescriptionKey: hError.localizedDescription}];
+                SUAINetworkError *err = [SUAINetworkError errorWithCode:SUAIErrorNetworkFault userInfo:@{NSLocalizedDescriptionKey: @"data is nil"}];
                 error(err);
             }
         });

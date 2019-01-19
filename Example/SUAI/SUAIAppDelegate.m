@@ -26,6 +26,11 @@
     tabBar.viewControllers = @[newsNavVC, scheduNavVC];
     _window.rootViewController = tabBar;
     [_window makeKeyAndVisible];
+    [[[SUAI instance] schedule] loadScheduleFor:@"1740М" ofType:Group success:^(SUAISchedule *schedule) {
+        NSLog(@"OK");
+    } fail:^(__kindof SUAIError *error) {
+        NSLog(@"%@", error.localizedDescription);
+    }];
     return YES;
 }
 

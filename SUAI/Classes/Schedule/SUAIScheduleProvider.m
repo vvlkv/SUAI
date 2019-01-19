@@ -64,7 +64,6 @@ typedef NSString*(*clr_func)(id, SEL);
     } fail:^(SUAINetworkError *fail) {
         dispatch_group_leave(group);
     }];
-    NSLog(@"eof");
 }
 
 - (void)loadScheduleFor:(SUAIEntity *)entity
@@ -98,7 +97,11 @@ typedef NSString*(*clr_func)(id, SEL);
             [welf p_loadCodes:group];
         });
         dispatch_group_notify(group, queue, ^{
-            [welf p_loadScheduleFor:entityName ofType:type success:schedule fail:error];
+            if (welf.codesAvailable)
+                [welf p_loadScheduleFor:entityName ofType:type success:schedule fail:error];
+            else {
+                error([SUAIError errorWithCode:SUAIErrorNetworkFault userInfo:@{NSLocalizedDescriptionKey: @"Entity codes not available"}]);
+            }
         });
     } else {
         [self p_loadScheduleFor:entityName ofType:type success:schedule fail:error];
