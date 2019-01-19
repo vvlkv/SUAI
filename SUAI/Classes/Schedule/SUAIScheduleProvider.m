@@ -133,7 +133,7 @@ typedef NSString*(*clr_func)(id, SEL);
     }
     
     if (entity == nil) {
-        SUAIError *lost = [SUAIError errorWithCode:SUAIErrorParseUnknown userInfo:@{NSLocalizedDescriptionKey: [NSString stringWithFormat:@"entity %@ of type %ld not found", entityName, type]}];
+        SUAIError *lost = [SUAIError errorWithCode:SUAIErrorParseUnknown userInfo:@{NSLocalizedDescriptionKey: [NSString stringWithFormat:@"entity %@ of type %lu not found", entityName, (unsigned long)type]}];
         error(lost);
     } else {
         [self loadScheduleFor:entity success:schedule fail:error];

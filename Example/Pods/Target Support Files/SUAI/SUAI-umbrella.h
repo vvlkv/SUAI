@@ -14,7 +14,6 @@
 #import "NSString+NameFormation.h"
 #import "SUAIError.h"
 #import "SUAINetworkError.h"
-#import "SUAIParseError.h"
 #import "Enums.h"
 #import "Links.h"
 #import "SUAILoader+News.h"
@@ -30,6 +29,7 @@
 #import "SUAISchedule.h"
 #import "SUAIScheduleProvider.h"
 #import "SUAI.h"
+#import "Reachability.h"
 
 FOUNDATION_EXPORT double SUAIVersionNumber;
 FOUNDATION_EXPORT const unsigned char SUAIVersionString[];
