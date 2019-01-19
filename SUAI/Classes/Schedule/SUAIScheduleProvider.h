@@ -11,31 +11,23 @@
 
 @class SUAISchedule;
 @class SUAIEntity;
-
-@protocol SUAIScheduleDelegate <NSObject>
-@required
-- (void)didChangeStatus:(Status)status;
-
-@end
+@class SUAIError;
 
 @interface SUAIScheduleProvider : NSObject
 
-@property (assign, nonatomic, readonly) Status status;
 @property (strong, nonatomic, readonly) NSArray <SUAIEntity *> *groups;
 @property (strong, nonatomic, readonly) NSArray <SUAIEntity *> *teachers;
 @property (strong, nonatomic, readonly) NSArray <SUAIEntity *> *auditories;
-
-@property (weak, nonatomic) id <SUAIScheduleDelegate> delegate;
 
 + (instancetype)instance;
 
 - (void)loadScheduleFor:(SUAIEntity *)entity
                 success:(void (^) (SUAISchedule *schedule))schedule
-                   fail:(void (^) (NSString *fail))fail;
+                   fail:(void (^) (__kindof SUAIError *error))error;
 
 - (void)loadScheduleFor:(NSString *)entityName
                  ofType:(Entity)type
                 success:(void (^) (SUAISchedule *schedule))schedule
-                   fail:(void (^) (NSString *fail))fail;
+                   fail:(void (^) (__kindof SUAIError *error))error;
 
 @end

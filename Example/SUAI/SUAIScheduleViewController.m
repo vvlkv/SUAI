@@ -45,7 +45,8 @@
                                         success:^(SUAISchedule *schedule) {
         welf.schedule = schedule;
         [welf showSchedule:0];
-    } fail:^(NSString *fail) {
+    } fail:^(SUAIError *fail) {
+        
     }];
     [self configureTableView];
     [self configureSegmentedControl];

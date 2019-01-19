@@ -12,15 +12,15 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SUAILoader (News)
 
 + (void)loadAllNewsWithSuccess:(void (^) (NSData *data))success
-                       fail:(void (^) (NSString *fail))fail;
+                       fail:(void (^) (SUAINetworkError *fail))fail;
 
 + (void)loadImages:(NSArray<NSString *> *)imagesUrl
            success:(void (^) (NSArray<UIImage *> *images))success
-              fail:(void (^) (NSString *fail))fail;
+              fail:(void (^) (SUAINetworkError *fail))fail;
 
 + (void)loadNews:(NSString *)newsID
          success:(void (^) (NSData *data))success
-            fail:(void (^) (NSString *fail))fail;
+            fail:(void (^) (SUAINetworkError *fail))fail;
 
 
 @end

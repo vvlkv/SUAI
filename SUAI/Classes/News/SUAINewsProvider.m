@@ -28,10 +28,10 @@
                 (news[i]).image = images[i];
             }
             success(news);
-        } fail:^(NSString * _Nonnull fail) {
+        } fail:^(SUAINetworkError * _Nonnull fail) {
         }];
-    } fail:^(NSString * _Nonnull fail) {
-        NSLog(@"ERROR");
+    } fail:^(SUAINetworkError * _Nonnull fail) {
+//        NSLog(@"ERROR");
     }];
 }
 
@@ -41,7 +41,7 @@
     [SUAILoader loadNews:newsID success:^(NSData * _Nonnull data) {
         SUAINews *loadedNews = [SUAIParser newsFromData:data];
         success(loadedNews);
-    } fail:^(NSString * _Nonnull fail) {
+    } fail:^(SUAINetworkError * _Nonnull fail) {
         
     }];
 }

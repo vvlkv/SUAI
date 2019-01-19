@@ -11,10 +11,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+extern NSString *kSUAIReachabilityNotification;
+
 @interface SUAI : NSObject
 
 @property (strong, nonatomic, readonly) SUAIScheduleProvider *schedule;
 @property (strong, nonatomic, readonly) SUAINewsProvider *news;
+@property (assign, nonatomic, readonly) BOOL isReachable;
 
 + (instancetype)instance;
 

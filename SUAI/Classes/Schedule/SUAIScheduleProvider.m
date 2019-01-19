@@ -13,6 +13,7 @@
 #import "SUAIEntity.h"
 #import "NSString+Enums.h"
 #import "NSString+NameFormation.h"
+#import "SUAINetworkError.h"
 
 typedef NSString*(*clr_func)(id, SEL);
 
@@ -21,6 +22,8 @@ typedef NSString*(*clr_func)(id, SEL);
     NSMutableArray <SUAIEntity *> *_teachers;
     NSMutableArray <SUAIEntity *> *_auditories;
 }
+
+@property (assign, nonatomic) BOOL codesAvailable;
 
 @end
 
@@ -38,11 +41,10 @@ typedef NSString*(*clr_func)(id, SEL);
 - (instancetype)initPrivate {
     self = [super init];
     if (self) {
-        _status = Error;
+        _codesAvailable = NO;
         _groups = [[NSMutableArray alloc] init];
         _teachers = [[NSMutableArray alloc] init];
         _auditories = [[NSMutableArray alloc] init];
-        [self prepare];
     }
     return self;
 }
@@ -52,14 +54,90 @@ typedef NSString*(*clr_func)(id, SEL);
     return nil;
 }
 
-- (void)prepare {
+- (void)p_loadCodes:(dispatch_group_t )group {
     __weak typeof(self) welf = self;
+    dispatch_group_enter(group);
     [SUAILoader loadCodesWithSuccess:^(NSArray<NSData *> *data) {
         [welf saveCodes:data];
-        [welf setStatus:Ok];
-    } fail:^(NSString *fail) {
-        
+        welf.codesAvailable = YES;
+        dispatch_group_leave(group);
+    } fail:^(SUAINetworkError *fail) {
+        dispatch_group_leave(group);
     }];
+    NSLog(@"eof");
+}
+
+- (void)loadScheduleFor:(SUAIEntity *)entity
+                success:(void (^) (SUAISchedule *schedule))schedule
+                   fail:(void (^) (__kindof SUAIError *error))error {
+    SUAISchedule *sched = [[SUAISchedule alloc] initWithName:[entity name]];
+    __weak SUAISchedule *weakSched = sched;
+
+    [SUAILoader loadSchedulesWithSemesterCode:[entity semesterCode]
+                                  sessionCode:[entity sessionCode]
+                                   entityType:[entity type]
+                                      success:^(NSArray<NSData *> *data) {
+        weakSched.semester = [SUAIParser scheduleFromData:data[0]];
+        weakSched.session = [SUAIParser scheduleFromData:data[1]];
+        schedule(sched);
+    } fail:^(SUAINetworkError *fail) {
+        error(fail);
+    }];
+}
+
+- (void)loadScheduleFor:(NSString *)entityName
+                 ofType:(Entity)type
+                success:(void (^) (SUAISchedule *schedule))schedule
+                   fail:(void (^) (__kindof SUAIError *error))error {
+    
+    if (!_codesAvailable) {
+        dispatch_group_t group = dispatch_group_create();
+        dispatch_queue_t queue = dispatch_queue_create("schedule preload", DISPATCH_QUEUE_CONCURRENT);
+        __weak typeof(self) welf = self;
+        dispatch_group_async(group, queue, ^{
+            [welf p_loadCodes:group];
+        });
+        dispatch_group_notify(group, queue, ^{
+            [welf p_loadScheduleFor:entityName ofType:type success:schedule fail:error];
+        });
+    } else {
+        [self p_loadScheduleFor:entityName ofType:type success:schedule fail:error];
+    }
+}
+
+- (void)p_loadScheduleFor:(NSString *)entityName
+                 ofType:(Entity)type
+                success:(void (^) (SUAISchedule *schedule))schedule
+                     fail:(void (^) (__kindof SUAIError *error))error {
+    NSArray *searchEntities;
+    switch (type) {
+        case Group:
+            searchEntities = _groups;
+            break;
+        case Teacher:
+            searchEntities = _teachers;
+            break;
+        case Auditory:
+            searchEntities = _auditories;
+            break;
+        default:
+            break;
+    }
+    
+    SUAIEntity *entity = nil;
+    for (SUAIEntity *e in searchEntities) {
+        if ([e.name isEqualToString:entityName]) {
+            entity = e;
+            break;
+        }
+    }
+    
+    if (entity == nil) {
+        SUAIError *lost = [SUAIError errorWithCode:SUAIErrorParseUnknown userInfo:@{NSLocalizedDescriptionKey: [NSString stringWithFormat:@"entity %@ of type %ld not found", entityName, type]}];
+        error(lost);
+    } else {
+        [self loadScheduleFor:entity success:schedule fail:error];
+    }
 }
 
 - (void)saveCodes:(NSArray<NSData *> *)data {
@@ -68,22 +146,22 @@ typedef NSString*(*clr_func)(id, SEL);
     NSDictionary *semesterCodes = [SUAIParser codesFromData:data[1]];
     
     NSArray *descriptors = @[[NSNumber numberWithInteger:Group],
-                         [NSNumber numberWithInteger:Teacher],
-                         [NSNumber numberWithInteger:Auditory]];
+                             [NSNumber numberWithInteger:Teacher],
+                             [NSNumber numberWithInteger:Auditory]];
     
     NSArray *entities = @[_groups, _teachers, _auditories];
     
     NSArray *clearMethods = @[NSStringFromSelector(@selector(refactoredGroup)),
-                          NSStringFromSelector(@selector(refactoredTeacher)),
-                          NSStringFromSelector(@selector(refactoredAuditory))];
+                              NSStringFromSelector(@selector(refactoredTeacher)),
+                              NSStringFromSelector(@selector(refactoredAuditory))];
     
     for (NSNumber *descriptor in descriptors) {
         NSMutableDictionary *entityDictionary = [NSMutableDictionary dictionary];
         NSDictionary *semesterDict = [semesterCodes objectForKey:descriptor];
         NSDictionary *sessionDict = [sessionCodes objectForKey:descriptor];
-
+        
         NSUInteger index = [descriptors indexOfObject:descriptor];
-
+        
         SEL clearMethod = NSSelectorFromString(clearMethods[index]);
         //REFACTOR IT
         for (NSString *name in [semesterDict allKeys]) {
@@ -98,7 +176,7 @@ typedef NSString*(*clr_func)(id, SEL);
                 entityDictionary[refName] = entity;
             }
         }
-
+        
         for (NSString *name in [sessionDict allKeys]) {
             clr_func func = (clr_func)[name methodForSelector:clearMethod];
             NSString *refName = func(name, clearMethod);
@@ -113,63 +191,11 @@ typedef NSString*(*clr_func)(id, SEL);
                 entity.sessionCode = sessionDict[name];
             }
         }
-
+        
         NSMutableArray *container = entities[index];
         [container addObjectsFromArray:[[entityDictionary allValues] sortedArrayUsingComparator:^NSComparisonResult(SUAIEntity  * _Nonnull obj1, SUAIEntity * _Nonnull obj2) {
             return [obj1.name compare:obj2.name];
         }]];
-    }
-}
-
-- (void)loadScheduleFor:(SUAIEntity *)entity
-                success:(void (^) (SUAISchedule *schedule))schedule
-                   fail:(void (^) (NSString *fail))fail {
-    
-    SUAISchedule *sched = [[SUAISchedule alloc] initWithName:[entity name]];
-    __weak SUAISchedule *weakSched = sched;
-
-    [SUAILoader loadSchedulesWithSemesterCode:[entity semesterCode] sessionCode:[entity sessionCode] entityType:[entity type] success:^(NSArray<NSData *> *data) {
-        weakSched.semester = [SUAIParser scheduleFromData:data[0]];
-        weakSched.session = [SUAIParser scheduleFromData:data[1]];
-        schedule(sched);
-    } fail:^(NSString *fail) {
-        //TODO
-    }];
-}
-
-- (void)loadScheduleFor:(NSString *)entityName
-                 ofType:(Entity)type
-                success:(void (^) (SUAISchedule *schedule))schedule
-                   fail:(void (^) (NSString *fail))fail {
-    NSArray *searchEntities;
-    switch (type) {
-        case Group:
-            searchEntities = _groups;
-            break;
-        case Teacher:
-            searchEntities = _teachers;
-            break;
-        case Auditory:
-            searchEntities = _auditories;
-            break;
-        default:
-            fail(@"FAIL");
-            break;
-    }
-    
-    SUAIEntity *entity = nil;
-    for (SUAIEntity *e in searchEntities) {
-        NSLog(@"%@", e.name);
-        if ([e.name isEqualToString:entityName]) {
-            entity = e;
-            break;
-        }
-    }
-    
-    if (entity == nil) {
-        fail(@"FAIL");
-    } else {
-        [self loadScheduleFor:entity success:schedule fail:fail];
     }
 }
 
@@ -183,11 +209,6 @@ typedef NSString*(*clr_func)(id, SEL);
 
 - (NSArray <SUAIEntity *> *)auditories {
     return _auditories;
-}
-
-- (void)setStatus:(Status)status {
-    _status = status;
-    [self.delegate didChangeStatus:_status];
 }
 
 @end

@@ -8,11 +8,12 @@
 
 #import "SUAILoader.h"
 #import "Links.h"
+#import "SUAINetworkError.h"
 
 @implementation SUAILoader
 
 + (void)loadCodesWithSuccess:(void (^) (NSArray<NSData *> *data))success
-                        fail:(void (^) (NSString *fail))fail {
+                        fail:(void (^) (SUAINetworkError *error))error {
     
     NSMutableArray<NSData *> *codes = [NSMutableArray arrayWithObjects:[NSData data], [NSData data], nil];
     NSURL *sessionUrl = [NSURL URLWithString:sessionLink];
@@ -28,7 +29,7 @@
         [SUAILoader performRequestWithUrl:sessionUrl inQueue:queue success:^(NSData *data) {
             weakCodes[0] = data;
             dispatch_group_leave(group);
-        } fail:^(NSString *description) {
+        } fail:^(SUAINetworkError *error) {
             dispatch_group_leave(group);
         }];
     });
@@ -37,7 +38,7 @@
         [SUAILoader performRequestWithUrl:semesterUrl inQueue:queue success:^(NSData *data) {
             weakCodes[1] = data;
             dispatch_group_leave(group);
-        } fail:^(NSString *description) {
+        } fail:^(SUAINetworkError *error) {
             dispatch_group_leave(group);
         }];
     });
@@ -52,7 +53,7 @@
                     entity:(Entity)entityType
                   entityId:(NSString *)identificator
                    success:(void (^) (NSData *data))success
-                      fail:(void (^) (NSString *fail))fail {
+                      fail:(void (^) (SUAINetworkError *error))error {
     
     NSMutableString *url = [[NSMutableString alloc] init];
     
@@ -76,14 +77,14 @@
     }
     [SUAILoader performRequestWithUrl:[NSURL URLWithString:url]
                               success:success
-                                 fail:fail];
+                                 fail:error];
 }
 
 + (void)loadSchedulesWithSemesterCode:(NSString *)semCode
                           sessionCode:(NSString *)sesCode
                            entityType:(Entity)type
                               success:(void (^) (NSArray<NSData *> *data))success
-                                 fail:(void (^) (NSString *fail))fail {
+                                 fail:(void (^) (SUAINetworkError *error))error {
     NSMutableString *semesterUrl = [NSMutableString stringWithString:semesterLink];
     NSMutableString *sessionUrl = [NSMutableString stringWithFormat:@"%@", sessionLink];
     
@@ -111,21 +112,25 @@
     NSMutableArray<NSData *> *schedules = [NSMutableArray arrayWithObjects:[NSData data], [NSData data], nil];
     dispatch_group_async(group, queue, ^{
         dispatch_group_enter(group);
-        [SUAILoader performRequestWithUrl:[NSURL URLWithString:semesterUrl] inQueue:queue success:^(NSData *data) {
+        [SUAILoader performRequestWithUrl:[NSURL URLWithString:semesterUrl]
+                                  inQueue:queue
+                                  success:^(NSData *data) {
             schedules[0] = data;
             dispatch_group_leave(group);
-        } fail:^(NSString *description) {
-            //TODO
+        } fail:^(SUAINetworkError *description) {
+            error(description);
             dispatch_group_leave(group);
         }];
     });
     dispatch_group_async(group, queue, ^{
         dispatch_group_enter(group);
-        [SUAILoader performRequestWithUrl:[NSURL URLWithString:sessionUrl] inQueue:queue success:^(NSData *data) {
+        [SUAILoader performRequestWithUrl:[NSURL URLWithString:sessionUrl]
+                                  inQueue:queue
+                                  success:^(NSData *data) {
             schedules[1] = data;
             dispatch_group_leave(group);
-        } fail:^(NSString *description) {
-            //TODO
+        } fail:^(SUAINetworkError *description) {
+            error(description);
             dispatch_group_leave(group);
         }];
     });
@@ -139,18 +144,24 @@
 + (void)performRequestWithUrl:(NSURL *)url
                       inQueue:(dispatch_queue_t)queue
                       success:(void (^) (NSData *data))success
-                         fail:(void (^) (NSString *description))fail {
+                         fail:(void (^) (SUAINetworkError *error))error {
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSURLSession *session = [NSURLSession sharedSession];
+    
     NSURLSessionTask *task = [session dataTaskWithRequest:request
                                         completionHandler:^(NSData * _Nullable data,
                                                             NSURLResponse * _Nullable response,
-                                                            NSError * _Nullable error) {
+                                                            NSError * _Nullable hError) {
                                             dispatch_async(queue, ^{
+                                                if (hError == nil) {
+                                                    SUAINetworkError *err = [SUAINetworkError errorWithCode:SUAIErrorNetworkFault userInfo:@{NSLocalizedDescriptionKey: hError.localizedDescription}];
+                                                    error(err);
+                                                }
                                                 if (data != nil) {
                                                     success(data);
                                                 } else {
-                                                    fail(error.localizedDescription);
+                                                    SUAINetworkError *err = [SUAINetworkError errorWithCode:SUAIErrorNetworkFault userInfo:@{NSLocalizedDescriptionKey: @"data is nil"}];
+                                                    error(err);
                                                 }
                                             });
                                         }];
@@ -159,16 +170,17 @@
 
 + (void)performRequestWithUrl:(NSURL *)url
                       success:(void (^) (NSData *data))success
-                         fail:(void (^) (NSString *description))fail {
+                         fail:(void (^) (SUAINetworkError *error))error {
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionTask *task = [session dataTaskWithRequest:request
-                                        completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+                                        completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable hError) {
         dispatch_async(dispatch_get_main_queue(), ^{
             if (data != nil) {
                 success(data);
             } else {
-                fail(error.localizedDescription);
+                SUAINetworkError *err = [SUAINetworkError errorWithCode:SUAIErrorNetworkFault userInfo:@{NSLocalizedDescriptionKey: hError.localizedDescription}];
+                error(err);
             }
         });
     }];

@@ -11,14 +11,14 @@
 @implementation SUAILoader (News)
 
 + (void)loadAllNewsWithSuccess:(void (^) (NSData *data))success
-                       fail:(void (^) (NSString *fail))fail {
+                       fail:(void (^) (SUAINetworkError *fail))fail {
     NSURL *newsUrl = [NSURL URLWithString:newsLink];
     [SUAILoader performRequestWithUrl:newsUrl success:success fail:fail];
 }
 
 + (void)loadImages:(NSArray<NSString *> *)imagesUrl
            success:(void (^) (NSArray<UIImage *> *images))success
-              fail:(void (^) (NSString *fail))fail {
+              fail:(void (^) (SUAINetworkError *fail))fail {
     
     NSUInteger const imagesCount = [imagesUrl count];
     NSMutableArray *loadedImages = [NSMutableArray arrayWithCapacity:imagesCount];
@@ -46,7 +46,7 @@
 
 + (void)loadNews:(NSString *)newsID
          success:(void (^) (NSData *data))success
-            fail:(void (^) (NSString *fail))fail {
+            fail:(void (^) (SUAINetworkError *fail))fail {
     NSString *urlStr = [NSString stringWithFormat:@"%@%@", @"http://new.guap.ru", newsID];
     [SUAILoader performRequestWithUrl:[NSURL URLWithString:urlStr] success:success fail:fail];
 }

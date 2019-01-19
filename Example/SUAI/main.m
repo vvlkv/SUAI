@@ -8,10 +8,12 @@
 
 @import UIKit;
 #import "SUAIAppDelegate.h"
+#import "SUAITestsAppDelegate.h"
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([SUAIAppDelegate class]));
+        Class appDelegateClass = (NSClassFromString(@"CXTestCase") ? [SUAITestsAppDelegate class] : [SUAIAppDelegate class]);
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass(appDelegateClass));
     }
 }

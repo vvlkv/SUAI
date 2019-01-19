@@ -11,7 +11,7 @@
 #import "SUAI.h"
 #import "SUAIEntity.h"
 
-@interface SUAIEntityViewController () <SUAIScheduleDelegate, UITableViewDelegate, UITableViewDataSource> {
+@interface SUAIEntityViewController () <UITableViewDelegate, UITableViewDataSource> {
     UITableView *_tableView;
     UISegmentedControl *_entityControl;
     UIActivityIndicatorView *_indicator;
@@ -28,7 +28,6 @@
     self.title = @"Schedule";
     [self configureTableView];
     [self configureSegmentedControl];
-    [[SUAI instance] schedule].delegate = self;
 }
 
 - (void)configureTableView {
@@ -75,19 +74,7 @@
             assert("wtf");
             break;
     }
-    [[[SUAI instance] schedule] loadScheduleFor:@"1740М" ofType:Group success:^(SUAISchedule *schedule) {
-        NSLog(@"%@", schedule);
-    } fail:^(NSString *fail) {
-        NSLog(@"%@", fail);
-    }];
     [_tableView reloadData];
-}
-
-
-#pragma mark - SUAIScheduleDelegate
-
-- (void)didChangeStatus:(Status)status {
-    [self showEntities:0];
 }
 
 

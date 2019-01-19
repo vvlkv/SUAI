@@ -10,11 +10,11 @@
 #import "SUAIAllNewsViewController.h"
 #import "SUAIEntityViewController.h"
 #import "SUAI.h"
+#import "SUAIError.h"
 
 @implementation SUAIAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     _window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     
     UINavigationController *newsNavVC = [[UINavigationController alloc]
@@ -24,15 +24,8 @@
     
     UITabBarController *tabBar = [[UITabBarController alloc] init];
     tabBar.viewControllers = @[newsNavVC, scheduNavVC];
-    
     _window.rootViewController = tabBar;
     [_window makeKeyAndVisible];
-    SUAINewsProvider *news = [[SUAINewsProvider alloc] init];
-    [news loadAllNews:^(NSArray<SUAINews *> * _Nonnull news) {
-        NSLog(@"%@", news);
-    } fail:^(NSString * _Nonnull fail) {
-        NSLog(@"%@", fail);
-    }];
     return YES;
 }
 

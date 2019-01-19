@@ -13,18 +13,30 @@
 #import "SUAIAuditory.h"
 #import "Enums.h"
 #import "NSString+Enums.h"
+#import "SUAIParseError.h"
 
 @implementation SUAIParser
 
 + (NSDictionary *)codesFromData:(NSData *)data {
-    NSMutableDictionary *contents = [[NSMutableDictionary alloc] init];
+    
+    if (data == nil) {
+        return nil;
+    }
     
     NSString *dataString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    HTMLDocument *document = [HTMLDocument documentWithString:dataString];
+    NSArray *rasp = [document querySelectorAll:@".rasp"];
+    
+    //no elements - no party
+    if ([rasp count] == 0) {
+        return nil;
+    }
+    
+    NSMutableDictionary *contents = [NSMutableDictionary dictionary];
+    
     NSArray <NSNumber *> *descriptors = @[[NSNumber numberWithInteger:Group],
                                         [NSNumber numberWithInteger:Teacher],
                                         [NSNumber numberWithInteger:Auditory]];
-    HTMLDocument *document = [HTMLDocument documentWithString:dataString];
-    NSArray *rasp = [document querySelectorAll:@".rasp"];
     
     for (HTMLElement *element in rasp) {
         NSArray *spans = [element querySelectorAll:@"span"];
@@ -48,19 +60,25 @@
 }
 
 + (NSArray *)scheduleFromData:(NSData *)data {
+    
     if (data == nil)
         return [NSArray array];
+    
     NSString *dataString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     HTMLDocument *document = [HTMLDocument documentWithString:dataString];
     
     NSArray *rasp = [document querySelectorAll:@".result"];
+    if ([rasp count] == 0)
+        return [NSArray array];
+    
     NSMutableArray *days = [NSMutableArray array];
     SUAIPair *pair;
     SUAIDay *day;
     
-    for (HTMLElement *element in rasp) {
+    for (HTMLNode *element in rasp) {
         for (HTMLElement *child in element.childNodes) {
-            //Each day starts with h3 tag
+            if ([child isKindOfClass:[HTMLText class]])
+                continue;
             if ([child.tagName isEqualToString:@"h3"]) {
                 // Create day and add pairs array
                 day = [[SUAIDay alloc] initWithName:child.textContent];
@@ -72,8 +90,6 @@
                 pair = [[SUAIPair alloc] init];
                 if (child.textContent != nil)
                     pair.time = child.textContent;
-                else
-                    assert("text content is nil?");
                 [day addPair:pair];
             }
             //Each pair content starts from div
@@ -89,27 +105,28 @@
 
 + (void)fillPair:(SUAIPair *)pair fromElement:(HTMLElement *)element {
     for (HTMLElement *el in element.childNodes) {
-        if ([el.tagName isEqualToString:@"span"]) {
-            NSString *text = el.textContent;
-            NSArray *pairContents = [text componentsSeparatedByString:@" – "];
-            pair.auditory = [[SUAIAuditory alloc] initWithString:pairContents.lastObject];
-            if (pairContents.count > 0)
-                pair.lessonType = [[pairContents[0] componentsSeparatedByString:@" "] lastObject];
-            if (pairContents.count > 1)
-                pair.name = pairContents[1];
-        }
-        if ([el.tagName isEqualToString:@"div"]) {
-            HTMLElement *prep = [el querySelector:@".preps"];
-            pair.teachers = [self contentsFromElement:prep];
-            HTMLElement *groups = [el querySelector:@".groups"];
-            pair.groups = [self contentsFromElement:groups];
+        if ([el isKindOfClass:[HTMLElement class]]) {
+            if ([el.tagName isEqualToString:@"span"]) {
+                NSString *text = el.textContent;
+                NSArray *pairContents = [text componentsSeparatedByString:@" – "];
+                pair.auditory = [[SUAIAuditory alloc] initWithString:pairContents.lastObject];
+                if (pairContents.count > 0)
+                    pair.lessonType = [[pairContents[0] componentsSeparatedByString:@" "] lastObject];
+                if (pairContents.count > 1)
+                    pair.name = pairContents[1];
+            }
+            if ([el.tagName isEqualToString:@"div"]) {
+                HTMLElement *prep = [el querySelector:@".preps"];
+                pair.teachers = [self contentsFromElement:prep];
+                HTMLElement *groups = [el querySelector:@".groups"];
+                pair.groups = [self contentsFromElement:groups];
+            }
         }
     }
 }
 
 + (NSArray<NSString *> *)contentsFromElement:(HTMLElement *)element {
-    return [[[[element.textContent componentsSeparatedByString:@": "] lastObject] stringByReplacingOccurrencesOfString:@";"
-                                                                                                            withString:@""] componentsSeparatedByString:@", "];
+    return [[[element.textContent componentsSeparatedByString:@": "] lastObject] componentsSeparatedByString:@"; "];
 }
 
 @end

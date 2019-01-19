@@ -9,20 +9,22 @@
 #import <Foundation/Foundation.h>
 #import "Enums.h"
 
+@class SUAINetworkError;
+
 @interface SUAILoader : NSObject
 
 + (void)loadCodesWithSuccess:(void (^) (NSArray<NSData *> *data))success
-                        fail:(void (^) (NSString *fail))fail;
+                        fail:(void (^) (SUAINetworkError *error))error;
 
 + (void)loadSchedulesWithSemesterCode:(NSString *)semCode
                           sessionCode:(NSString *)sesCode
                            entityType:(Entity)type
                               success:(void (^) (NSArray<NSData *> *data))success
-                                 fail:(void (^) (NSString *fail))fail;
+                                 fail:(void (^) (SUAINetworkError *error))error;
 
 + (void)performRequestWithUrl:(NSURL *)url
                       success:(void (^) (NSData *data))success
-                         fail:(void (^) (NSString *description))fail;
+                         fail:(void (^) (SUAINetworkError *error))error;
 
 @end
 
