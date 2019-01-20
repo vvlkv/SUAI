@@ -73,7 +73,7 @@
     NSMutableArray *days = [NSMutableArray array];
     SUAIPair *pair;
     SUAIDay *day;
-    
+    NSString *pairTime;
     for (HTMLNode *element in rasp) {
         for (HTMLElement *child in element.childNodes) {
             if ([child isKindOfClass:[HTMLText class]])
@@ -83,19 +83,18 @@
                 day = [[SUAIDay alloc] initWithName:child.textContent];
                 [days addObject:day];
             }
-            //Each pair starts with h4 tag
+            //Each pair time with h4 tag
             if ([child.tagName isEqualToString:@"h4"]) {
-                // Create pair object
-                pair = [[SUAIPair alloc] init];
+                // Save pair time
                 if (child.textContent != nil)
-                    pair.time = child.textContent;
-                [day addPair:pair];
+                    pairTime = child.textContent;
             }
-            //Each pair content starts from div
+            //Each pair starts from div
             if ([child.tagName isEqualToString:@"div"]) {
-                if (pair != nil) {
-                    [self fillPair:pair fromElement:[child querySelector:@".study"]];
-                }
+                pair = [[SUAIPair alloc] init];
+                pair.time = pairTime;
+                [self fillPair:pair fromElement:[child querySelector:@".study"]];
+                [day addPair:pair];
             }
         }
     }
