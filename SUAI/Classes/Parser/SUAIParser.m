@@ -109,10 +109,14 @@
                 NSString *text = el.textContent;
                 NSArray *pairContents = [text componentsSeparatedByString:@" – "];
                 pair.auditory = [[SUAIAuditory alloc] initWithString:pairContents.lastObject];
-                if (pairContents.count > 0)
-                    pair.lessonType = [[pairContents[0] componentsSeparatedByString:@" "] lastObject];
-                if (pairContents.count > 1)
-                    pair.name = pairContents[1];
+                if ([pairContents count] == 3) { //Semester pair
+                    if (pairContents.count > 0)
+                        pair.lessonType = [[pairContents[0] componentsSeparatedByString:@" "] lastObject];
+                    if (pairContents.count > 1)
+                        pair.name = pairContents[1];
+                } else {
+                    pair.name = pairContents[0];
+                }
             }
             if ([el.tagName isEqualToString:@"div"]) {
                 HTMLElement *prep = [el querySelector:@".preps"];
