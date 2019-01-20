@@ -103,6 +103,11 @@
 }
 
 + (void)fillPair:(SUAIPair *)pair fromElement:(HTMLElement *)element {
+    if ([element querySelector:@".dn"] != nil) {
+        pair.color = DayColorBlue;
+    } else if ([element querySelector:@".up"] != nil) {
+        pair.color = DayColorRed;
+    }
     for (HTMLElement *el in element.childNodes) {
         if ([el isKindOfClass:[HTMLElement class]]) {
             if ([el.tagName isEqualToString:@"span"]) {
