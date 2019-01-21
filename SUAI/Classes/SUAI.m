@@ -68,7 +68,6 @@ NSString *kSUAIReachabilityNotification = @"kSUAIReachabilityNotification";
         _isReachable = reachable;
         NSNumber *bolNumber = [NSNumber numberWithBool:_isReachable];
         [[NSNotificationCenter defaultCenter] postNotificationName:kSUAIReachabilityNotification object:bolNumber];
-        NSLog(@"status: %d", _isReachable);
     }
 }
 

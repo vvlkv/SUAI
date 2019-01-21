@@ -19,26 +19,34 @@
 
 @implementation SUAISchedule
 
-- (instancetype)initWithName:(NSString *)name
-{
+- (instancetype)initWithEntity:(SUAIEntity *)entity {
     self = [super init];
     if (self) {
-        _name = name;
+        _entity = entity;
     }
     return self;
 }
-
-- (instancetype)initWithName:(NSString *)name
-                     session:(NSArray<SUAIDay *> *)session
-                 andSemester:(NSArray<SUAIDay *> *)semester {
-    self = [super init];
-    if (self) {
-        _name = name;
-        _session = [session copy];
-        _semester = [semester copy];
-    }
-    return self;
-}
+//
+//- (instancetype)initWithName:(NSString *)name
+//{
+//    self = [super init];
+//    if (self) {
+//        _name = name;
+//    }
+//    return self;
+//}
+//
+//- (instancetype)initWithName:(NSString *)name
+//                     session:(NSArray<SUAIDay *> *)session
+//                 andSemester:(NSArray<SUAIDay *> *)semester {
+//    self = [super init];
+//    if (self) {
+//        _name = name;
+//        _session = [session copy];
+//        _semester = [semester copy];
+//    }
+//    return self;
+//}
 
 - (NSString *)description {
     return [NSString stringWithFormat:@"Name:\t%@\nSemester:\n%@Session:\n%@", _name, _semester, _session];

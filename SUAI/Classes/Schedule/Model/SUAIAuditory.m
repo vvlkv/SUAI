@@ -22,7 +22,7 @@
         } else {
             _building = Undefined;
             _number = @"";
-            _fullDescription = @"";
+            _fullDescription = [str stringByReplacingOccurrencesOfString:@" КАФЕДРА" withString:@""];
         }
     }
     return self;

@@ -15,6 +15,8 @@
 #import "NSString+NameFormation.h"
 #import "SUAINetworkError.h"
 
+NSString *kSUAIEntityLoaded = @"kSUAIEntityLoaded";
+
 typedef NSString*(*clr_func)(id, SEL);
 
 @interface SUAIScheduleProvider() {
@@ -60,6 +62,8 @@ typedef NSString*(*clr_func)(id, SEL);
     [SUAILoader loadCodesWithSuccess:^(NSArray<NSData *> *data) {
         [welf saveCodes:data];
         welf.codesAvailable = YES;
+        [[NSNotificationCenter defaultCenter] postNotificationName:kSUAIEntityLoaded
+                                                            object:nil];
         dispatch_group_leave(group);
     } fail:^(SUAINetworkError *fail) {
         dispatch_group_leave(group);
@@ -69,7 +73,7 @@ typedef NSString*(*clr_func)(id, SEL);
 - (void)loadScheduleFor:(SUAIEntity *)entity
                 success:(void (^) (SUAISchedule *schedule))schedule
                    fail:(void (^) (__kindof SUAIError *error))error {
-    SUAISchedule *sched = [[SUAISchedule alloc] initWithName:[entity name]];
+    SUAISchedule *sched = [[SUAISchedule alloc] initWithEntity:entity];
     __weak SUAISchedule *weakSched = sched;
 
     [SUAILoader loadSchedulesWithSemesterCode:[entity semesterCode]
@@ -129,7 +133,7 @@ typedef NSString*(*clr_func)(id, SEL);
     
     SUAIEntity *entity = nil;
     for (SUAIEntity *e in searchEntities) {
-        if ([e.name isEqualToString:entityName]) {
+        if ([e.name containsString:entityName]) {
             entity = e;
             break;
         }

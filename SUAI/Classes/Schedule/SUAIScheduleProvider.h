@@ -13,6 +13,8 @@
 @class SUAIEntity;
 @class SUAIError;
 
+extern NSString *kSUAIEntityLoaded;
+
 @interface SUAIScheduleProvider : NSObject
 
 @property (strong, nonatomic, readonly) NSArray <SUAIEntity *> *groups;
