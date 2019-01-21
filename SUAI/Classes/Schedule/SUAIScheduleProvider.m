@@ -15,7 +15,7 @@
 #import "NSString+NameFormation.h"
 #import "SUAINetworkError.h"
 
-NSString *kSUAIEntityLoaded = @"kSUAIEntityLoaded";
+NSString *kSUAIEntityLoadedNotification = @"kSUAIEntityLoadedNotification";
 
 typedef NSString*(*clr_func)(id, SEL);
 
@@ -62,7 +62,7 @@ typedef NSString*(*clr_func)(id, SEL);
     [SUAILoader loadCodesWithSuccess:^(NSArray<NSData *> *data) {
         [welf saveCodes:data];
         welf.codesAvailable = YES;
-        [[NSNotificationCenter defaultCenter] postNotificationName:kSUAIEntityLoaded
+        [[NSNotificationCenter defaultCenter] postNotificationName:kSUAIEntityLoadedNotification
                                                             object:nil];
         dispatch_group_leave(group);
     } fail:^(SUAINetworkError *fail) {

@@ -13,7 +13,7 @@
 @class SUAIEntity;
 @class SUAIError;
 
-extern NSString *kSUAIEntityLoaded;
+extern NSString *kSUAIEntityLoadedNotification;
 
 @interface SUAIScheduleProvider : NSObject
 
