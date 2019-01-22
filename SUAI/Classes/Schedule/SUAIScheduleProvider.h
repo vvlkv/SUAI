@@ -33,3 +33,4 @@ extern NSString *kSUAIEntityLoadedNotification;
                    fail:(void (^) (__kindof SUAIError *error))error;
 
 @end
+

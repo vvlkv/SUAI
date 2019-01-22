@@ -24,12 +24,15 @@
     
     __weak typeof(codes) weakCodes = codes;
     
+    __block SUAINetworkError *retErr;
+    
     dispatch_group_async(group, queue, ^{
         dispatch_group_enter(group);
         [SUAILoader performRequestWithUrl:sessionUrl inQueue:queue success:^(NSData *data) {
             weakCodes[0] = data;
             dispatch_group_leave(group);
-        } fail:^(SUAINetworkError *error) {
+        } fail:^(SUAINetworkError *err) {
+            retErr = err;
             dispatch_group_leave(group);
         }];
     });
@@ -38,13 +41,17 @@
         [SUAILoader performRequestWithUrl:semesterUrl inQueue:queue success:^(NSData *data) {
             weakCodes[1] = data;
             dispatch_group_leave(group);
-        } fail:^(SUAINetworkError *error) {
+        } fail:^(SUAINetworkError *err) {
+            retErr = err;
             dispatch_group_leave(group);
         }];
     });
     dispatch_group_notify(group, queue, ^{
         dispatch_async(dispatch_get_main_queue(), ^{
-            success(codes);
+            if (retErr != nil)
+                error(retErr);
+            else
+                success(codes);
         });
     });
 }
@@ -118,8 +125,8 @@
             schedules[0] = data;
             dispatch_group_leave(group);
         } fail:^(SUAINetworkError *description) {
+//            dispatch_group_leave(group);
             error(description);
-            dispatch_group_leave(group);
         }];
     });
     dispatch_group_async(group, queue, ^{
@@ -131,7 +138,7 @@
             dispatch_group_leave(group);
         } fail:^(SUAINetworkError *description) {
             error(description);
-            dispatch_group_leave(group);
+//            dispatch_group_leave(group);
         }];
     });
     dispatch_group_notify(group, queue, ^{
@@ -156,8 +163,7 @@
                                                 if (hError != nil) {
                                                     SUAINetworkError *err = [SUAINetworkError errorWithCode:SUAIErrorNetworkFault userInfo:@{NSLocalizedDescriptionKey: hError.localizedDescription}];
                                                     error(err);
-                                                }
-                                                if (data != nil) {
+                                                } else if (data != nil) {
                                                     success(data);
                                                 } else {
                                                     SUAINetworkError *err = [SUAINetworkError errorWithCode:SUAIErrorNetworkFault userInfo:@{NSLocalizedDescriptionKey: @"data is nil"}];
