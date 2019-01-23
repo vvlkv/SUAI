@@ -13,6 +13,7 @@
 @interface SUAIConcreteNewsViewController () {
     NSString *newsId;
 }
+
 @property (weak, nonatomic) IBOutlet UILabel *headerLabe;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -38,7 +39,7 @@
         welf.dateLabel.text = news.date;
         welf.imageView.image = news.image;
         welf.textView.text = news.text;
-    } fail:^(NSString * _Nonnull fail) {
+    } fail:^(SUAIError * _Nonnull fail) {
         
     }];
 }

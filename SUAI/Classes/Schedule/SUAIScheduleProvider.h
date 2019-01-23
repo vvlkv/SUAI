@@ -23,6 +23,8 @@ extern NSString *kSUAIEntityLoadedNotification;
 
 + (instancetype)instance;
 
+- (void)loadCodes;
+
 - (void)loadScheduleFor:(SUAIEntity *)entity
                 success:(void (^) (SUAISchedule *schedule))schedule
                    fail:(void (^) (__kindof SUAIError *error))error;

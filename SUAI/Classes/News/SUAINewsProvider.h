@@ -10,14 +10,15 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @class SUAINews;
+@class SUAIError;
 @interface SUAINewsProvider : NSObject
 
 - (void)loadAllNews:(void (^) (NSArray<SUAINews *>* news))success
-               fail:(void (^) (NSString *fail))fail;
+               fail:(void (^) (SUAIError *err))error;
 
 - (void)loadNews:(NSString *)newsID
          success:(void (^) (SUAINews *news))success
-            fail:(void (^) (NSString *fail))fail;
+            fail:(void (^) (SUAIError *err))error;
 
 @end
 

@@ -26,7 +26,7 @@
     [[[SUAI instance] news] loadAllNews:^(NSArray<SUAINews *> * _Nonnull news) {
         welf.content = news;
         [welf.tableView reloadData];
-    } fail:^(NSString * _Nonnull fail) {
+    } fail:^(SUAIError * _Nonnull fail) {
     }];
 }
 

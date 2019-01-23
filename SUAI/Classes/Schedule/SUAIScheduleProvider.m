@@ -56,18 +56,30 @@ typedef NSString*(*clr_func)(id, SEL);
     return nil;
 }
 
+- (void)loadCodes {
+    dispatch_group_t group = dispatch_group_create();
+    static dispatch_once_t onceToken;
+    __weak typeof(self) welf = self;
+    dispatch_once(&onceToken, ^{
+        [welf p_loadCodes:group];
+    });
+}
+
 - (void)p_loadCodes:(dispatch_group_t )group {
     __weak typeof(self) welf = self;
     dispatch_group_enter(group);
-    [SUAILoader loadCodesWithSuccess:^(NSArray<NSData *> *data) {
-        [welf saveCodes:data];
-        welf.codesAvailable = YES;
-        [[NSNotificationCenter defaultCenter] postNotificationName:kSUAIEntityLoadedNotification
-                                                            object:nil];
-        dispatch_group_leave(group);
-    } fail:^(SUAINetworkError *fail) {
-        dispatch_group_leave(group);
-    }];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [SUAILoader loadCodesWithSuccess:^(NSArray<NSData *> *data) {
+            [welf saveCodes:data];
+            welf.codesAvailable = YES;
+            [[NSNotificationCenter defaultCenter] postNotificationName:kSUAIEntityLoadedNotification
+                                                                object:nil];
+            dispatch_group_leave(group);
+        } fail:^(SUAINetworkError *fail) {
+            dispatch_group_leave(group);
+        }];
+    });
 }
 
 - (void)loadScheduleFor:(SUAIEntity *)entity
@@ -75,7 +87,7 @@ typedef NSString*(*clr_func)(id, SEL);
                    fail:(void (^) (__kindof SUAIError *error))error {
     SUAISchedule *sched = [[SUAISchedule alloc] initWithEntity:entity];
     __weak SUAISchedule *weakSched = sched;
-
+    
     [SUAILoader loadSchedulesWithSemesterCode:[entity semesterCode]
                                   sessionCode:[entity sessionCode]
                                    entityType:[entity type]
@@ -92,6 +104,11 @@ typedef NSString*(*clr_func)(id, SEL);
                  ofType:(Entity)type
                 success:(void (^) (SUAISchedule *schedule))schedule
                    fail:(void (^) (__kindof SUAIError *error))error {
+    if (entityName == nil) {
+        SUAIError *err = [SUAIError errorWithCode:SUAIErrorParseUnknown userInfo:@{NSLocalizedDescriptionKey: @"entity name is nil!"}];
+        error(err);
+        return;
+    }
     
     if (!_codesAvailable) {
         dispatch_group_t group = dispatch_group_create();
