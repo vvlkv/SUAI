@@ -17,9 +17,10 @@ extern NSString *kSUAIEntityLoadedNotification;
 
 @interface SUAIScheduleProvider : NSObject
 
-@property (strong, nonatomic, readonly) NSArray <SUAIEntity *> *groups;
-@property (strong, nonatomic, readonly) NSArray <SUAIEntity *> *teachers;
-@property (strong, nonatomic, readonly) NSArray <SUAIEntity *> *auditories;
+@property (nonatomic, strong, readonly) NSArray <SUAIEntity *> *groups;
+@property (nonatomic, strong, readonly) NSArray <SUAIEntity *> *teachers;
+@property (nonatomic, strong, readonly) NSArray <SUAIEntity *> *auditories;
+@property (nonatomic, assign, readonly) BOOL codesAvailable;
 
 + (instancetype)instance;
 

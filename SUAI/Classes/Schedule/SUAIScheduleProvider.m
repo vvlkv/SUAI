@@ -25,7 +25,7 @@ typedef NSString*(*clr_func)(id, SEL);
     NSMutableArray <SUAIEntity *> *_auditories;
 }
 
-@property (assign, nonatomic) BOOL codesAvailable;
+@property (nonatomic, assign,readwrite) BOOL codesAvailable;
 
 @end
 
