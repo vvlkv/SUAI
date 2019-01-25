@@ -11,6 +11,7 @@
 @class SUAIParseError;
 @interface SUAIParser : NSObject
 
++ (NSUInteger)weekTypeFromData:(NSData *)data;
 + (NSDictionary *)codesFromData:(NSData *)data;
 + (NSArray *)scheduleFromData:(NSData *)data;
 

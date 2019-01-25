@@ -16,6 +16,23 @@
 
 @implementation SUAIParser
 
++ (NSUInteger)weekTypeFromData:(NSData *)data {
+    if (data == nil) {
+        return -1;
+    }
+    
+    NSString *dataString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    HTMLDocument *document = [HTMLDocument documentWithString:dataString];
+    HTMLElement *rasp = [document querySelector:@".rasp"];
+    if (rasp == nil) {
+        return -1;
+    }
+    HTMLElement *today = [document querySelector:@"p"];
+    if (today == nil)
+        return -1;
+    NSLog(@"%@", [today textContent]);
+}
+
 + (NSDictionary *)codesFromData:(NSData *)data {
     
     if (data == nil) {
@@ -25,7 +42,6 @@
     NSString *dataString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     HTMLDocument *document = [HTMLDocument documentWithString:dataString];
     NSArray *rasp = [document querySelectorAll:@".rasp"];
-    
     //no elements - no party
     if ([rasp count] == 0) {
         return nil;

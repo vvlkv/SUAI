@@ -71,6 +71,7 @@ typedef NSString*(*clr_func)(id, SEL);
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         [SUAILoader loadCodesWithSuccess:^(NSArray<NSData *> *data) {
+            [welf p_saveWeek:[data lastObject]];
             [welf saveCodes:data];
             welf.codesAvailable = YES;
             [[NSNotificationCenter defaultCenter] postNotificationName:kSUAIEntityLoadedNotification
@@ -105,25 +106,26 @@ typedef NSString*(*clr_func)(id, SEL);
                 success:(void (^) (SUAISchedule *schedule))schedule
                    fail:(void (^) (__kindof SUAIError *error))error {
     if (entityName == nil) {
-        SUAIError *err = [SUAIError errorWithCode:SUAIErrorParseUnknown userInfo:@{NSLocalizedDescriptionKey: @"entity name is nil!"}];
+        SUAIError *err = [SUAIError errorWithCode:SUAIErrorParseUnknown userInfo:@{NSLocalizedDescriptionKey: @"Entity name is nil!"}];
         error(err);
         return;
     }
     
     if (!_codesAvailable) {
-        dispatch_group_t group = dispatch_group_create();
-        dispatch_queue_t queue = dispatch_queue_create("schedule preload", DISPATCH_QUEUE_CONCURRENT);
-        __weak typeof(self) welf = self;
-        dispatch_group_async(group, queue, ^{
-            [welf p_loadCodes:group];
-        });
-        dispatch_group_notify(group, queue, ^{
-            if (welf.codesAvailable)
-                [welf p_loadScheduleFor:entityName ofType:type success:schedule fail:error];
-            else {
-                error([SUAIError errorWithCode:SUAIErrorNetworkFault userInfo:@{NSLocalizedDescriptionKey: @"Entity codes not available"}]);
-            }
-        });
+        error([SUAIError errorWithCode:SUAIErrorNetworkFault userInfo:@{NSLocalizedDescriptionKey: @"Entity codes not available"}]);
+//        dispatch_group_t group = dispatch_group_create();
+//        dispatch_queue_t queue = dispatch_queue_create("schedule preload", DISPATCH_QUEUE_CONCURRENT);
+//        __weak typeof(self) welf = self;
+//        dispatch_group_async(group, queue, ^{
+//            [welf p_loadCodes:group];
+//        });
+//        dispatch_group_notify(group, queue, ^{
+//            if (welf.codesAvailable)
+//                [welf p_loadScheduleFor:entityName ofType:type success:schedule fail:error];
+//            else {
+//                error([SUAIError errorWithCode:SUAIErrorNetworkFault userInfo:@{NSLocalizedDescriptionKey: @"Entity codes not available"}]);
+//            }
+//        });
     } else {
         [self p_loadScheduleFor:entityName ofType:type success:schedule fail:error];
     }
@@ -162,6 +164,10 @@ typedef NSString*(*clr_func)(id, SEL);
     } else {
         [self loadScheduleFor:entity success:schedule fail:error];
     }
+}
+
+- (void)p_saveWeek:(NSData *)data {
+    NSUInteger index = [SUAIParser weekTypeFromData:data];
 }
 
 - (void)saveCodes:(NSArray<NSData *> *)data {
