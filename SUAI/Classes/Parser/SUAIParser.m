@@ -16,7 +16,7 @@
 
 @implementation SUAIParser
 
-+ (NSUInteger)weekTypeFromData:(NSData *)data {
++ (WeekType)weekTypeFromData:(NSData *)data {
     if (data == nil) {
         return -1;
     }
@@ -30,10 +30,14 @@
     HTMLElement *today = [document querySelector:@"p"];
     if (today == nil)
         return -1;
-    NSLog(@"%@", [today textContent]);
+    if ([[today textContent] containsString:@"нижн"])
+        return WeekTypeBlue;
+    return WeekTypeRed;
 }
 
 + (NSDictionary *)codesFromData:(NSData *)data {
+    
+    NSArray<NSString *> const *prohibitedEntityNames = @[@"нет", @"--", @"/."];
     
     if (data == nil) {
         return nil;
@@ -62,8 +66,10 @@
             
             for (HTMLElement *option in options) {
                 HTMLNode *firstChild = [option firstChild];
-                if (firstChild != nil && firstChild.textContent != nil)
-                    codes[firstChild.textContent] = option.attributes[@"value"];
+                if (firstChild != nil && firstChild.textContent != nil) {
+                    if (![self p_containsName:firstChild.textContent inArray:prohibitedEntityNames])
+                        codes[firstChild.textContent] = option.attributes[@"value"];
+                }
             }
             if (codes.count > 0) {
                 NSUInteger index = [spans indexOfObject:span] - 1;
@@ -72,6 +78,14 @@
         }
     }
     return contents;
+}
+
++ (BOOL)p_containsName:(NSString *)name inArray:(NSArray<NSString *> *)array {
+    for (NSString *value in array) {
+        if ([name containsString:value])
+            return YES;
+    }
+    return NO;
 }
 
 + (NSArray *)scheduleFromData:(NSData *)data {
@@ -119,9 +133,9 @@
 
 + (void)fillPair:(SUAIPair *)pair fromElement:(HTMLElement *)element {
     if ([element querySelector:@".dn"] != nil) {
-        pair.color = DayColorBlue;
+        pair.color = WeekTypeBlue;
     } else if ([element querySelector:@".up"] != nil) {
-        pair.color = DayColorRed;
+        pair.color = WeekTypeRed;
     }
     for (HTMLElement *el in element.childNodes) {
         if ([el isKindOfClass:[HTMLElement class]]) {

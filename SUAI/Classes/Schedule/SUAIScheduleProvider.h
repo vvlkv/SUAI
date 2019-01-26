@@ -14,6 +14,7 @@
 @class SUAIError;
 
 extern NSString *kSUAIEntityLoadedNotification;
+extern NSString *kSUAIWeekTypeObtainedNotification;
 
 @interface SUAIScheduleProvider : NSObject
 
@@ -21,6 +22,7 @@ extern NSString *kSUAIEntityLoadedNotification;
 @property (nonatomic, strong, readonly) NSArray <SUAIEntity *> *teachers;
 @property (nonatomic, strong, readonly) NSArray <SUAIEntity *> *auditories;
 @property (nonatomic, assign, readonly) BOOL codesAvailable;
+@property (nonatomic, assign, readonly) WeekType currentWeekType;
 
 + (instancetype)instance;
 

@@ -33,24 +33,24 @@
 
 - (NSArray<SUAIDay *> *)redSemester {
     if (_redSemester == nil) {
-        _redSemester = [self sortSemesterUsing:DayColorRed];
+        _redSemester = [self sortSemesterUsing:WeekTypeRed];
     }
     return _redSemester;
 }
 
 - (NSArray<SUAIDay *> *)blueSemester {
     if (_blueSemester == nil) {
-        _blueSemester = [self sortSemesterUsing:DayColorBlue];
+        _blueSemester = [self sortSemesterUsing:WeekTypeBlue];
     }
     return _blueSemester;
 }
 
-- (NSArray<SUAIDay *> *)sortSemesterUsing:(DayColor)color {
+- (NSArray<SUAIDay *> *)sortSemesterUsing:(WeekType)color {
     NSMutableArray<SUAIDay *> *result = [NSMutableArray array];
     for (SUAIDay *day in _semester) {
         NSMutableArray<SUAIPair *> *pairs = [NSMutableArray array];
         for (SUAIPair *pair in day.pairs) {
-            if (pair.color == DayColorBoth || pair.color == color) {
+            if (pair.color == WeekTypeBoth || pair.color == color) {
                 [pairs addObject:pair];
             }
         }

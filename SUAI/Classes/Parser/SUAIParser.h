@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Enums.h"
 
 @class SUAIParseError;
 @interface SUAIParser : NSObject
 
-+ (NSUInteger)weekTypeFromData:(NSData *)data;
++ (WeekType)weekTypeFromData:(NSData *)data;
 + (NSDictionary *)codesFromData:(NSData *)data;
 + (NSArray *)scheduleFromData:(NSData *)data;
 

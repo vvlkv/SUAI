@@ -56,7 +56,7 @@
     });
 }
 
-+ (void)loadScheduleOfType:(Schedule)scheduleType
++ (void)loadScheduleOfType:(ScheduleType)scheduleType
                     entity:(Entity)entityType
                   entityId:(NSString *)identificator
                    success:(void (^) (NSData *data))success
@@ -64,7 +64,7 @@
     
     NSMutableString *url = [[NSMutableString alloc] init];
     
-    if (scheduleType == Session) {
+    if (scheduleType == ScheduleTypeSession) {
         [url appendString:sessionLink];
     } else {
         [url appendString:semesterLink];

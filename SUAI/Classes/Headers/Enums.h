@@ -9,20 +9,21 @@
 #ifndef Enums_h
 #define Enums_h
 
-typedef enum Status {
-    Ok,
-    Error
-}Status;
-
-typedef enum Schedule {
-    Session,
-    Semester
-}Schedule;
+typedef NS_ENUM(NSUInteger, ScheduleType) {
+    ScheduleTypeSemester,
+    ScheduleTypeSession
+};
 
 typedef NS_ENUM(NSUInteger, Entity) {
     Group,
     Teacher,
     Auditory
+};
+
+typedef NS_ENUM(NSUInteger, WeekType) {
+    WeekTypeBlue,
+    WeekTypeRed,
+    WeekTypeBoth
 };
 
 #endif /* Enums_h */

@@ -18,7 +18,7 @@
         _name = @"";
         _teachers = [NSArray array];
         _groups = [NSArray array];
-        _color = DayColorBoth;
+        _color = WeekTypeBoth;
         _lessonType = @"";
         _time = @"";
         _auditory = [[SUAIAuditory alloc] initWithString:@""];

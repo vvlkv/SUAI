@@ -16,6 +16,7 @@
 #import "SUAINetworkError.h"
 
 NSString *kSUAIEntityLoadedNotification = @"kSUAIEntityLoadedNotification";
+NSString *kSUAIWeekTypeObtainedNotification = @"kSUAIWeekTypeObtainedNotification";
 
 typedef NSString*(*clr_func)(id, SEL);
 
@@ -25,7 +26,8 @@ typedef NSString*(*clr_func)(id, SEL);
     NSMutableArray <SUAIEntity *> *_auditories;
 }
 
-@property (nonatomic, assign,readwrite) BOOL codesAvailable;
+@property (nonatomic, assign, readwrite) BOOL codesAvailable;
+@property (nonatomic, assign, readwrite) WeekType currentWeekType;
 
 @end
 
@@ -71,7 +73,7 @@ typedef NSString*(*clr_func)(id, SEL);
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         [SUAILoader loadCodesWithSuccess:^(NSArray<NSData *> *data) {
-            [welf p_saveWeek:[data lastObject]];
+            [welf p_saveWeekType:[data lastObject]];
             [welf saveCodes:data];
             welf.codesAvailable = YES;
             [[NSNotificationCenter defaultCenter] postNotificationName:kSUAIEntityLoadedNotification
@@ -166,8 +168,10 @@ typedef NSString*(*clr_func)(id, SEL);
     }
 }
 
-- (void)p_saveWeek:(NSData *)data {
-    NSUInteger index = [SUAIParser weekTypeFromData:data];
+- (void)p_saveWeekType:(NSData *)data {
+    _currentWeekType = [SUAIParser weekTypeFromData:data];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kSUAIWeekTypeObtainedNotification
+                                                        object:nil];
 }
 
 - (void)saveCodes:(NSArray<NSData *> *)data {

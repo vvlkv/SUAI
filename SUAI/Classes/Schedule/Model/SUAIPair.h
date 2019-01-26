@@ -7,12 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-typedef enum DayColor {
-    DayColorRed,
-    DayColorBlue,
-    DayColorBoth
-} DayColor;
+#import "Enums.h"
 
 @class SUAIAuditory;
 @interface SUAIPair : NSObject
@@ -20,7 +15,7 @@ typedef enum DayColor {
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSArray<NSString *> *teachers;
 @property (strong, nonatomic) NSArray<NSString *> *groups;
-@property (assign, nonatomic) DayColor color;
+@property (assign, nonatomic) WeekType color;
 @property (strong, nonatomic) NSString *lessonType;
 @property (strong, nonatomic) NSString *time;
 @property (strong, nonatomic) SUAIAuditory *auditory;
