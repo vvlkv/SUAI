@@ -126,7 +126,10 @@
             dispatch_group_leave(group);
         } fail:^(SUAINetworkError *description) {
 //            dispatch_group_leave(group);
-            error(description);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                error(description);
+            });
+//            error(description);
         }];
     });
     dispatch_group_async(group, queue, ^{
@@ -137,7 +140,9 @@
             schedules[1] = data;
             dispatch_group_leave(group);
         } fail:^(SUAINetworkError *description) {
-            error(description);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                error(description);
+            });
 //            dispatch_group_leave(group);
         }];
     });

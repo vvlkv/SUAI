@@ -114,7 +114,7 @@ typedef NSString*(*clr_func)(id, SEL);
     }
     
     if (!_codesAvailable) {
-        error([SUAIError errorWithCode:SUAIErrorNetworkFault userInfo:@{NSLocalizedDescriptionKey: @"Entity codes not available"}]);
+        error([SUAIError errorWithCode:SUAIErrorEntityNotAvailable userInfo:@{NSLocalizedDescriptionKey: @"Entity codes not available"}]);
 //        dispatch_group_t group = dispatch_group_create();
 //        dispatch_queue_t queue = dispatch_queue_create("schedule preload", DISPATCH_QUEUE_CONCURRENT);
 //        __weak typeof(self) welf = self;

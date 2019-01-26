@@ -15,6 +15,7 @@ typedef NS_ENUM(NSInteger, SUAIErrorCode) {
     SUAIErrorParseUnknown = -1,
     SUAIErrorParseFault = 1,
     SUAIErrorNetworkFault,
+    SUAIErrorEntityNotAvailable,
     SUAIErrorGlobalFault
 };
 
