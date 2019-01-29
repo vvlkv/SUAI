@@ -26,7 +26,10 @@ extern NSString *kSUAIWeekTypeObtainedNotification;
 
 + (instancetype)instance;
 
-- (void)loadCodes;
+//- (void)loadCodes;
+
+- (void)loadCodes:(void (^) (NSArray<SUAIEntity *> *g, NSArray<SUAIEntity *> *t, NSArray<SUAIEntity *> *a))codes
+             fail:(void (^) (__kindof SUAIError *error))error;
 
 - (void)loadScheduleFor:(SUAIEntity *)entity
                 success:(void (^) (SUAISchedule *schedule))schedule

@@ -26,6 +26,16 @@
     return self;
 }
 
+- (void)setTeachers:(NSArray<NSString *> *)teachers {
+    if (teachers != nil)
+        _teachers = [teachers copy];
+}
+
+- (void)setGroups:(NSArray<NSString *> *)groups {
+    if (groups != nil)
+        _groups = [groups copy];
+}
+
 - (NSString *)description {
     return [NSString stringWithFormat:@"Name:\t%@\nTeachers:\t%@", _name, _teachers];
 }

@@ -69,8 +69,8 @@ NSString *kSUAIReachabilityNotification = @"kSUAIReachabilityNotification";
         NSNumber *bolNumber = [NSNumber numberWithBool:_isReachable];
         [[NSNotificationCenter defaultCenter] postNotificationName:kSUAIReachabilityNotification object:bolNumber];
     }
-    if (reachable && !_schedule.codesAvailable)
-        [_schedule loadCodes];
+//    if (reachable && !_schedule.codesAvailable)
+//        [_schedule loadCodes];
 }
 
 - (SUAIScheduleProvider *)schedule {

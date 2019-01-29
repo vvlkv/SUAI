@@ -93,7 +93,7 @@
                               success:(void (^) (NSArray<NSData *> *data))success
                                  fail:(void (^) (SUAINetworkError *error))error {
     NSMutableString *semesterUrl = [NSMutableString stringWithString:semesterLink];
-    NSMutableString *sessionUrl = [NSMutableString stringWithFormat:@"%@", sessionLink];
+    NSMutableString *sessionUrl = [NSMutableString stringWithString:sessionLink];
     
     NSString *placeholder;
     
@@ -118,33 +118,34 @@
     
     NSMutableArray<NSData *> *schedules = [NSMutableArray arrayWithObjects:[NSData data], [NSData data], nil];
     dispatch_group_async(group, queue, ^{
-        dispatch_group_enter(group);
-        [SUAILoader performRequestWithUrl:[NSURL URLWithString:semesterUrl]
-                                  inQueue:queue
-                                  success:^(NSData *data) {
-            schedules[0] = data;
-            dispatch_group_leave(group);
-        } fail:^(SUAINetworkError *description) {
-//            dispatch_group_leave(group);
-            dispatch_async(dispatch_get_main_queue(), ^{
-                error(description);
-            });
-//            error(description);
-        }];
+        if (![semCode isEqual:nil]) {
+            dispatch_group_enter(group);
+            [SUAILoader performRequestWithUrl:[NSURL URLWithString:semesterUrl]
+                                      inQueue:queue
+                                      success:^(NSData *data) {
+                                          schedules[0] = data;
+                                          dispatch_group_leave(group);
+                                      } fail:^(SUAINetworkError *description) {
+                                          dispatch_async(dispatch_get_main_queue(), ^{
+                                              error(description);
+                                          });
+                                      }];
+        }
     });
     dispatch_group_async(group, queue, ^{
-        dispatch_group_enter(group);
-        [SUAILoader performRequestWithUrl:[NSURL URLWithString:sessionUrl]
-                                  inQueue:queue
-                                  success:^(NSData *data) {
-            schedules[1] = data;
-            dispatch_group_leave(group);
-        } fail:^(SUAINetworkError *description) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                error(description);
-            });
-//            dispatch_group_leave(group);
-        }];
+        if (![sesCode isEqual:nil]) {
+            dispatch_group_enter(group);
+            [SUAILoader performRequestWithUrl:[NSURL URLWithString:sessionUrl]
+                                      inQueue:queue
+                                      success:^(NSData *data) {
+                                          schedules[1] = data;
+                                          dispatch_group_leave(group);
+                                      } fail:^(SUAINetworkError *description) {
+                                          dispatch_async(dispatch_get_main_queue(), ^{
+                                              error(description);
+                                          });
+                                      }];
+        }
     });
     dispatch_group_notify(group, queue, ^{
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -157,6 +158,7 @@
                       inQueue:(dispatch_queue_t)queue
                       success:(void (^) (NSData *data))success
                          fail:(void (^) (SUAINetworkError *error))error {
+    
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSURLSession *session = [NSURLSession sharedSession];
     

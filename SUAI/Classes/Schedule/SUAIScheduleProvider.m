@@ -28,6 +28,8 @@ typedef NSString*(*clr_func)(id, SEL);
 
 @property (nonatomic, assign, readwrite) BOOL codesAvailable;
 @property (nonatomic, assign, readwrite) WeekType currentWeekType;
+@property (nonatomic, strong, readwrite) dispatch_group_t loadCodesGroup;
+@property (nonatomic, strong, readwrite) dispatch_queue_t loadCodesQueue;
 
 @end
 
@@ -49,6 +51,9 @@ typedef NSString*(*clr_func)(id, SEL);
         _groups = [[NSMutableArray alloc] init];
         _teachers = [[NSMutableArray alloc] init];
         _auditories = [[NSMutableArray alloc] init];
+        _loadCodesGroup = dispatch_group_create();
+        _loadCodesQueue = dispatch_queue_create("load codes", DISPATCH_QUEUE_CONCURRENT);
+        [self p_loadCodes:_loadCodesGroup];
     }
     return self;
 }
@@ -58,24 +63,14 @@ typedef NSString*(*clr_func)(id, SEL);
     return nil;
 }
 
-- (void)loadCodes {
-    dispatch_group_t group = dispatch_group_create();
-    static dispatch_once_t onceToken;
-    __weak typeof(self) welf = self;
-    dispatch_once(&onceToken, ^{
-        [welf p_loadCodes:group];
-    });
-}
-
 - (void)p_loadCodes:(dispatch_group_t )group {
     __weak typeof(self) welf = self;
-    dispatch_group_enter(group);
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
+        dispatch_group_enter(group);
         [SUAILoader loadCodesWithSuccess:^(NSArray<NSData *> *data) {
             [welf p_saveWeekType:[data lastObject]];
             [welf saveCodes:data];
-            NSLog(@"codes available");
             welf.codesAvailable = YES;
             [[NSNotificationCenter defaultCenter] postNotificationName:kSUAIEntityLoadedNotification
                                                                 object:nil];
@@ -84,6 +79,23 @@ typedef NSString*(*clr_func)(id, SEL);
             dispatch_group_leave(group);
         }];
     });
+}
+
+- (void)loadCodes:(void (^) (NSArray<SUAIEntity *> *g, NSArray<SUAIEntity *> *t, NSArray<SUAIEntity *> *a))codes
+             fail:(void (^) (__kindof SUAIError *error))error {
+    if (!_codesAvailable) {
+        __weak typeof(self) welf = self;
+        dispatch_group_notify(_loadCodesGroup, _loadCodesQueue, ^{
+            if (welf.codesAvailable) {
+                codes(welf.groups, welf.teachers, welf.auditories);
+            } else {
+                error([SUAIError errorWithCode:SUAIErrorGlobalFault userInfo:@{NSLocalizedDescriptionKey: @"codes not loaded"}]);
+            }
+        });
+    } else {
+        codes(_groups, _teachers, _auditories);
+    }
+    
 }
 
 - (void)loadScheduleFor:(SUAIEntity *)entity
@@ -116,7 +128,16 @@ typedef NSString*(*clr_func)(id, SEL);
     
     if (!_codesAvailable) {
         //TODO wait until codes will be loaded
-        error([SUAIError errorWithCode:SUAIErrorEntityNotAvailable userInfo:@{NSLocalizedDescriptionKey: @"Entity codes not available"}]);
+        //notify when codes load completes
+        __weak typeof(self) welf = self;
+        dispatch_group_notify(_loadCodesGroup, _loadCodesQueue, ^{
+            //if codes still unavailable - return error
+            if (welf.codesAvailable) {
+                [welf p_loadScheduleFor:entityName ofType:type success:schedule fail:error];
+            } else {
+                error([SUAIError errorWithCode:SUAIErrorEntityNotAvailable userInfo:@{NSLocalizedDescriptionKey: @"Entity codes not available"}]);
+            }
+        });
     } else {
         [self p_loadScheduleFor:entityName ofType:type success:schedule fail:error];
     }

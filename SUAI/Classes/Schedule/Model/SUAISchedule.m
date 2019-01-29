@@ -90,7 +90,6 @@
         return YES;
     if ([self class] != [object class])
         return NO;
-    
     SUAISchedule *otherSchedule = (SUAISchedule *)object;
     if (![_entity isEqual:[otherSchedule entity]])
         return NO;
@@ -98,7 +97,6 @@
         return NO;
     if (![_semester isEqualToArray:[otherSchedule semester]])
         return NO;
-    
     return YES;
 }
 
