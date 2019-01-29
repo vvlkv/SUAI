@@ -39,4 +39,24 @@
     return Undefined;
 }
 
+- (BOOL)isEqual:(id)object {
+    if (self == object)
+        return YES;
+    if ([self class] != [object class])
+        return NO;
+    
+    SUAIAuditory *otherAud = (SUAIAuditory *)object;
+    if (![_number isEqualToString:[otherAud number]])
+        return NO;
+    if (_building != [otherAud building])
+        return NO;
+    return YES;
+}
+
+- (NSUInteger)hash {
+    NSUInteger numberHash = [_number hash];
+    NSUInteger buildingHash = (NSUInteger)_building;
+    return numberHash ^ buildingHash;
+}
+
 @end

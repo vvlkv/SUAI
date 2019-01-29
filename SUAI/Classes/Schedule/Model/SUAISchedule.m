@@ -9,6 +9,7 @@
 #import "SUAISchedule.h"
 #import "SUAIDay.h"
 #import "SUAIPair.h"
+#import "SUAIEntity.h"
 
 @interface SUAISchedule() {
     NSArray <SUAIDay *> *_redSemester;
@@ -82,6 +83,30 @@
         }
     }
     return expanded;
+}
+
+- (BOOL)isEqual:(id)object {
+    if (self == object)
+        return YES;
+    if ([self class] != [object class])
+        return NO;
+    
+    SUAISchedule *otherSchedule = (SUAISchedule *)object;
+    if (![_entity isEqual:[otherSchedule entity]])
+        return NO;
+    if (![_session isEqualToArray:[otherSchedule session]])
+        return NO;
+    if (![_semester isEqualToArray:[otherSchedule semester]])
+        return NO;
+    
+    return YES;
+}
+
+- (NSUInteger)hash {
+    NSUInteger entityHash = [_entity hash];
+    NSUInteger sessHash = [_session hash];
+    NSUInteger semHash = [_semester hash];
+    return entityHash ^ sessHash ^ semHash;
 }
 
 @end

@@ -26,8 +26,43 @@
     return self;
 }
 
-- (NSString *)description
-{
+- (NSString *)description {
     return [NSString stringWithFormat:@"Name:\t%@\nTeachers:\t%@", _name, _teachers];
 }
+
+- (BOOL)isEqual:(id)object {
+    if (self == object)
+        return YES;
+    if ([self class] != [object class])
+        return NO;
+    
+    SUAIPair *otherPair = (SUAIPair *)object;
+    if (![_name isEqualToString:[otherPair name]])
+        return NO;
+    if (![_teachers isEqualToArray:[otherPair teachers]])
+        return NO;
+    if (![_groups isEqualToArray:[otherPair groups]])
+        return NO;
+    if (_color != [otherPair color])
+        return NO;
+    if (![_lessonType isEqualToString:[otherPair lessonType]])
+        return NO;
+    if (![_time isEqualToString:[otherPair time]])
+        return NO;
+    if (![_auditory isEqual:[otherPair auditory]])
+        return NO;
+    return YES;
+}
+
+- (NSUInteger)hash {
+    NSUInteger nameHash = [_name hash];
+    NSUInteger teachersHash = [_teachers hash];
+    NSUInteger groupsHash = [_groups hash];
+    NSUInteger colorHash = (NSUInteger)_color;
+    NSUInteger lessTypeHash = [_lessonType hash];
+    NSUInteger timeHash = [_time hash];
+    NSUInteger audHash = [_auditory hash];
+    return nameHash ^ teachersHash ^ groupsHash ^ colorHash ^ lessTypeHash ^ timeHash ^ audHash;
+}
+
 @end

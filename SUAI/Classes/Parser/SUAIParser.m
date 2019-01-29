@@ -37,7 +37,7 @@
 
 + (NSDictionary *)codesFromData:(NSData *)data {
     
-    NSArray<NSString *> const *prohibitedEntityNames = @[@"нет", @"--", @"/."];
+    NSArray<NSString *> *prohibitedEntityNames = @[@"нет", @"--", @"/."];
     
     if (data == nil) {
         return nil;

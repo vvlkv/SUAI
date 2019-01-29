@@ -38,9 +38,29 @@
     return [_pairs copy];
 }
 
-- (NSString *)description
-{
+- (NSString *)description {
     return [NSString stringWithFormat:@"day:%@\rpairs:%@\r", self.name, self.pairs];
+}
+
+- (BOOL)isEqual:(id)object {
+    if (self == object)
+        return YES;
+    if ([self class] != [object class])
+        return NO;
+    
+    SUAIDay *otherDay = (SUAIDay *)object;
+    if (![_name isEqualToString:[otherDay name]])
+        return NO;
+    if (![_pairs isEqualToArray:[otherDay pairs]])
+        return NO;
+    
+    return YES;
+}
+
+- (NSUInteger)hash {
+    NSUInteger nameHash = [_name hash];
+    NSUInteger pairsHash = [_pairs hash];
+    return nameHash ^ pairsHash;
 }
 
 @end
