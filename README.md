@@ -54,7 +54,7 @@ typedef enum Status {
                 success:(void (^) (SUAISchedule *schedule))schedule
                    fail:(void (^) (NSString *fail))fail;
 ```
-For getting schedule for teacher or group passed in first argument (for example, 1740M). Also you need to pass entity. In next releases may be entity will be deprecated.
+For getting schedule for teacher or group passed in first argument (for example, 1741). Also you need to pass entity. In next releases may be entity will be deprecated.
 
 ### Important
 Don't forget to allow arbitrary loads!

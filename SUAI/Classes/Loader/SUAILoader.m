@@ -117,6 +117,7 @@
     dispatch_queue_t queue = dispatch_queue_create("loading schedule", DISPATCH_QUEUE_CONCURRENT);
     
     NSMutableArray<NSData *> *schedules = [NSMutableArray arrayWithObjects:[NSData data], [NSData data], nil];
+    __block SUAINetworkError *retErr;
     dispatch_group_async(group, queue, ^{
         if (![semCode isEqual:nil]) {
             dispatch_group_enter(group);
@@ -126,9 +127,8 @@
                                           schedules[0] = data;
                                           dispatch_group_leave(group);
                                       } fail:^(SUAINetworkError *description) {
-                                          dispatch_async(dispatch_get_main_queue(), ^{
-                                              error(description);
-                                          });
+                                          retErr = description;
+                                          dispatch_group_leave(group);
                                       }];
         }
     });
@@ -141,15 +141,17 @@
                                           schedules[1] = data;
                                           dispatch_group_leave(group);
                                       } fail:^(SUAINetworkError *description) {
-                                          dispatch_async(dispatch_get_main_queue(), ^{
-                                              error(description);
-                                          });
+                                          retErr = description;
+                                          dispatch_group_leave(group);
                                       }];
         }
     });
     dispatch_group_notify(group, queue, ^{
         dispatch_async(dispatch_get_main_queue(), ^{
-            success(schedules);
+            if (retErr != nil)
+                error(retErr);
+            else
+                success(schedules);
         });
     });
 }

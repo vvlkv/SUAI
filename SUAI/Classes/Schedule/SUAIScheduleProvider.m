@@ -14,6 +14,7 @@
 #import "NSString+Enums.h"
 #import "NSString+NameFormation.h"
 #import "SUAINetworkError.h"
+#import "SUAI.h"
 
 NSString *kSUAIEntityLoadedNotification = @"kSUAIEntityLoadedNotification";
 NSString *kSUAIWeekTypeObtainedNotification = @"kSUAIWeekTypeObtainedNotification";
@@ -54,6 +55,7 @@ typedef NSString*(*clr_func)(id, SEL);
         _loadCodesGroup = dispatch_group_create();
         _loadCodesQueue = dispatch_queue_create("load codes", DISPATCH_QUEUE_CONCURRENT);
         [self p_loadCodes:_loadCodesGroup];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(p_reachabilityChanged:) name:kSUAIReachabilityNotification object:nil];
     }
     return self;
 }
@@ -65,20 +67,26 @@ typedef NSString*(*clr_func)(id, SEL);
 
 - (void)p_loadCodes:(dispatch_group_t )group {
     __weak typeof(self) welf = self;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
+    if (!_codesAvailable) {
         dispatch_group_enter(group);
         [SUAILoader loadCodesWithSuccess:^(NSArray<NSData *> *data) {
             [welf p_saveWeekType:[data lastObject]];
             [welf saveCodes:data];
+            if (!welf.codesAvailable)
+                [[NSNotificationCenter defaultCenter] postNotificationName:kSUAIEntityLoadedNotification
+                                                                    object:nil];
             welf.codesAvailable = YES;
-            [[NSNotificationCenter defaultCenter] postNotificationName:kSUAIEntityLoadedNotification
-                                                                object:nil];
             dispatch_group_leave(group);
         } fail:^(SUAINetworkError *fail) {
             dispatch_group_leave(group);
         }];
-    });
+    }
+}
+
+- (void)p_reachabilityChanged:(NSNotification *)notification {
+    BOOL isReach = [[notification object] boolValue];
+    if (!_codesAvailable && isReach)
+        [self p_loadCodes:_loadCodesGroup];
 }
 
 - (void)loadCodes:(void (^) (NSArray<SUAIEntity *> *g, NSArray<SUAIEntity *> *t, NSArray<SUAIEntity *> *a))codes
@@ -135,7 +143,10 @@ typedef NSString*(*clr_func)(id, SEL);
             if (welf.codesAvailable) {
                 [welf p_loadScheduleFor:entityName ofType:type success:schedule fail:error];
             } else {
-                error([SUAIError errorWithCode:SUAIErrorEntityNotAvailable userInfo:@{NSLocalizedDescriptionKey: @"Entity codes not available"}]);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    error([SUAIError errorWithCode:SUAIErrorEntityNotAvailable
+                                          userInfo:@{NSLocalizedDescriptionKey: @"Entity codes not available"}]);
+                });
             }
         });
     } else {
@@ -185,6 +196,8 @@ typedef NSString*(*clr_func)(id, SEL);
 }
 
 - (void)saveCodes:(NSArray<NSData *> *)data {
+    if ([_groups count] != 0)
+        return;
     
     NSDictionary *sessionCodes = [SUAIParser codesFromData:data[0]];
     NSDictionary *semesterCodes = [SUAIParser codesFromData:data[1]];
@@ -253,6 +266,10 @@ typedef NSString*(*clr_func)(id, SEL);
 
 - (NSArray <SUAIEntity *> *)auditories {
     return _auditories;
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kSUAIReachabilityNotification object:nil];
 }
 
 @end
