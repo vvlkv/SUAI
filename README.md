@@ -26,23 +26,23 @@ pod 'SUAI'
 If you know name of entity and it's type, use:
 ```Objective-C
 - (void)loadScheduleFor:(NSString *)entityName
-ofType:(Entity)type
-success:(void (^) (SUAISchedule *schedule))schedule
-fail:(void (^) (__kindof SUAIError *error))error;
+                 ofType:(Entity)type
+                success:(void (^) (SUAISchedule *schedule))schedule
+                   fail:(void (^) (__kindof SUAIError *error))error;
 ```
 or if you have SUAIEntity object of entity, use:
 ```Objective-C
 - (void)loadScheduleFor:(SUAIEntity *)entity
-success:(void (^) (SUAISchedule *schedule))schedule
-fail:(void (^) (__kindof SUAIError *error))error;
+                success:(void (^) (SUAISchedule *schedule))schedule
+                   fail:(void (^) (__kindof SUAIError *error))error;
 ```
 Methods above are similar, if schedule have been obtained without errors, success block will be called. In any cases fail block is to your service :).
 Example how to load schedule of type: Group with name "1741":
 ```Objective-C
 [[[SUAI instance] schedule] loadScheduleFor:@"1741" ofType:Group success:^(SUAISchedule *schedule) {
-NSLog(@"OK: %@", schedule);
+        NSLog(@"OK: %@", schedule);
 } fail:^(__kindof SUAIError *error) {
-NSLog(@"error: %@", error.description)
+        NSLog(@"error: %@", error.description)
 }];
 ```
 
@@ -50,13 +50,13 @@ NSLog(@"error: %@", error.description)
 For load available news preview use this method:
 ```Objective-C
 - (void)loadAllNews:(void (^) (NSArray<SUAINews *>* news))success
-fail:(void (^) (SUAIError *err))error;
+               fail:(void (^) (SUAIError *err))error;
 ```
 If you want to load concrete news use:
 ```Objective-C
 - (void)loadNews:(NSString *)newsID
-success:(void (^) (SUAINews *news))success
-fail:(void (^) (SUAIError *err))error;
+         success:(void (^) (SUAINews *news))success
+            fail:(void (^) (SUAIError *err))error;
 ```
 Where newsID is a part of url stored in property *publicationId* of SUAINews object.
 
@@ -70,14 +70,14 @@ Somewhere in class you subscribed on notification:
 
 ```Objective-C
 [[NSNotificationCenter defaultCenter] addObserver:self
-selector:@selector(p_internetReachabilityChanged:)
-name:kSUAIReachabilityNotification object:nil];
+                                         selector:@selector(p_internetReachabilityChanged:)
+                                             name:kSUAIReachabilityNotification object:nil];
 ```
 And in method *p_internetReachabilityChanged* you can check reachability status:
 ```Objective-C
 - (void)p_internetReachabilityChanged:(NSNotification *)notification {
-BOOL isReachable = [(NSNumber *)[notification object] boolValue];
-NSLog(@"internet is reachable: %ld", isReachable);
+    BOOL isReachable = [(NSNumber *)[notification object] boolValue];
+    NSLog(@"internet is reachable: %ld", isReachable);
 }
 ```
 * kSUAIWeekTypeObtainedNotification
