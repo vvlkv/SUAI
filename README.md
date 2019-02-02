@@ -5,56 +5,85 @@
 [![License](https://img.shields.io/cocoapods/l/SUAI.svg?style=flat)](https://cocoapods.org/pods/SUAI)
 [![Platform](https://img.shields.io/cocoapods/p/SUAI.svg?style=flat)](https://cocoapods.org/pods/SUAI)
 ###
-SUAI is a lightweight and very simple library for load schedule of groups or teachers studying in [Saint Petersburg State University of Aerospace Instrumentation](http://suai.ru).
-Current version is beta, it doesn't obtain status of internet connection and not return adequate error codes.
+SUAI is a lightweight and very simple library for working with contents of [Saint Petersburg State University of Aerospace Instrumentation](http://suai.ru).
+Using this library you can:
+* Obtain schedule of groups, teachers and auditories referenced from [scheduling site](rasp.guap.ru);
+* Obtain university news.
 
+This library used in Official SUAI app "[Спутник ГУАП](https://itunes.apple.com/ru/app/спутник-гуап/id1234040508?l=en&mt=8)".
 ## Example
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Installation
 
-SUAI is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+SUAI is available through [CocoaPods](https://cocoapods.org). To install it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'SUAI'
 ```
 ## Usage
+### Schedule
+If you know name of entity and it's type, use:
+```Objective-C
+- (void)loadScheduleFor:(NSString *)entityName
+ofType:(Entity)type
+success:(void (^) (SUAISchedule *schedule))schedule
+fail:(void (^) (__kindof SUAIError *error))error;
+```
+or if you have SUAIEntity object of entity, use:
+```Objective-C
+- (void)loadScheduleFor:(SUAIEntity *)entity
+success:(void (^) (SUAISchedule *schedule))schedule
+fail:(void (^) (__kindof SUAIError *error))error;
+```
+Methods above are similar, if schedule have been obtained without errors, success block will be called. In any cases fail block is to your service :).
+Example how to load schedule of type: Group with name "1741":
+```Objective-C
+[[[SUAI instance] schedule] loadScheduleFor:@"1741" ofType:Group success:^(SUAISchedule *schedule) {
+NSLog(@"OK: %@", schedule);
+} fail:^(__kindof SUAIError *error) {
+NSLog(@"error: %@", error.description)
+}];
+```
 
-Library contains SUAIManager class, which is a singleton, it means that during all program execution you will have only one instance of this class (it's necessary to load entity codes once and store it in instance).
+### News
+For load available news preview use this method:
+```Objective-C
+- (void)loadAllNews:(void (^) (NSArray<SUAINews *>* news))success
+fail:(void (^) (SUAIError *err))error;
+```
+If you want to load concrete news use:
+```Objective-C
+- (void)loadNews:(NSString *)newsID
+success:(void (^) (SUAINews *news))success
+fail:(void (^) (SUAIError *err))error;
+```
+Where newsID is a part of url stored in property *publicationId* of SUAINews object.
 
-SUAIManager have one delegate method:
-```Objective-C
-- (void)didChangeStatus:(Status)status;
-```
-Where Status is a structure which means current status of SUAIManager:
-1. Ok (i.e all codes is loaded and SUAIManager can load any schedule you need);
-2. Error (i.e. SUAIManager doesn't contain codes or it have problems with internet connection).
+### Notifications
 
-Full description of Status below:
+Library also contain notification constants. Subscribe on it if you need to react on it's changing:
+* kSUAIReachabilityNotification
+If you subscribed on it's notification constant, you will be notified when internet reachability changed (e.g. device is offline or connected via Wi-fi or LTE). In notification object you will get NSNumber contains bool value with reachability status.
+Simple example:
+Somewhere in class you subscribed on notification:
+
 ```Objective-C
-typedef enum Status {
-    Ok,
-    Error
-}Status;
+[[NSNotificationCenter defaultCenter] addObserver:self
+selector:@selector(p_internetReachabilityChanged:)
+name:kSUAIReachabilityNotification object:nil];
 ```
-### Step by step
-1. Import SUAIManager.h to your class:
+And in method *p_internetReachabilityChanged* you can check reachability status:
 ```Objective-C
-#import "SUAIManager.h"
+- (void)p_internetReachabilityChanged:(NSNotification *)notification {
+BOOL isReachable = [(NSNumber *)[notification object] boolValue];
+NSLog(@"internet is reachable: %ld", isReachable);
+}
 ```
-2. Set delegate if you want to obtain status of SUAIManager and of course implement method in class:
-```Objective-C
-[SUAIManager instance].delegate = self;
-```
-3. Use method:
-```Objective-C
-- (void)loadScheduleFor:(NSString *)identificator
-           ofEntityType:(Entity)entity
-                success:(void (^) (SUAISchedule *schedule))schedule
-                   fail:(void (^) (NSString *fail))fail;
-```
-For getting schedule for teacher or group passed in first argument (for example, 1741). Also you need to pass entity. In next releases may be entity will be deprecated.
+* kSUAIWeekTypeObtainedNotification
+These constant will notify when SUAI loaded current week type of week.
+* kSUAIEntityLoadedNotification
+Before you be able to load schedule, it's necessary load all codes available. These contant will notify when all codes is loaded and ready to work.
 
 ### Important
 Don't forget to allow arbitrary loads!
