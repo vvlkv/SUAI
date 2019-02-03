@@ -13,7 +13,7 @@
 - (instancetype)initWithName:(NSString *)name
                  sessionCode:(NSString *)sessionCode
                 semesterCode:(NSString *)semesterCode
-                        type:(Entity)type {
+                        type:(EntityType)type {
     self = [super init];
     if (self) {
         _name = name;

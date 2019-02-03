@@ -10,12 +10,12 @@
 
 @implementation NSString (Enums)
 
-+ (NSString *)convertToString:(Entity)entity {
++ (NSString *)convertToString:(EntityType)entity {
     switch (entity) {
-        case Group:
+        case EntityTypeGroup:
             return @"Group";
             break;
-        case Teacher:
+        case EntityTypeTeacher:
             return @"Teacher";
         default:
             return nil;
@@ -23,13 +23,14 @@
     }
 }
 
-+ (Entity)convertToEntity:(NSString *)entity {
++ (EntityType)convertToEntity:(NSString *)entity {
     if ([entity isEqualToString:@"Group"]) {
-        return Group;
+        return EntityTypeGroup;
     }
     if ([entity isEqualToString:@"Teacher"]) {
-        return Teacher;
+        return EntityTypeTeacher;
     }
     return 0;
 }
+
 @end

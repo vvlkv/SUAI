@@ -12,10 +12,15 @@
 @interface SUAIDay: NSObject
 
 @property (strong, nonatomic) NSString *name;
+@property (nonatomic, assign) NSUInteger weekday;
 @property (strong, nonatomic, readonly) NSArray<SUAIPair *> *pairs;
 
 - (instancetype)initWithName:(NSString *)name
                    andPairs:(NSArray<SUAIPair *> *)pairs;
+
+- (instancetype)initWithName:(NSString *)name
+                     weekday:(NSUInteger)weekday
+                    andPairs:(NSArray<SUAIPair *> *)pairs;
 
 - (instancetype)initWithName:(NSString *)name;
 

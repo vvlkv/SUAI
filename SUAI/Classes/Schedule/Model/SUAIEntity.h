@@ -16,12 +16,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *sessionCode;
 @property (strong, nonatomic) NSString *semesterCode;
-@property (assign, nonatomic) Entity type;
+@property (assign, nonatomic) EntityType type;
 
 - (instancetype)initWithName:(NSString *)name
                  sessionCode:(NSString *)sessionCode
                 semesterCode:(NSString *)semesterCode
-                        type:(Entity)type;
+                        type:(EntityType)type;
 
 
 @end

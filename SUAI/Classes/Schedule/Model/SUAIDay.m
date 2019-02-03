@@ -18,9 +18,16 @@
 
 - (instancetype)initWithName:(NSString *)name andPairs:(NSArray<SUAIPair *> *)pairs
 {
+    return [self initWithName:name weekday:0 andPairs:pairs];
+}
+
+- (instancetype)initWithName:(NSString *)name
+                     weekday:(NSUInteger)weekday
+                    andPairs:(NSArray<SUAIPair *> *)pairs {
     self = [super init];
     if (self) {
         _name = name;
+        _weekday = weekday;
         _pairs = [NSMutableArray arrayWithArray:pairs];
     }
     return self;

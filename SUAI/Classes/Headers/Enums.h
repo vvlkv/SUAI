@@ -14,10 +14,10 @@ typedef NS_ENUM(NSUInteger, ScheduleType) {
     ScheduleTypeSession
 };
 
-typedef NS_ENUM(NSUInteger, Entity) {
-    Group,
-    Teacher,
-    Auditory
+typedef NS_ENUM(NSUInteger, EntityType) {
+    EntityTypeGroup,
+    EntityTypeTeacher,
+    EntityTypeAuditory
 };
 
 typedef NS_ENUM(NSUInteger, WeekType) {

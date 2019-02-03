@@ -12,6 +12,7 @@
 		5522AF5C211CE0BF00A8A5AF /* SUAIScheduleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5522AF5A211CE0BF00A8A5AF /* SUAIScheduleTableViewCell.m */; };
 		5522AF5D211CE0BF00A8A5AF /* SUAIScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5522AF5B211CE0BF00A8A5AF /* SUAIScheduleTableViewCell.xib */; };
 		554A2410211CC75700B79FCC /* SUAIEntityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 554A240F211CC75700B79FCC /* SUAIEntityViewController.m */; };
+		55CAF23422076001001C8E47 /* SUAIModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CAF23322076001001C8E47 /* SUAIModelTests.m */; };
 		55CF154121C5701700568F6F /* SUAIAllNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CF154021C5701700568F6F /* SUAIAllNewsViewController.m */; };
 		55D7836821C6DC0700FD8E05 /* SUAIConcreteNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D7836721C6DC0700FD8E05 /* SUAIConcreteNewsViewController.m */; };
 		55D7836A21C6DCE000FD8E05 /* SUAIConcreteNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55D7836921C6DCE000FD8E05 /* SUAIConcreteNewsViewController.xib */; };
@@ -52,6 +53,7 @@
 		5522AF5B211CE0BF00A8A5AF /* SUAIScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SUAIScheduleTableViewCell.xib; path = SUAI/SUAIScheduleTableViewCell.xib; sourceTree = "<group>"; };
 		554A240E211CC75700B79FCC /* SUAIEntityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SUAIEntityViewController.h; path = SUAI/SUAIEntityViewController.h; sourceTree = "<group>"; };
 		554A240F211CC75700B79FCC /* SUAIEntityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SUAIEntityViewController.m; path = SUAI/SUAIEntityViewController.m; sourceTree = "<group>"; };
+		55CAF23322076001001C8E47 /* SUAIModelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUAIModelTests.m; sourceTree = "<group>"; };
 		55CF153F21C5701700568F6F /* SUAIAllNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SUAIAllNewsViewController.h; sourceTree = "<group>"; };
 		55CF154021C5701700568F6F /* SUAIAllNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUAIAllNewsViewController.m; sourceTree = "<group>"; };
 		55D7836621C6DC0700FD8E05 /* SUAIConcreteNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SUAIConcreteNewsViewController.h; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				6003F5B6195388D20070C39A /* Supporting Files */,
 				55F30BC321F32FC400B59DBB /* SUAIParserTests.m */,
 				55F30C1221F3527300B59DBB /* SUAIScheduleTests.m */,
+				55CAF23322076001001C8E47 /* SUAIModelTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55CAF23422076001001C8E47 /* SUAIModelTests.m in Sources */,
 				55F30C1321F3527300B59DBB /* SUAIScheduleTests.m in Sources */,
 				55F30BC421F32FC400B59DBB /* SUAIParserTests.m in Sources */,
 			);

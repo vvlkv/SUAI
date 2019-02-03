@@ -18,7 +18,7 @@
 
 + (void)loadSchedulesWithSemesterCode:(NSString *)semCode
                           sessionCode:(NSString *)sesCode
-                           entityType:(Entity)type
+                           entityType:(EntityType)type
                               success:(void (^) (NSArray<NSData *> *data))success
                                  fail:(void (^) (SUAINetworkError *error))error;
 

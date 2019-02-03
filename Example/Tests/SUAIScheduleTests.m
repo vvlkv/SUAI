@@ -124,7 +124,7 @@
 
 - (void)testEntityScheduleWrongEntity {
     XCTestExpectation *exp = [self expectationWithDescription:@"load"];
-    [provider loadScheduleFor:@"1wdsa" ofType:Teacher success:^(SUAISchedule *schedule) {
+    [provider loadScheduleFor:@"1wdsa" ofType:EntityTypeTeacher success:^(SUAISchedule *schedule) {
         XCTFail("no!");
     } fail:^(__kindof SUAIError *error) {
         NSLog(@"%@", error);
@@ -139,13 +139,13 @@
     
     XCTestExpectation *load1Exp = [self expectationWithDescription:@"load1"];
     XCTestExpectation *load2Exp = [self expectationWithDescription:@"load2"];
-    [provider loadScheduleFor:@"1542" ofType:Group success:^(SUAISchedule *schedule) {
+    [provider loadScheduleFor:@"1542" ofType:EntityTypeGroup success:^(SUAISchedule *schedule) {
         obj1 = schedule;
         [load1Exp fulfill];
     } fail:^(__kindof SUAIError *error) {
         XCTFail("fail loading 1");
     }];
-    [provider loadScheduleFor:@"1542" ofType:Group success:^(SUAISchedule *schedule) {
+    [provider loadScheduleFor:@"1542" ofType:EntityTypeGroup success:^(SUAISchedule *schedule) {
         obj2 = schedule;
         [load2Exp fulfill];
     } fail:^(__kindof SUAIError *error) {

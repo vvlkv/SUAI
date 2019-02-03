@@ -125,7 +125,7 @@ typedef NSString*(*clr_func)(id, SEL);
 }
 
 - (void)loadScheduleFor:(NSString *)entityName
-                 ofType:(Entity)type
+                 ofType:(EntityType)type
                 success:(void (^) (SUAISchedule *schedule))schedule
                    fail:(void (^) (__kindof SUAIError *error))error {
     if (entityName == nil) {
@@ -155,18 +155,18 @@ typedef NSString*(*clr_func)(id, SEL);
 }
 
 - (void)p_loadScheduleFor:(NSString *)entityName
-                 ofType:(Entity)type
+                 ofType:(EntityType)type
                 success:(void (^) (SUAISchedule *schedule))schedule
                      fail:(void (^) (__kindof SUAIError *error))error {
     NSArray *searchEntities;
     switch (type) {
-        case Group:
+        case EntityTypeGroup:
             searchEntities = _groups;
             break;
-        case Teacher:
+        case EntityTypeTeacher:
             searchEntities = _teachers;
             break;
-        case Auditory:
+        case EntityTypeAuditory:
             searchEntities = _auditories;
             break;
         default:
@@ -202,9 +202,9 @@ typedef NSString*(*clr_func)(id, SEL);
     NSDictionary *sessionCodes = [SUAIParser codesFromData:data[0]];
     NSDictionary *semesterCodes = [SUAIParser codesFromData:data[1]];
     
-    NSArray *descriptors = @[[NSNumber numberWithInteger:Group],
-                             [NSNumber numberWithInteger:Teacher],
-                             [NSNumber numberWithInteger:Auditory]];
+    NSArray *descriptors = @[[NSNumber numberWithInteger:EntityTypeGroup],
+                             [NSNumber numberWithInteger:EntityTypeTeacher],
+                             [NSNumber numberWithInteger:EntityTypeAuditory]];
     
     NSArray *entities = @[_groups, _teachers, _auditories];
     

@@ -13,8 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSString (Enums)
 
-+ (NSString *)convertToString:(Entity)entity;
-+ (Entity)convertToEntity:(NSString *)entity;
++ (NSString *)convertToString:(EntityType)entity;
++ (EntityType)convertToEntity:(NSString *)entity;
 
 @end
 

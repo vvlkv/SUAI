@@ -10,6 +10,7 @@
 #import "Enums.h"
 
 @class SUAIAuditory;
+@class SUAITime;
 @interface SUAIPair : NSObject
 
 @property (strong, nonatomic) NSString *name;
@@ -17,7 +18,7 @@
 @property (strong, nonatomic) NSArray<NSString *> *groups;
 @property (assign, nonatomic) WeekType color;
 @property (strong, nonatomic) NSString *lessonType;
-@property (strong, nonatomic) NSString *time;
+@property (strong, nonatomic) SUAITime *time;
 @property (strong, nonatomic) SUAIAuditory *auditory;
 
 @end

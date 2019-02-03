@@ -56,40 +56,9 @@
     });
 }
 
-+ (void)loadScheduleOfType:(ScheduleType)scheduleType
-                    entity:(Entity)entityType
-                  entityId:(NSString *)identificator
-                   success:(void (^) (NSData *data))success
-                      fail:(void (^) (SUAINetworkError *error))error {
-    
-    NSMutableString *url = [[NSMutableString alloc] init];
-    
-    if (scheduleType == ScheduleTypeSession) {
-        [url appendString:sessionLink];
-    } else {
-        [url appendString:semesterLink];
-    }
-    
-    switch (entityType) {
-        case Group:
-            [url appendFormat:@"/?g=%@", identificator];
-            break;
-        case Teacher:
-            [url appendFormat:@"/?p=%@", identificator];
-            break;
-        case Auditory:
-            [url appendFormat:@"/?r=%@", identificator];
-        default:
-            break;
-    }
-    [SUAILoader performRequestWithUrl:[NSURL URLWithString:url]
-                              success:success
-                                 fail:error];
-}
-
 + (void)loadSchedulesWithSemesterCode:(NSString *)semCode
                           sessionCode:(NSString *)sesCode
-                           entityType:(Entity)type
+                           entityType:(EntityType)type
                               success:(void (^) (NSArray<NSData *> *data))success
                                  fail:(void (^) (SUAINetworkError *error))error {
     NSMutableString *semesterUrl = [NSMutableString stringWithString:semesterLink];
@@ -98,13 +67,13 @@
     NSString *placeholder;
     
     switch (type) {
-        case Group:
+        case EntityTypeGroup:
             placeholder = @"/?g=%@";
             break;
-        case Teacher:
+        case EntityTypeTeacher:
             placeholder = @"/?p=%@";
             break;
-        case Auditory:
+        case EntityTypeAuditory:
             placeholder = @"/?r=%@";
             break;
         default:

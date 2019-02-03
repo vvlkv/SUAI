@@ -8,6 +8,7 @@
 
 #import "SUAIPair.h"
 #import "SUAIAuditory.h"
+#import "SUAITime.h"
 
 @implementation SUAIPair
 
@@ -20,7 +21,7 @@
         _groups = [NSArray array];
         _color = WeekTypeBoth;
         _lessonType = @"";
-        _time = @"";
+        _time = [[SUAITime alloc] init];
         _auditory = [[SUAIAuditory alloc] initWithString:@""];
     }
     return self;
@@ -57,7 +58,7 @@
         return NO;
     if (![_lessonType isEqualToString:[otherPair lessonType]])
         return NO;
-    if (![_time isEqualToString:[otherPair time]])
+    if (![_time isEqual:[otherPair time]])
         return NO;
     if (![_auditory isEqual:[otherPair auditory]])
         return NO;

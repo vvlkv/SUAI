@@ -55,6 +55,8 @@
 		537486179B0F1D7AC9F649B1A7E0B297 /* CSSInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 7777C2992C92813F88D755B40DE1C620 /* CSSInputStream.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		539EF496CF555228D628F6037595F78F /* HTMLCharacterToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A2589222D4F44A4913AB2A949BC8836 /* HTMLCharacterToken.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		5432DBE2468B7914FB4CE5C867F1EF03 /* HTMLCommentToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FAEC855F53B80A0AD3BD5EA16A5C054 /* HTMLCommentToken.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		55CAF23922076061001C8E47 /* SUAITime.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CAF23622076059001C8E47 /* SUAITime.m */; };
+		55CAF23A22076065001C8E47 /* SUAITime.h in Headers */ = {isa = PBXBuildFile; fileRef = 55CAF23522076059001C8E47 /* SUAITime.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		570BA6BE3110B5DEF2D1B8D6D330EF9C /* HTMLDOMTokenList.m in Sources */ = {isa = PBXBuildFile; fileRef = 408466ADDAC3793A120AC4B51B811C07 /* HTMLDOMTokenList.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5877B7F496E7633CC2312C90A1185352 /* HTMLDOMTokenList.h in Headers */ = {isa = PBXBuildFile; fileRef = 645472D6F8497BF1D90CB6D616313551 /* HTMLDOMTokenList.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AAF6C3034D244485E0532A93939964D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED889963E13282F933B7131D9CD57F6 /* Foundation.framework */; };
@@ -267,6 +269,8 @@
 		53A06FFAF0A6EB56B31C289EA18467FC /* HTMLListOfActiveFormattingElements.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLListOfActiveFormattingElements.h; path = Sources/include/HTMLListOfActiveFormattingElements.h; sourceTree = "<group>"; };
 		54BE645BE4A09F9445D0FF2715DFD947 /* SUAIError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SUAIError.h; sourceTree = "<group>"; };
 		556072F2392C36895E97C7A5F1E75EFD /* CSSSelector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSSSelector.h; path = Sources/include/CSSSelector.h; sourceTree = "<group>"; };
+		55CAF23522076059001C8E47 /* SUAITime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUAITime.h; sourceTree = "<group>"; };
+		55CAF23622076059001C8E47 /* SUAITime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUAITime.m; sourceTree = "<group>"; };
 		577579969E53C9EFEE2591CCA1C2F485 /* Pods-SUAI_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SUAI_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		58E741FA72DFBFA6940D9D05B2341604 /* HTMLComment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLComment.h; path = Sources/include/HTMLComment.h; sourceTree = "<group>"; };
 		58EA9ED00DB75A47211BEF75E79F0FC0 /* HTMLDocumentType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMLDocumentType.m; path = Sources/HTMLDocumentType.m; sourceTree = "<group>"; };
@@ -603,6 +607,8 @@
 		8FF8F1767D7F8E65E66A6E205E071EB0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				55CAF23522076059001C8E47 /* SUAITime.h */,
+				55CAF23622076059001C8E47 /* SUAITime.m */,
 				2E809F161F26A262C281E0C2B622AA17 /* SUAIAuditory.h */,
 				FEABCAB7E1FDC9E1DB66B495E389C5F2 /* SUAIAuditory.m */,
 				874E09879C49D68D7A3A7CA0452A1F9A /* SUAIDay.h */,
@@ -940,6 +946,7 @@
 				8049C6ACA86BE06C0DD2641E604A8BAB /* Reachability.h in Headers */,
 				91791311C25CBFD8DEA5BDE07D0B0E50 /* SUAI-umbrella.h in Headers */,
 				C980307EBD1D268ECE9342314C5F1DD4 /* SUAI.h in Headers */,
+				55CAF23A22076065001C8E47 /* SUAITime.h in Headers */,
 				7E85B389847034CDE95AF338348C3A67 /* SUAIAuditory.h in Headers */,
 				46F9A27D44F942043672B9C5A2FF6EA1 /* SUAIDay.h in Headers */,
 				70D5F63546B1C468DCDEE00029905418 /* SUAIEntity.h in Headers */,
@@ -1140,6 +1147,7 @@
 			files = (
 				04B04630C9162793419C163D94393AE2 /* NSString+Enums.m in Sources */,
 				035C3A0744BD797A71EB86341DA559AD /* NSString+NameFormation.m in Sources */,
+				55CAF23922076061001C8E47 /* SUAITime.m in Sources */,
 				74E5D2F7B760E01484DBBC877221F472 /* Reachability.m in Sources */,
 				65D7562AC308487D8DA7C25211B5F5FD /* SUAI-dummy.m in Sources */,
 				84BFD03F2DD66B841081CA7C65A294F4 /* SUAI.m in Sources */,

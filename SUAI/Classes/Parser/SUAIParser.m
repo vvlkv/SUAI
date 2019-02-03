@@ -10,6 +10,7 @@
 #import "HTMLKit.h"
 #import "SUAIPair.h"
 #import "SUAIDay.h"
+#import "SUAITime.h"
 #import "SUAIAuditory.h"
 #import "Enums.h"
 #import "NSString+Enums.h"
@@ -24,12 +25,13 @@
     NSString *dataString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     HTMLDocument *document = [HTMLDocument documentWithString:dataString];
     HTMLElement *rasp = [document querySelector:@".rasp"];
-    if (rasp == nil) {
+    if (rasp == nil)
         return -1;
-    }
+    
     HTMLElement *today = [document querySelector:@"p"];
     if (today == nil)
         return -1;
+    
     if ([[today textContent] containsString:@"нижн"])
         return WeekTypeBlue;
     return WeekTypeRed;
@@ -47,15 +49,14 @@
     HTMLDocument *document = [HTMLDocument documentWithString:dataString];
     NSArray *rasp = [document querySelectorAll:@".rasp"];
     //no elements - no party
-    if ([rasp count] == 0) {
+    if ([rasp count] == 0)
         return nil;
-    }
     
     NSMutableDictionary *contents = [NSMutableDictionary dictionary];
     
-    NSArray <NSNumber *> *descriptors = @[[NSNumber numberWithInteger:Group],
-                                        [NSNumber numberWithInteger:Teacher],
-                                        [NSNumber numberWithInteger:Auditory]];
+    NSArray <NSNumber *> *descriptors = @[[NSNumber numberWithInteger:EntityTypeGroup],
+                                        [NSNumber numberWithInteger:EntityTypeTeacher],
+                                        [NSNumber numberWithInteger:EntityTypeAuditory]];
     
     for (HTMLElement *element in rasp) {
         NSArray *spans = [element querySelectorAll:@"span"];
@@ -122,7 +123,7 @@
             //Each pair starts from div
             if ([child.tagName isEqualToString:@"div"]) {
                 pair = [[SUAIPair alloc] init];
-                pair.time = pairTime;
+                pair.time = [[SUAITime alloc] initWithTimeString:pairTime];
                 [self fillPair:pair fromElement:[child querySelector:@".study"]];
                 [day addPair:pair];
             }

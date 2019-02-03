@@ -34,7 +34,7 @@ extern NSString *kSUAIWeekTypeObtainedNotification;
                    fail:(void (^) (__kindof SUAIError *error))error;
 
 - (void)loadScheduleFor:(NSString *)entityName
-                 ofType:(Entity)type
+                 ofType:(EntityType)type
                 success:(void (^) (SUAISchedule *schedule))schedule
                    fail:(void (^) (__kindof SUAIError *error))error;
 
