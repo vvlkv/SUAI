@@ -16,8 +16,7 @@
 
 @implementation SUAIDay
 
-- (instancetype)initWithName:(NSString *)name andPairs:(NSArray<SUAIPair *> *)pairs
-{
+- (instancetype)initWithName:(NSString *)name andPairs:(NSArray<SUAIPair *> *)pairs {
     return [self initWithName:name weekday:0 andPairs:pairs];
 }
 
@@ -34,7 +33,11 @@
 }
 
 - (instancetype)initWithName:(NSString *)name {
-    return [self initWithName:name andPairs:[NSArray array]];
+    return [self initWithName:name weekday:0 andPairs:[NSArray array]];
+}
+
+- (instancetype)initWithName:(NSString *)name weekday:(NSUInteger)weekday {
+    return [self initWithName:name weekday:weekday andPairs:[NSArray array]];
 }
 
 - (void)addPair:(SUAIPair *)pair {

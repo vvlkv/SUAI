@@ -67,6 +67,10 @@
     return YES;
 }
 
+- (NSUInteger)minutesSinceMidnight {
+    return _hour * 60 + _minute;
+}
+
 - (NSUInteger)hash {
     return [_str hash];
 }

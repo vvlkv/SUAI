@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign, readonly) NSUInteger hour;
 @property (nonatomic, assign, readonly) NSUInteger minute;
+@property (nonatomic, assign, readonly) NSUInteger minutesSinceMidnight;
 
 - (instancetype)initWithTimeString:(NSString *)timeStr;
 

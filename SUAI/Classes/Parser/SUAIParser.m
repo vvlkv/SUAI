@@ -111,7 +111,8 @@
                 continue;
             if ([child.tagName isEqualToString:@"h3"]) {
                 // Create day and add pairs array
-                day = [[SUAIDay alloc] initWithName:child.textContent];
+                NSString *dayName = [child textContent];
+                day = [[SUAIDay alloc] initWithName:dayName weekday:[self p_weekdayFromName:dayName]];
                 [days addObject:day];
             }
             //Each pair time with h4 tag
@@ -165,6 +166,16 @@
 
 + (NSArray<NSString *> *)contentsFromElement:(HTMLElement *)element {
     return [[[element.textContent componentsSeparatedByString:@": "] lastObject] componentsSeparatedByString:@"; "];
+}
+
++ (NSUInteger)p_weekdayFromName:(NSString *)name {
+    NSArray *weekdays = @[@"вне", @"понедельник", @"вторник", @"среда", @"четверг", @"пятница", @"суббота"];
+    for (int i = 0; i < [weekdays count]; i++) {
+        NSString *weekday = weekdays[i];
+        if ([[name lowercaseString] containsString:weekday])
+            return i + 1;
+    }
+    return 0;
 }
 
 @end

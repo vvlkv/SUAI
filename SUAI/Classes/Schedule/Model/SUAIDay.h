@@ -24,6 +24,8 @@
 
 - (instancetype)initWithName:(NSString *)name;
 
+- (instancetype)initWithName:(NSString *)name weekday:(NSUInteger)weekday;
+
 - (void)addPair:(SUAIPair *)pair;
 
 @end
