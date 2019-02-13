@@ -32,9 +32,12 @@
         dispatch_group_enter(group);
         dispatch_async(queue, ^{
             NSURL *imgUrl = [NSURL URLWithString:imagesUrl[i]];
-            [loadedImages replaceObjectAtIndex:i
-                                    withObject:[UIImage imageWithData:[NSData dataWithContentsOfURL:imgUrl]]];
-            dispatch_group_leave(group);
+            NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:[NSURLRequest requestWithURL:imgUrl]
+                                                                     completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+                [loadedImages replaceObjectAtIndex:i withObject:[UIImage imageWithData:[NSData dataWithContentsOfURL:imgUrl]]];
+                dispatch_group_leave(group);
+            }];
+            [task resume];
         });
     }
     dispatch_group_notify(group, queue, ^{
