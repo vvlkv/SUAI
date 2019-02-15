@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "Enums.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @class SUAISchedule;
 @class SUAIEntity;
 @class SUAIError;
@@ -39,4 +41,6 @@ extern NSString *kSUAIWeekTypeObtainedNotification;
                    fail:(void (^) (__kindof SUAIError *error))error;
 
 @end
+
+NS_ASSUME_NONNULL_END
 

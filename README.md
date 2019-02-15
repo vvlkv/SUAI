@@ -38,6 +38,7 @@ or if you have SUAIEntity object of entity, use:
 ```
 Methods above are similar, if schedule have been obtained without errors, success block will be called. In any cases fail block is to your service :).
 Example how to load schedule of type: Group with name "1741":
+#### Objective-C
 ```Objective-C
 [[[SUAI instance] schedule] loadScheduleFor:@"1741" ofType:Group success:^(SUAISchedule *schedule) {
         NSLog(@"OK: %@", schedule);
@@ -45,7 +46,14 @@ Example how to load schedule of type: Group with name "1741":
         NSLog(@"error: %@", error.description)
 }];
 ```
-
+#### Swift
+```Swift
+SUAI.instance().schedule.loadSchedule(for: "1741", of: .group, success: { (schedule) in
+    print("OK: \(schedule)")
+}) { (error) in
+    print("error: \(error.description)")
+}
+```
 ### News
 For load available news preview use this method:
 ```Objective-C

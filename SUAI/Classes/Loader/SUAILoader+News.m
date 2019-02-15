@@ -34,8 +34,11 @@
             NSURL *imgUrl = [NSURL URLWithString:imagesUrl[i]];
             NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:[NSURLRequest requestWithURL:imgUrl]
                                                                      completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-                [loadedImages replaceObjectAtIndex:i withObject:[UIImage imageWithData:[NSData dataWithContentsOfURL:imgUrl]]];
-                dispatch_group_leave(group);
+                                                                         if (![error isEqual:nil]) {
+                                                                             [loadedImages replaceObjectAtIndex:i withObject:[UIImage imageWithData:data]];
+                                                                         } else
+                                                                             NSLog(@"%@", error);
+                                                                         dispatch_group_leave(group);
             }];
             [task resume];
         });
