@@ -34,7 +34,7 @@
             NSURL *imgUrl = [NSURL URLWithString:imagesUrl[i]];
             NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:[NSURLRequest requestWithURL:imgUrl]
                                                                      completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-                                                                         if (![error isEqual:nil]) {
+                                                                         if (error == nil && data != nil) {
                                                                              [loadedImages replaceObjectAtIndex:i withObject:[UIImage imageWithData:data]];
                                                                          } else
                                                                              NSLog(@"%@", error);

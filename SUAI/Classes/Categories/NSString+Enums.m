@@ -18,7 +18,7 @@
         case EntityTypeTeacher:
             return @"Teacher";
         default:
-            return nil;
+            return @"";
             break;
     }
 }

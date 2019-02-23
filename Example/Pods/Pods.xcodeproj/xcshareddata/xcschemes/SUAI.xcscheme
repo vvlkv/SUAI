@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2091F875797A0FFD3E6717A26618EFB5"
+               BlueprintIdentifier = "0C62945C8A5CFEB0ABCDD6855979C19C"
                BuildableName = "SUAI.framework"
                BlueprintName = "SUAI"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "55E6D94922216D040056DE1D"
+               BuildableName = "SUAI Tests.xctest"
+               BlueprintName = "SUAI Tests"
+               ReferencedContainer = "container:../SUAI.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "0C62945C8A5CFEB0ABCDD6855979C19C"
+            BuildableName = "SUAI.framework"
+            BlueprintName = "SUAI"
+            ReferencedContainer = "container:Pods.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -45,7 +64,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2091F875797A0FFD3E6717A26618EFB5"
+            BlueprintIdentifier = "0C62945C8A5CFEB0ABCDD6855979C19C"
             BuildableName = "SUAI.framework"
             BlueprintName = "SUAI"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -60,6 +79,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "0C62945C8A5CFEB0ABCDD6855979C19C"
+            BuildableName = "SUAI.framework"
+            BlueprintName = "SUAI"
+            ReferencedContainer = "container:Pods.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

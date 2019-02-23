@@ -15,6 +15,7 @@
 #import "SUAI.h"
 #import "SUAIEntity.h"
 #import "SUAISchedule.h"
+#import "SUAITime.h"
 
 @interface SUAIScheduleViewController () <UITableViewDelegate, UITableViewDataSource> {
     UITableView *_tableView;
@@ -116,7 +117,7 @@
     SUAIPair *pair = _content[indexPath.section].pairs[indexPath.row];
     cell.name = pair.name;
     cell.teachers = pair.teachers;
-    cell.time = pair.time;
+    cell.time = [[pair time] stringValue];
     cell.type = pair.lessonType;
     cell.auditory = [pair.auditory fullDescription];
     cell.groups = pair.groups;

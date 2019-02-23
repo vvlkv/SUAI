@@ -27,6 +27,7 @@
 #import "SUAIEntity.h"
 #import "SUAIPair.h"
 #import "SUAISchedule.h"
+#import "SUAITime.h"
 #import "SUAIScheduleProvider.h"
 #import "SUAI.h"
 #import "Reachability.h"

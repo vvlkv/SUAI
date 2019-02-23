@@ -104,7 +104,7 @@
     NSMutableArray *days = [NSMutableArray array];
     SUAIPair *pair;
     SUAIDay *day;
-    NSString *pairTime;
+    NSString *pairTime = @"";
     for (HTMLNode *element in rasp) {
         for (HTMLElement *child in element.childNodes) {
             if ([child isKindOfClass:[HTMLText class]])

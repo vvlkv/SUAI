@@ -7,7 +7,6 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "SUAI.h"
 #import "SUAITime.h"
 
 @interface SUAIModelTests : XCTestCase
