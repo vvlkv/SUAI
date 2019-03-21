@@ -163,6 +163,7 @@
             if (hError != nil) {
                 SUAINetworkError *err = [SUAINetworkError errorWithCode:SUAIErrorNetworkFault userInfo:@{NSLocalizedDescriptionKey: hError.localizedDescription}];
                 error(err);
+                return;
             }
             if (data != nil) {
                 success(data);
