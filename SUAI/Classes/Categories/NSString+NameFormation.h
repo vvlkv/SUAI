@@ -12,7 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)refactoredTeacher;
 - (NSString *)refactoredGroup;
 - (NSString *)refactoredAuditory;
-
 - (NSString *)removeSlashes;
 
 @end

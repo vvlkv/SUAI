@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SUAI'
-  s.version          = '1.0.3'
+  s.version          = '1.0.4'
   s.summary          = 'Library for working with SUAI content'
 
 # This description is used to generate tags and improve search results.
@@ -29,5 +29,6 @@ SUAISchedule is a lightweight and simple library for loading and parsing schedul
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'SUAI/Classes/**/*'
+  s.private_header_files = 'SUAI/Classes/Loader/*.h', 'SUAI/Classes/Parser/*.h', 'SUAI/Classes/Categories/*.h'
   s.dependency 'HTMLKit'
 end
