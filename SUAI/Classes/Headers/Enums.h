@@ -23,7 +23,8 @@ typedef NS_ENUM(NSUInteger, EntityType) {
 typedef NS_ENUM(NSUInteger, WeekType) {
     WeekTypeBlue,
     WeekTypeRed,
-    WeekTypeBoth
+    WeekTypeBoth,
+    WeekTypeUndefined
 };
 
 #endif /* Enums_h */

@@ -27,7 +27,6 @@ typedef NSString*(*clr_func)(id, SEL);
     NSMutableArray <SUAIEntity *> *_auditories;
 }
 
-@property (nonatomic, assign, readwrite) BOOL codesAvailable;
 @property (nonatomic, assign, readwrite) WeekType currentWeekType;
 @property (nonatomic, strong, readwrite) dispatch_group_t loadCodesGroup;
 @property (nonatomic, strong, readwrite) dispatch_queue_t loadCodesQueue;
@@ -48,14 +47,17 @@ typedef NSString*(*clr_func)(id, SEL);
 - (instancetype)initPrivate {
     self = [super init];
     if (self) {
-        _codesAvailable = NO;
+        _currentWeekType = WeekTypeUndefined;
         _groups = [[NSMutableArray alloc] init];
         _teachers = [[NSMutableArray alloc] init];
         _auditories = [[NSMutableArray alloc] init];
         _loadCodesGroup = dispatch_group_create();
         _loadCodesQueue = dispatch_queue_create("load codes", DISPATCH_QUEUE_CONCURRENT);
         [self p_loadCodes:_loadCodesGroup];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(p_reachabilityChanged:) name:kSUAIReachabilityNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(p_reachabilityChanged:)
+                                                     name:kSUAIReachabilityNotification
+                                                   object:nil];
     }
     return self;
 }
@@ -67,15 +69,14 @@ typedef NSString*(*clr_func)(id, SEL);
 
 - (void)p_loadCodes:(dispatch_group_t )group {
     __weak typeof(self) welf = self;
-    if (!_codesAvailable) {
+    if (!self.codesAvailable) {
         dispatch_group_enter(group);
         [SUAILoader loadCodesWithSuccess:^(NSArray<NSData *> *data) {
             [welf p_saveWeekType:[data lastObject]];
             [welf saveCodes:data];
-            if (!welf.codesAvailable)
+            if (welf.codesAvailable)
                 [[NSNotificationCenter defaultCenter] postNotificationName:kSUAIEntityLoadedNotification
                                                                     object:nil];
-            welf.codesAvailable = YES;
             dispatch_group_leave(group);
         } fail:^(SUAINetworkError *fail) {
             dispatch_group_leave(group);
@@ -85,13 +86,13 @@ typedef NSString*(*clr_func)(id, SEL);
 
 - (void)p_reachabilityChanged:(NSNotification *)notification {
     BOOL isReach = [[notification object] boolValue];
-    if (!_codesAvailable && isReach)
+    if (!self.codesAvailable && isReach)
         [self p_loadCodes:_loadCodesGroup];
 }
 
 - (void)loadCodes:(void (^) (NSArray<SUAIEntity *> *g, NSArray<SUAIEntity *> *t, NSArray<SUAIEntity *> *a))codes
              fail:(void (^) (__kindof SUAIError *error))error {
-    if (!_codesAvailable) {
+    if (!self.codesAvailable) {
         __weak typeof(self) welf = self;
         dispatch_group_notify(_loadCodesGroup, _loadCodesQueue, ^{
             if (welf.codesAvailable) {
@@ -128,13 +129,18 @@ typedef NSString*(*clr_func)(id, SEL);
                  ofType:(EntityType)type
                 success:(void (^) (SUAISchedule *schedule))schedule
                    fail:(void (^) (__kindof SUAIError *error))error {
+    if (![[SUAI instance] isReachable]) {
+        SUAIError *err = [SUAIError errorWithCode:SUAIErrorNetworkFault userInfo:@"Netwofr connection isn't available"];
+        error(err);
+        return;
+    }
     if (entityName == nil) {
         SUAIError *err = [SUAIError errorWithCode:SUAIErrorParseUnknown userInfo:@{NSLocalizedDescriptionKey: @"Entity name is nil!"}];
         error(err);
         return;
     }
     
-    if (!_codesAvailable) {
+    if (!self.codesAvailable) {
         //TODO wait until codes will be loaded
         //notify when codes load completes
         __weak typeof(self) welf = self;
@@ -190,6 +196,9 @@ typedef NSString*(*clr_func)(id, SEL);
 }
 
 - (void)p_saveWeekType:(NSData *)data {
+    WeekType typeFromData = [SUAIParser weekTypeFromData:data];
+    if (typeFromData == WeekTypeUndefined)
+        return;
     _currentWeekType = [SUAIParser weekTypeFromData:data];
     [[NSNotificationCenter defaultCenter] postNotificationName:kSUAIWeekTypeObtainedNotification
                                                         object:nil];
@@ -270,6 +279,10 @@ typedef NSString*(*clr_func)(id, SEL);
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:kSUAIReachabilityNotification object:nil];
+}
+
+- (BOOL)codesAvailable {
+    return [_groups count] > 0 || [_teachers count] > 0 || [_auditories count] > 0;
 }
 
 @end

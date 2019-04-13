@@ -19,18 +19,18 @@
 
 + (WeekType)weekTypeFromData:(NSData *)data {
     if (data == nil) {
-        return -1;
+        return WeekTypeUndefined;
     }
     
     NSString *dataString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     HTMLDocument *document = [HTMLDocument documentWithString:dataString];
     HTMLElement *rasp = [document querySelector:@".rasp"];
     if (rasp == nil)
-        return -1;
+        return WeekTypeUndefined;
     
     HTMLElement *today = [document querySelector:@"p"];
     if (today == nil)
-        return -1;
+        return WeekTypeUndefined;
     
     if ([[today textContent] containsString:@"нижн"])
         return WeekTypeBlue;
