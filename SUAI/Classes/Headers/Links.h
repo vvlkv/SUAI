@@ -11,12 +11,14 @@
 //#define LOCAL
 
 #ifdef LOCAL
-static NSString *semesterLink = @"http://192.168.1.2:8080";
-static NSString *sessionLink = @"http://192.168.1.2:8080";
-static NSString *newsLink = @"http://192.168.1.2:8080";
+static NSString *const semesterLink = @"http://192.168.1.2:8080";
+static NSString *const sessionLink = @"http://192.168.1.2:8080";
+static NSString *const newsLink = @"http://192.168.1.2:8080";
+static NSString *const publicationsLink = @"http://192.168.1.2:8080";
 #else
-static NSString *semesterLink = @"http://rasp.guap.ru";
-static NSString *sessionLink = @"http://raspsess.guap.ru";
-static NSString *newsLink = @"http://new.guap.ru/pubs";
+static NSString *const semesterLink = @"http://rasp.guap.ru";
+static NSString *const sessionLink = @"http://raspsess.guap.ru";
+static NSString *const newsLink = @"http://new.guap.ru";
+static NSString *const publicationsLink = @"http://new.guap.ru/pubs";
 #endif
 #endif /* Links_h */

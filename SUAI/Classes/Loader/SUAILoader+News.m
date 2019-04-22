@@ -12,7 +12,7 @@
 
 + (void)loadAllNewsWithSuccess:(void (^) (NSData *data))success
                        fail:(void (^) (SUAINetworkError *fail))fail {
-    NSURL *newsUrl = [NSURL URLWithString:newsLink];
+    NSURL *newsUrl = [NSURL URLWithString:publicationsLink];
     [SUAILoader performRequestWithUrl:newsUrl success:success fail:fail];
 }
 
@@ -35,9 +35,10 @@
             NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:[NSURLRequest requestWithURL:imgUrl]
                                                                      completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
                                                                          if (error == nil && data != nil) {
-                                                                             [loadedImages replaceObjectAtIndex:i withObject:[UIImage imageWithData:data]];
-                                                                         } else
-                                                                             NSLog(@"%@", error);
+                                                                             UIImage *img = [UIImage imageWithData:data];
+                                                                             if (img != nil)
+                                                                                 [loadedImages replaceObjectAtIndex:i withObject:[UIImage imageWithData:data]];
+                                                                         }
                                                                          dispatch_group_leave(group);
             }];
             [task resume];
@@ -53,7 +54,7 @@
 + (void)loadNews:(NSString *)newsID
          success:(void (^) (NSData *data))success
             fail:(void (^) (SUAINetworkError *fail))fail {
-    NSString *urlStr = [NSString stringWithFormat:@"%@%@", @"http://new.guap.ru", newsID];
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@", newsLink, newsID];
     [SUAILoader performRequestWithUrl:[NSURL URLWithString:urlStr] success:success fail:fail];
 }
 
